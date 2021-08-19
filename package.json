@@ -3,12 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chainsafe/common-components": "^1.0.30",
+    "@chainsafe/common-theme": "^1.0.10",
+    "@lingui/core": "^3.10.4",
+    "@lingui/react": "^3.10.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "clsx": "^1.1.1",
+    "formik": "^2.2.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "react-toast-notifications": "^2.5.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
