@@ -4,7 +4,9 @@ import { useLanguageContext } from "../../LanguageContext"
 import Hero from "../Subpages/Hero"
 import Why from "../Subpages/Why"
 import Featured from "../Subpages/Featured"
-
+import Links from "../Subpages/Links"
+import NavBar from "../Modules/Navbar"
+import Footer from "../Modules/Footer"
 const HomePage: React.FC = () => {
   const { lang } = useParams()
   const { availableLanguages, selectedLanguage, setActiveLanguage } = useLanguageContext()
@@ -22,9 +24,12 @@ const HomePage: React.FC = () => {
   )
   return (
     <div>
+      <NavBar />
       <Hero />
       <Featured />
       <Why />
+      <Links />
+      <Footer />
     </div>
   )
 }

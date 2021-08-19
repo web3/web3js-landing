@@ -151,6 +151,38 @@ const Why: React.FC = () => {
               </a>
             </div>
           </div>
+          <div className={clsx(classes.marginTop, classes.factsContainer)}>
+            <div className={clsx(classes.levitate, classes.fact)}>
+              <Typography variant="body1" className={classes.singleColText}>
+                <a href="/" target="__blank" rel="noopener noreferrer" className={clsx(classes.noUnderline)}>
+                  <Trans>Connect to any EVM-compatible blockchain.</Trans>
+                </a>
+              </Typography>
+              <a href="/" target="__blank" rel="noopener noreferrer">
+                <img className={classes.arrow} src="/arrow.png" alt="orange arrow link" />
+              </a>
+            </div>
+            <div className={clsx(classes.levitate, classes.fact)}>
+              <Typography variant="body1" className={classes.singleColText}>
+                <a href="/" target="__blank" rel="noopener noreferrer" className={classes.noUnderline}>
+                  <Trans>Connect to any EVM-compatible blockchain.</Trans>
+                </a>
+              </Typography>
+              <a href="/" target="__blank" rel="noopener noreferrer">
+                <img className={classes.arrow} src="/arrow.png" alt="orange arrow link" />
+              </a>
+            </div>
+            <div className={clsx(classes.levitate, classes.fact)}>
+              <Typography variant="body1" className={clsx(classes.singleColText)}>
+                <a href="/" target="__blank" rel="noopener noreferrer" className={classes.noUnderline}>
+                  <Trans>Built-in cryptowallet authentication.</Trans>
+                </a>
+              </Typography>
+              <a href="/" target="__blank" rel="noopener noreferrer">
+                <img className={classes.arrow} src="/arrow.png" alt="orange arrow link" />
+              </a>
+            </div>
+          </div>
         </article>
       </div >
     </section >

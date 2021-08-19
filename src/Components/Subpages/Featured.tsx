@@ -10,6 +10,7 @@ const useStyles = makeStyles(
       container: {
         overflowX: "hidden",
         minHeight: "30vh",
+        background: palette.additional["gray"][4],
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
@@ -19,9 +20,7 @@ const useStyles = makeStyles(
         },
       },
       gridContainer: {
-        paddingTop: "80px",
-        paddingLeft: "20px",
-        paddingRight: "20px",
+        padding: "40px",
         width: "calc(100% - 16px)",
         display: "block",
         maxWidth: "1200px",
@@ -63,7 +62,6 @@ const useStyles = makeStyles(
       },
       contentContainer: {
         width: "100%",
-        marginBottom: "80px",
         paddingLeft: constants.generalUnit,
         paddingRight: constants.generalUnit,
         display: "flex",
@@ -108,9 +106,9 @@ const Featured: React.FC = () => {
     <section className={classes.container}>
       <div className={classes.gridContainer}>
         <article className={classes.contentContainer}>
-          <div className={clsx(classes.marginTop, classes.factsContainer)}>
+          <div className={classes.factsContainer}>
             <div className={classes.fact}>
-              <Typography variant="h4" className={clsx(classes.bold, classes.marginTop, classes.singleColText)}>
+              <Typography variant="h4" className={clsx(classes.bold, classes.singleColText)}>
                 <Trans>Comprehensive.</Trans>
               </Typography>
               <Typography variant="body1" className={clsx(classes.marginTop, classes.bodyText, classes.singleColText)}>
@@ -119,19 +117,19 @@ const Featured: React.FC = () => {
               </Typography>
             </div>
             <div className={classes.fact}>
-              <Typography variant="h4" className={clsx(classes.bold, classes.marginTop, classes.singleColText)}>
+              <Typography variant="h4" className={clsx(classes.bold, classes.singleColText)}>
                 <Trans>Community driven.</Trans>
               </Typography>
               <Typography variant="body1" className={clsx(classes.marginTop, classes.bodyText, classes.singleColText)}>
-                <Trans>Open source since it was launched in 2015, and maintained with care for the 200k+ downloads each week.</Trans>
+                <Trans>Open source since it was launched in 2015, and frequently updated to support the 200k+ downloads each week on NPM.</Trans>
               </Typography>
             </div>
             <div className={classes.fact}>
-              <Typography variant="h4" className={clsx(classes.bold, classes.marginTop, classes.singleColText)}>
+              <Typography variant="h4" className={clsx(classes.bold, classes.singleColText)}>
                 <Trans>Modular.</Trans>
               </Typography>
               <Typography variant="body1" className={clsx(classes.marginTop, classes.bodyText, classes.singleColText)}>
-                <Trans>Does your app have need for speed? Import the only functions you need.</Trans>
+                <Trans>Import just the functions you need; interact with smart contracts, query the blockchain, and more.</Trans>
               </Typography>
             </div>
           </div>
