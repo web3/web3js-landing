@@ -80,7 +80,7 @@ const useStyles = makeStyles(
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        maxWidth: "357px",
+        maxWidth: "350px",
         borderRadius: constants.generalUnit,
         border: "1px solid #e8e8e8",
         padding: "1.5rem 1rem",
@@ -123,7 +123,7 @@ const Why: React.FC = () => {
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={classes.singleColText}>
                 <a href="/" target="__blank" rel="noopener noreferrer" className={clsx(classes.noUnderline)}>
-                  <Trans>Connect to any EVM-compatible blockchain.</Trans>
+                  <Trans>Interact with smart contracts as JS objects.</Trans>
                 </a>
               </Typography>
               <a href="/" target="__blank" rel="noopener noreferrer">
@@ -133,7 +133,7 @@ const Why: React.FC = () => {
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={classes.singleColText}>
                 <a href="/" target="__blank" rel="noopener noreferrer" className={classes.noUnderline}>
-                  <Trans>Connect to any EVM-compatible blockchain.</Trans>
+                  <Trans>Subscribe to specific on-chain events.</Trans>
                 </a>
               </Typography>
               <a href="/" target="__blank" rel="noopener noreferrer">
@@ -143,7 +143,7 @@ const Why: React.FC = () => {
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={clsx(classes.singleColText)}>
                 <a href="/" target="__blank" rel="noopener noreferrer" className={classes.noUnderline}>
-                  <Trans>Built-in cryptowallet authentication.</Trans>
+                  <Trans>Features to interact with the Ethereum Name Service.</Trans>
                 </a>
               </Typography>
               <a href="/" target="__blank" rel="noopener noreferrer">
@@ -155,7 +155,7 @@ const Why: React.FC = () => {
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={classes.singleColText}>
                 <a href="/" target="__blank" rel="noopener noreferrer" className={clsx(classes.noUnderline)}>
-                  <Trans>Connect to any EVM-compatible blockchain.</Trans>
+                  <Trans>Use the whisper protocol for broadcasting.</Trans>
                 </a>
               </Typography>
               <a href="/" target="__blank" rel="noopener noreferrer">
@@ -165,7 +165,7 @@ const Why: React.FC = () => {
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={classes.singleColText}>
                 <a href="/" target="__blank" rel="noopener noreferrer" className={classes.noUnderline}>
-                  <Trans>Connect to any EVM-compatible blockchain.</Trans>
+                  <Trans>Get information on Ethereum nodes. </Trans>
                 </a>
               </Typography>
               <a href="/" target="__blank" rel="noopener noreferrer">
@@ -175,7 +175,7 @@ const Why: React.FC = () => {
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={clsx(classes.singleColText)}>
                 <a href="/" target="__blank" rel="noopener noreferrer" className={classes.noUnderline}>
-                  <Trans>Built-in cryptowallet authentication.</Trans>
+                  <Trans>Create accounts, process and sign transactions.</Trans>
                 </a>
               </Typography>
               <a href="/" target="__blank" rel="noopener noreferrer">
