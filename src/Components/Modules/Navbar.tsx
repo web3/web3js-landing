@@ -58,7 +58,7 @@ const NavBar: React.FC = () => {
             <img
               className={classes.logo}
               src="/web3js.png"
-              alt="chainsafe files logo"
+              alt="web3js logo"
             />
             <Typography variant="h5">
               <a href="/" className={classes.navlink}>

@@ -91,6 +91,8 @@ const useStyles = makeStyles(
         },
         "& > span": {
           fontSize: "18px",
+          maxWidth: "350px",
+
         },
       },
       arrow: {
@@ -143,7 +145,7 @@ const Why: React.FC = () => {
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={clsx(classes.singleColText)}>
                 <a href="/" target="__blank" rel="noopener noreferrer" className={classes.noUnderline}>
-                  <Trans>Features to interact with the Ethereum Name Service.</Trans>
+                  <Trans>Interact with the Ethereum Name Service.</Trans>
                 </a>
               </Typography>
               <a href="/" target="__blank" rel="noopener noreferrer">

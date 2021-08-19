@@ -1,8 +1,11 @@
 import React from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
-import { Button, Typography } from "@chainsafe/common-components";
+import { Typography } from "@chainsafe/common-components";
 import clsx from "clsx";
 import { Trans } from "@lingui/macro";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import atomOneDark from 'react-syntax-highlighter/dist/esm/styles/hljs/docco';
+
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
@@ -77,11 +80,16 @@ const useStyles = makeStyles(
       noUnderline: {
         textDecoration: "none",
       },
+      bgDark: {
+        background: "#0f0f0f",
+      }
     })
   })
 
+
 const Links: React.FC = () => {
   const classes = useStyles();
+  const string = "let childrencount = 0"
   return (
     <div className={classes.container}>
       <section>
@@ -107,9 +115,10 @@ const Links: React.FC = () => {
             </a>
           </Typography>
         </div>
-        <div style={{ width: 900 }}></div>
+        <div >
+        </div>
       </section>
-    </div>
+    </div >
   )
 }
 
