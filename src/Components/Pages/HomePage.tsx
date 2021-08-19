@@ -3,6 +3,7 @@ import { useParams } from "@chainsafe/common-components"
 import { useLanguageContext } from "../../LanguageContext"
 import Hero from "../Subpages/Hero"
 import Why from "../Subpages/Why"
+import Featured from "../Subpages/Featured"
 
 const HomePage: React.FC = () => {
   const { lang } = useParams()
@@ -22,6 +23,7 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <Hero />
+      <Featured />
       <Why />
     </div>
   )
