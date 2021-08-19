@@ -8,14 +8,14 @@ import Routes from "./Components/Routes"
 const theme = createTheme({
   globalStyling: {
     body: {
-      backgroundColor: "#0f0f0f",
+      backgroundColor: "#fafafa",
       overflowX: "hidden",
     },
   },
   themeConfig: {
     palette: {
       primary: {
-        main: "#5165DC",
+        main: "#F16822",
       }
     },
     constants: {

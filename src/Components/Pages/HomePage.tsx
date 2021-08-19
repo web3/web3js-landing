@@ -1,6 +1,8 @@
 import React, { useEffect } from "react"
 import { useParams } from "@chainsafe/common-components"
 import { useLanguageContext } from "../../LanguageContext"
+import Hero from "../Subpages/Hero"
+import Why from "../Subpages/Why"
 
 const HomePage: React.FC = () => {
   const { lang } = useParams()
@@ -19,7 +21,8 @@ const HomePage: React.FC = () => {
   )
   return (
     <div>
-      sup
+      <Hero />
+      <Why />
     </div>
   )
 }

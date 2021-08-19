@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2016",
     "lib": [
       "dom",
       "dom.iterable",
@@ -19,9 +19,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "downlevelIteration": true,
+    "downlevelIteration": true
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules/*"
   ]
 }
