@@ -157,7 +157,7 @@ const Why: React.FC = () => {
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={classes.singleColText}>
                 <a href="/" target="__blank" rel="noopener noreferrer" className={clsx(classes.noUnderline)}>
-                  <Trans>Use the whisper protocol for broadcasting.</Trans>
+                  <Trans>Utilities with built-in helpers for Ethereum dapps and web3 packages.</Trans>
                 </a>
               </Typography>
               <a href="/" target="__blank" rel="noopener noreferrer">
@@ -167,7 +167,7 @@ const Why: React.FC = () => {
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={classes.singleColText}>
                 <a href="/" target="__blank" rel="noopener noreferrer" className={classes.noUnderline}>
-                  <Trans>Get information on Ethereum nodes. </Trans>
+                  <Trans>Get block and state information from Ethereum nodes. </Trans>
                 </a>
               </Typography>
               <a href="/" target="__blank" rel="noopener noreferrer">

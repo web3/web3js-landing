@@ -121,7 +121,7 @@ const Featured: React.FC = () => {
                 <Trans>Community driven.</Trans>
               </Typography>
               <Typography variant="body1" className={clsx(classes.marginTop, classes.bodyText, classes.singleColText)}>
-                <Trans>Open source since it was launched in 2015, and frequently updated to support the 200k+ downloads each week on NPM.</Trans>
+                <Trans>Launched as an open-source library in 2015, and frequently updated to support 200k+ downloads each week on NPM.</Trans>
               </Typography>
             </div>
             <div className={classes.fact}>
@@ -129,7 +129,7 @@ const Featured: React.FC = () => {
                 <Trans>Modular.</Trans>
               </Typography>
               <Typography variant="body1" className={clsx(classes.marginTop, classes.bodyText, classes.singleColText)}>
-                <Trans>Import just the functions you need; interact with smart contracts, query the blockchain, and more.</Trans>
+                <Trans>Import only the packages you require; interact with smart contracts, query the blockchain, and more.</Trans>
               </Typography>
             </div>
           </div>

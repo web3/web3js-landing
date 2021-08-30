@@ -134,7 +134,7 @@ const Hero: React.FC = () => {
             <Button size="large" variant="danger" className={clsx(classes.bold, classes.lightButton)}
             >
               <a className={classes.noUnderline} href="https://github.com/chainsafe/web3.unity" rel="noopener noreferrer" target="_blank">
-                <Trans>Download</Trans>
+                <Trans>Tutorial</Trans>
               </a>
             </Button>
             <Button size="large" variant="danger" className={clsx(classes.bold, classes.darkButton)}>
