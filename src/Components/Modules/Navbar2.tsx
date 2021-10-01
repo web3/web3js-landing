@@ -102,8 +102,8 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
       height: "auto",
       flexDirection: "column",
       justifyContent: "flex-start",
-      alignItems: "flex-start",
-      marginLeft: "2rem",
+      alignItems: "flex-end",
+      paddingRight: "16px",
     },
     mobileLinkWrapper: {
       marginTop: "1rem",
