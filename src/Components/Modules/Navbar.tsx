@@ -54,7 +54,6 @@ const NavBar: React.FC = () => {
   const classes = useStyles()
   const [isNavVisible, setIsNavVisible] = useState(false);
   const isMobile = useMediaQuery("(max-width: 1170px)");
-
   return (
     <div className={classes.container}>
       <Grid container xs={12}>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   createStyles, ITheme, makeStyles, useMediaQuery
 } from "@chainsafe/common-theme";
-import { Grid, Typography, useHistory, useScrollToTop } from "@chainsafe/common-components";
+import { Grid, Typography, useScrollToTop } from "@chainsafe/common-components";
 import { Trans } from "@lingui/macro"
 
 import nav from "./nav.svg";
@@ -124,6 +124,10 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
         color: palette.primary.main,
       },
     },
+    flex: {
+      display: "flex",
+      alignItems: "center",
+    }
   })
 })
 
@@ -141,9 +145,6 @@ const NavBar2: React.FC = () => {
   }
   const scrollToTop = useScrollToTop();
 
-  const { redirect } = useHistory()
-
-
   return (
     <nav className={classes.container}>
       {scrollToTop}
@@ -151,7 +152,7 @@ const NavBar2: React.FC = () => {
       <Grid item alignItems="center" className={classes.linksMenu}>
         <Grid container justifyContent="flex-start" alignItems="center">
           <Grid item alignItems="flex-start">
-            <div style={{display: "flex", alignItems: "center"}}>
+            <div className={classes.flex}>
               <img
                 className={classes.logo}
                 src="/web3js.png"
@@ -164,56 +165,66 @@ const NavBar2: React.FC = () => {
               </Typography>
             </div>
           </Grid>
-           <Typography variant="h5">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://web3js.readthedocs.io/en/v1.5.2/"
-              className={classes.navlink}
-            >
-              <Trans>Tutorial</Trans>
-            </a>
-          </Typography>
-          <Typography variant="h5">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://web3js.readthedocs.io/en/v1.5.2/"
-              className={classes.navlink}
-            >
-              <Trans>API</Trans>
-            </a>
-          </Typography>
-          <Typography variant="h5">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://web3js.readthedocs.io/en/v1.5.2/"
-              className={classes.navlink}
-            >
-              <Trans>Docs</Trans>
-            </a>
-          </Typography>
-          <Typography variant="h5">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://discord.com/invite/xSAwrnCWcg"
-              className={classes.navlink}
-            >
-              <Trans>Community</Trans>
-            </a>
-          </Typography>
-          <Typography variant="h5">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://medium.com/chainsafe-systems"
-              className={classes.navlink}
-            >
-              <Trans>Blog</Trans>
-            </a>
-          </Typography>
+            <Typography variant="h5">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://web3js.readthedocs.io/en/v1.5.2/"
+                className={classes.navlink}
+              >
+                <Trans>Tutorial</Trans>
+              </a>
+            </Typography>
+            <Typography variant="h5">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://web3js.readthedocs.io/en/v1.5.2/"
+                className={classes.navlink}
+              >
+                <Trans>API</Trans>
+              </a>
+            </Typography>
+            <Typography variant="h5">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://web3js.readthedocs.io/en/v1.5.2/"
+                className={classes.navlink}
+              >
+                <Trans>Docs</Trans>
+              </a>
+            </Typography>
+            <Typography variant="h5">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://discord.com/invite/xSAwrnCWcg"
+                className={classes.navlink}
+              >
+                <Trans>Community</Trans>
+              </a>
+            </Typography>
+            <Typography variant="h5">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://medium.com/chainsafe-systems"
+                className={classes.navlink}
+              >
+                <Trans>Blog</Trans>
+              </a>
+            </Typography>
+            <Typography variant="h5">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/chainsafe/web3.js"
+                className={classes.navlink}
+              >
+                <Trans>Github</Trans>
+              </a>
+            </Typography>
           </Grid>
         </Grid>}
       {(isMobile && !isNavVisible) && (
@@ -262,10 +273,10 @@ const NavBar2: React.FC = () => {
             </div>
             <ul className={classes.mobileLinkContainer}>
               <div className={classes.mobileLinkWrapper} >
-                <a href="hhttps://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Docs</a>
+                <a href="https://web3js.readthedocs.io/en/v1.5.2/" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Docs</a>
               </div>
               <div className={classes.mobileLinkWrapper} >
-                <a href="hhttps://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>GitHub</a>
+                <a href="https://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>GitHub</a>
               </div>
               <div className={classes.mobileLinkWrapper} >
                 <a href="https://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Community</a>
