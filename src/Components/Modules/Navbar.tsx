@@ -98,7 +98,7 @@ const NavBar: React.FC = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://web3js.readthedocs.io/en/v1.5.2/"
+              href="https://discord.com/invite/xSAwrnCWcg"
               className={classes.navlink}
             >
               <Trans>Community</Trans>

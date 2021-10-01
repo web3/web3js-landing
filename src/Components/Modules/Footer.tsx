@@ -1,7 +1,7 @@
 import React from "react"
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme"
 import { Grid, Typography } from "@chainsafe/common-components"
-import { Trans } from "@lingui/macro";
+import {Trans} from "@lingui/macro";
 
 const useStyles = makeStyles(({ palette, constants, breakpoints }: ITheme) => {
   return createStyles({
@@ -15,6 +15,7 @@ const useStyles = makeStyles(({ palette, constants, breakpoints }: ITheme) => {
         maxWidth: "2560px",
       },
       paddingLeft: constants.generalUnit * 2,
+      background: palette.additional["gray"][10],
     },
     linkWrapper: {
       display: "flex",
@@ -23,7 +24,7 @@ const useStyles = makeStyles(({ palette, constants, breakpoints }: ITheme) => {
       color: palette.additional["gray"][5],
       margin: "0 0 .5rem 0",
       "&:hover": {
-        color: palette.additional["gray"][8],
+        color: palette.primary.main,
         transition: "ease-in 0.2s",
       },
       "& a": {
@@ -71,7 +72,7 @@ const useStyles = makeStyles(({ palette, constants, breakpoints }: ITheme) => {
     copyright: {
       position: "absolute",
       color: palette.additional["gray"][8],
-      [breakpoints.down("xl")]: {
+      [breakpoints.down("xl")]:{
         marginLeft: constants.generalUnit * 2,
       },
       [breakpoints.up("xl")]: {
@@ -87,22 +88,127 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
   const classes = useStyles()
   return (
-    <footer className={classes.root}>
-      <Grid
-        container
-        xs={12}
-        md={4}
-        xl={4}
-        justifyContent="flex-start"
-        className={classes.smalltextContainer}
-      >
-        <Grid item>
-          <Typography component="p" variant="body1" className={classes.copyright}>
-            &copy; {currentYear} ChainSafe Systems, <Trans>All Rights Reserved.</Trans>
-          </Typography>
+      <footer className={classes.root}>
+        <Grid container>
+          <Grid item className={classes.linkWrapper}>
+            <Grid item className={classes.header}>
+              <Typography variant="h5" >
+                <strong><Trans>Resources</Trans></strong>
+              </Typography>
+            </Grid>
+            <Grid item className={classes.item}>
+              <a
+                href="https://app.files.chainsafe.io"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Typography variant="h5" className={classes.bold}>
+                  <Trans>Tutorial</Trans>
+                </Typography>
+              </a>
+            </Grid>
+            <Grid item className={classes.item}>
+              <a
+                href="/terms-of-service"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Typography variant="h5" className={classes.bold}>
+                  Documentation
+                  </Typography>
+              </a>
+            </Grid>
+            <Grid item className={classes.item}>
+              <a
+                href="/privacy-policy"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Typography variant="h5" className={classes.bold}>
+                  API
+                  </Typography>
+              </a>
+            </Grid>
+            <Grid item className={classes.item}>
+              <a
+                href="https://chainsafe.io"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Typography variant="h5" className={classes.bold}>
+                  About ChainSafe
+                  </Typography>
+              </a>
+            </Grid>
+          </Grid>
+          <Grid item className={classes.linkWrapper}>
+            <Grid item className={classes.header}>
+              <Typography variant="h5" className={classes.bold}>
+                <strong>Community</strong>
+              </Typography>
+            </Grid>
+            <Grid item className={classes.item}>
+              <a
+                href="https://github.com/chainsafe/web3js"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Typography variant="h5" className={classes.bold}>
+                  <Trans>GitHub</Trans>
+                </Typography>
+              </a>
+            </Grid>
+            <Grid item className={classes.item}>
+              <a
+                href="https://discord.com/invite/xSAwrnCWcg"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Typography variant="h5" className={classes.bold}>
+                  <Trans>Discord</Trans>
+                </Typography>
+              </a>
+          </Grid>
+          <Grid item className={classes.item}>
+            <a
+              href="https://twitter.com/ChainSafeth"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Typography variant="h5" className={classes.bold}>
+                Twitter
+              </Typography>
+            </a>
+          </Grid>
+          <Grid item className={classes.item}>
+            <a
+              href="https://twitter.com/ChainSafeth"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Typography variant="h5" className={classes.bold}>
+                Blog
+              </Typography>
+            </a>
+          </Grid>
+          </Grid>
+
         </Grid>
-      </Grid>
-    </footer>
+        <Grid
+          container
+          xs={12}
+          md={4}
+          xl={4}
+          justifyContent="flex-start"
+          className={classes.smalltextContainer}
+        >
+          <Grid item>
+            <Typography component="p" variant="body1" className={classes.copyright}>
+              &copy; {currentYear} ChainSafe Systems, <Trans>All Rights Reserved.</Trans>
+            </Typography>
+          </Grid>
+        </Grid>
+      </footer>
   )
 }
 export default Footer

@@ -28,6 +28,9 @@ const useStyles = makeStyles(
       bold: {
         fontWeight: 800,
       },
+      primaryColor: {
+        color: palette.primary.main,
+      },
       reduceLeading: {
         letterSpacing: "-1px",
       },
@@ -107,7 +110,7 @@ const FactBanner: React.FC = () => {
         <article className={classes.contentContainer}>
           <div className={classes.factsContainer}>
             <div className={classes.fact}>
-              <Typography variant="h2" className={clsx(classes.bold, classes.singleColText)}>
+              <Typography variant="h2" className={clsx(classes.bold, classes.primaryColor, classes.singleColText)}>
                 <Trans>250,000+</Trans>
               </Typography>
               <Typography variant="h4" className={clsx(classes.bold, classes.singleColText)}>
@@ -115,7 +118,7 @@ const FactBanner: React.FC = () => {
               </Typography>
             </div>
             <div className={classes.fact}>
-              <Typography variant="h2" className={clsx(classes.bold, classes.singleColText)}>
+              <Typography variant="h2" className={clsx(classes.bold, classes.primaryColor, classes.singleColText)}>
                 <Trans>3000+</Trans>
               </Typography>
               <Typography variant="h4" className={clsx(classes.bold, classes.singleColText)}>
