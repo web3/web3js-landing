@@ -60,7 +60,6 @@ const useStyles = makeStyles(
       },
       contentContainer: {
         width: "100%",
-        marginBottom: "80px",
         paddingLeft: constants.generalUnit,
         paddingRight: constants.generalUnit,
         display: "flex",
@@ -98,6 +97,7 @@ const useStyles = makeStyles(
           margin: ".5rem 0 .5rem 0",
           flexDirection: "column",
           minHeight: "auto",
+          alignItems: "flex-start",
           justifyContent: "flex-start",
 
         },
