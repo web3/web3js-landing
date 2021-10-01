@@ -7,6 +7,8 @@ import Featured from "../Subpages/Featured"
 import Links from "../Subpages/Links"
 import NavBar from "../Modules/Navbar"
 import Footer from "../Modules/Footer"
+import FactBanner from "../Subpages/FactBanner"
+import CodeSnippets from "../Subpages/CodeSnippets"
 const HomePage: React.FC = () => {
   const { lang } = useParams()
   const { availableLanguages, selectedLanguage, setActiveLanguage } = useLanguageContext()
@@ -28,7 +30,8 @@ const HomePage: React.FC = () => {
       <Hero />
       <Featured />
       <Why />
-      <Links />
+      <FactBanner/>
+      <CodeSnippets/>
       <Footer />
     </div>
   )

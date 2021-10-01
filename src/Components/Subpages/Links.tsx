@@ -3,9 +3,6 @@ import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import { Typography } from "@chainsafe/common-components";
 import clsx from "clsx";
 import { Trans } from "@lingui/macro";
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import atomOneDark from 'react-syntax-highlighter/dist/esm/styles/hljs/docco';
-
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
@@ -89,7 +86,6 @@ const useStyles = makeStyles(
 
 const Links: React.FC = () => {
   const classes = useStyles();
-  const string = "let childrencount = 0"
   return (
     <div className={classes.container}>
       <section>
@@ -114,8 +110,6 @@ const Links: React.FC = () => {
               <Trans>Discord</Trans>
             </a>
           </Typography>
-        </div>
-        <div >
         </div>
       </section>
     </div >
