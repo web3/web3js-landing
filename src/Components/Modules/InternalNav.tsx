@@ -42,6 +42,9 @@ const useStyles = makeStyles(
           transition: "ease-in 0.1s",
         },
       },
+      bold: {
+        fontWeight: 600,
+      }
     })
   }
 )
@@ -51,8 +54,8 @@ const InternalNav: React.FC = () => {
   return(
     <div className={classes.container}>
       <div className={classes.linksContainer}>
-          <Typography variant="h5">
-            <a href="https://chainbridge.chainsafe.io" target="__blank" rel="noreferrer noopener"className={classes.navlink}>Banner with some text announcing a new release!</a>
+          <Typography variant="h5" className={classes.bold}>
+            <a href="https://github.com/ChainSafe/web3.js/releases/tag/v1.6.0" target="__blank" rel="noreferrer noopener"className={classes.navlink}>Banner with some text announcing latest version number</a>
           </Typography>
        
       </div>

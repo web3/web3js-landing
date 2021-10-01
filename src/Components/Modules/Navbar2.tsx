@@ -279,7 +279,7 @@ const NavBar2: React.FC = () => {
                 <a href="https://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>GitHub</a>
               </div>
               <div className={classes.mobileLinkWrapper} >
-                <a href="https://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Community</a>
+                <a href="https://discord.com/invite/xSAwrnCWcg" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Community</a>
               </div>
               <div className={classes.mobileLinkWrapper} >
                 <a href="https://medium.com/chainsafe-systems" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Blog</a>
