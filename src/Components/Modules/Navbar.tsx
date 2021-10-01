@@ -1,7 +1,9 @@
-import React from "react"
-import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme"
-import { Grid, Typography } from "@chainsafe/common-components"
+import React, {useState} from "react"
+import { createStyles, ITheme, makeStyles, useMediaQuery } from "@chainsafe/common-theme"
+import { Grid, Typography, useScrollToTop } from "@chainsafe/common-components"
 import { Trans } from "@lingui/macro"
+import nav from "./nav.svg";
+
 // import LanguageSelection from "../LanguageSelector"
 
 const useStyles = makeStyles(
@@ -50,6 +52,9 @@ const useStyles = makeStyles(
 
 const NavBar: React.FC = () => {
   const classes = useStyles()
+  const [isNavVisible, setIsNavVisible] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 1170px)");
+
   return (
     <div className={classes.container}>
       <Grid container xs={12}>
