@@ -53,8 +53,7 @@ const NavBar: React.FC = () => {
   return (
     <div className={classes.container}>
       <Grid container xs={12}>
-        <Grid item justifyContent="center" alignItems="flex-start">
-          <Grid container alignItems="center">
+        <Grid item justifyContent="flex-start" alignItems="center" flexDirection="row">
             <img
               className={classes.logo}
               src="/web3js.png"
@@ -65,14 +64,63 @@ const NavBar: React.FC = () => {
                 Web3.js
               </a>
             </Typography>
-          </Grid>
+          <Typography variant="h5">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://web3js.readthedocs.io/en/v1.5.2/"
+              className={classes.navlink}
+            >
+              <Trans>Tutorial</Trans>
+            </a>
+          </Typography>
+          <Typography variant="h5">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://web3js.readthedocs.io/en/v1.5.2/"
+              className={classes.navlink}
+            >
+              <Trans>API</Trans>
+            </a>
+          </Typography>
+          <Typography variant="h5">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://web3js.readthedocs.io/en/v1.5.2/"
+              className={classes.navlink}
+            >
+              <Trans>Docs</Trans>
+            </a>
+          </Typography>
+          <Typography variant="h5">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://web3js.readthedocs.io/en/v1.5.2/"
+              className={classes.navlink}
+            >
+              <Trans>Community</Trans>
+            </a>
+          </Typography>
+          <Typography variant="h5">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://medium.com/chainsafe-systems"
+              className={classes.navlink}
+            >
+              <Trans>Blog</Trans>
+            </a>
+          </Typography>
         </Grid>
         <Grid item justifyContent="flex-end" alignItems="center" flexDirection="row">
           <Typography variant="h5">
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://app.files.chainsafe.io/"
+              href="https://github.com/chainsafe/web3.js"
               className={classes.navlink}
             >
               <Trans>GitHub</Trans>
