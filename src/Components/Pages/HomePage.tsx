@@ -4,7 +4,6 @@ import { useLanguageContext } from "../../LanguageContext"
 import Hero from "../Subpages/Hero"
 import Why from "../Subpages/Why"
 import Featured from "../Subpages/Featured"
-import NavBar from "../Modules/Navbar"
 import FactBanner from "../Subpages/FactBanner"
 import CodeSnippets from "../Subpages/CodeSnippets"
 import InternalNav from "../Modules/InternalNav"
@@ -28,8 +27,7 @@ const HomePage: React.FC = () => {
   )
   return (
     <div>
-      <NavBar />
-      {/* <NavBar2/> */}
+      <NavBar2/>
       <InternalNav/>
       <Hero />
       <Featured />

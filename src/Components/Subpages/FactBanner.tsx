@@ -77,6 +77,7 @@ const useStyles = makeStyles(
       factsContainer: {
         display: "flex",
         justifyContent: "center",
+        alignItems: "center",
         [breakpoints.down('md')]: {
           flexDirection: "column",
         }
@@ -84,7 +85,7 @@ const useStyles = makeStyles(
       fact: {
         display: "flex",
         flexDirection: "column",
-        marginRight: constants.generalUnit * 15,
+        margin: "0 4rem",
         [breakpoints.down('md')]: {
           margin: "1rem 0 1rem 0",
           justifyContent: "space-evenly",

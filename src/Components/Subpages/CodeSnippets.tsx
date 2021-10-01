@@ -84,6 +84,7 @@ const useStyles = makeStyles(
         [breakpoints.down('md')]: {
           flexDirection: "column",
           justifyContent: "flex-start",
+          padding: "1rem 0",
         }
       },
       snippetRow: {
@@ -109,6 +110,13 @@ const useStyles = makeStyles(
       noUnderline: {
         textDecoration: "none",
       },
+      syntaxSection: {
+        width: "50%",
+        [breakpoints.down('md')]: {
+          margin: "1rem 0",
+          width: "100%",
+        }
+      }
     })
   })
 
@@ -128,7 +136,7 @@ const CodeSnippets: React.FC = () => {
                 <br/>
                 <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Get an Ethereum account balance with a simple query to an Etheruem node provider via JSON-RPC.</Typography>
               </div>
-              <div style={{width: "50%"}}>
+              <div className={classes.syntaxSection}>
                 <SyntaxHighlighter language="javascript" style={nightOwl} wrapLines={true} customStyle={{fontSize: "16px", fontWeight: "bold"}}>
                 web3.eth.getBalance("0x407d73d8a49eeb85d32cf465507dd71d507100c1").then(console.log);
                 </SyntaxHighlighter>
@@ -140,7 +148,7 @@ const CodeSnippets: React.FC = () => {
                 <br/>
                 <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Examine recent transfer events by querying or subscribing to their events.</Typography>
               </div>
-              <div style={{width: "50%"}}>
+              <div className={classes.syntaxSection}>
                 <SyntaxHighlighter language="javascript" style={nightOwl} wrapLines={true} customStyle={{fontSize: "16px", fontWeight: "bold"}}>
                 web3.eth.getBalance("0x407d73d8a49eeb85d32cf465507dd71d507100c1").then(console.log);
                 </SyntaxHighlighter>
@@ -152,7 +160,7 @@ const CodeSnippets: React.FC = () => {
                 <br/>
                 <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Calculate the sha3 hash of your input data, convert your Ether values in wei, and more.</Typography>
               </div>
-              <div style={{width: "50%"}}>
+              <div className={classes.syntaxSection}>
                 <SyntaxHighlighter language="javascript" style={nightOwl} wrapLines={true} customStyle={{fontSize: "16px", fontWeight: "bold"}}>
                 web3.eth.getBalance("0x407d73d8a49eeb85d32cf465507dd71d507100c1").then(console.log);
                 </SyntaxHighlighter>

@@ -31,10 +31,6 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
       flexDirection: "row",
       justifyContent: "flex-start",
       alignItems: "center",
-      [breakpoints.down('md')]: {
-        alignItems: "center",
-      },
-
     },
     logo: {
       width: constants.generalUnit * 4,
@@ -84,42 +80,41 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
         cursor: "pointer",
       },
       display: "none",
-      width: "40px",
+      width: "30px",
       marginTop: "13px",
       zIndex: 400000,
-
-      height: "40px",
+      height: "30px",
       transition: "transform 0.4s ease-in",
     },
     wrapper: {
-      background: "black",
+      background: palette.additional["gray"][9],
       position: "absolute",
-      margin: "-1rem 0",
+      marginTop: "-3rem",
       left: 0,
       width: "100%",
-      height: "103vh",
+      height: "33vh",
       zIndex: 400000,
     },
     mobileLinkContainer: {
       zIndex: 1000,
       display: "flex",
       width: "100%",
-      marginTop: "15vh",
       height: "auto",
       flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
+      justifyContent: "flex-start",
+      alignItems: "flex-start",
+      marginLeft: "2rem",
     },
     mobileLinkWrapper: {
-      marginTop: "2rem",
+      marginTop: "1rem",
       display: "flex",
       flexDirection: "column",
-      justifyContent: "center",
+      justifyContent: "flex-start",
       alignItems: "center",
     },
     mobileLink: {
       textDecoration: "none",
-      fontSize: "2.5rem",
+      fontSize: "1rem",
       color: palette.primary.main,
       transition: "0.1s ease-in-out",
       '&:hover': {
@@ -152,20 +147,23 @@ const NavBar2: React.FC = () => {
   return (
     <nav className={classes.container}>
       {scrollToTop}
-        <Grid container justifyContent="center" alignItems="flex-start">
-          <Grid container alignItems="center">
-            <img
-              className={classes.logo}
-              src="/web3js.png"
-              alt="web3js logo"
-            />
-            <Typography variant="h5">
-              <a href="/" className={classes.navlink}>
-                Web3.js
-              </a>
-            </Typography>
+      {!isMobile && 
+      <Grid item alignItems="center" className={classes.linksMenu}>
+        <Grid container justifyContent="flex-start" alignItems="center">
+          <Grid item alignItems="flex-start">
+            <div style={{display: "flex", alignItems: "center"}}>
+              <img
+                className={classes.logo}
+                src="/web3js.png"
+                alt="web3js logo"
+              />
+              <Typography variant="h5">
+                <a href="/" className={classes.navlink}>
+                  Web3.js
+                </a>
+              </Typography>
+            </div>
           </Grid>
-          {!isMobile && <Grid item alignItems="center" className={classes.linksMenu}>
            <Typography variant="h5">
             <a
               target="_blank"
@@ -216,32 +214,69 @@ const NavBar2: React.FC = () => {
               <Trans>Blog</Trans>
             </a>
           </Typography>
+          </Grid>
+        </Grid>}
+      {(isMobile && !isNavVisible) && (
+      <Grid container justifyContent="flex-start" alignItems="center" className={classes.linksMenu}>
+        <Grid item >
+            <div style={{display: "flex", alignItems: "center"}}>
+              <img
+                className={classes.logo}
+                src="/web3js.png"
+                alt="web3js logo"
+              />
+              <Typography variant="h5">
+                <a href="/" className={classes.navlink}>
+                  Web3.js
+                </a>
+              </Typography>
+            </div>
         </Grid>
-        }
-        </Grid>
-        <div className={classes.menuToggle} onClick={toggleNav}>
-          <img src={darknav} alt="menuIcon" />
-        </div>
-      {(isMobile && isNavVisible) && (
-        <div className={classes.wrapper}>
-          <div className={classes.menuToggle} onClick={toggleNav} style={{ float: "right", margin: "1.7rem 1rem" }}>
-            <img src={nav} alt="menuIcon" />
+        <Grid item alignItems="flex-end">
+          <div className={classes.menuToggle} onClick={toggleNav}>
+          < img src={darknav} alt="menuIcon" />
           </div>
-          <ul className={classes.mobileLinkContainer}>
-            <div className={classes.mobileLinkWrapper} >
-              <a href="hhttps://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Docs</a>
+        </Grid>
+        </Grid>
+      )}
+      {(isMobile && isNavVisible) && (
+      <Grid item alignItems="center" className={classes.linksMenu}>
+         <Grid item alignItems="flex-start">
+            <div style={{display: "flex", alignItems: "center"}}>
+              <img
+                className={classes.logo}
+                src="/web3js.png"
+                alt="web3js logo"
+              />
+              <Typography variant="h5">
+                <a href="/" className={classes.navlink}>
+                  Web3.js
+                </a>
+              </Typography>
             </div>
-            <div className={classes.mobileLinkWrapper} >
-              <a href="hhttps://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>GitHub</a>
+          </Grid>
+         <Grid item alignItems="flex-end">
+          <div className={classes.wrapper}>
+            <div className={classes.menuToggle} onClick={toggleNav} style={{ float: "right", margin: "1.5rem .5rem" }}>
+              <img src={nav} alt="menuIcon" />
             </div>
-            <div className={classes.mobileLinkWrapper} >
-              <a href="https://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Community</a>
-            </div>
-            <div className={classes.mobileLinkWrapper} >
-              <a href="https://medium.com/chainsafe-systems" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Blog</a>
-            </div>
-          </ul>
-        </div>
+            <ul className={classes.mobileLinkContainer}>
+              <div className={classes.mobileLinkWrapper} >
+                <a href="hhttps://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Docs</a>
+              </div>
+              <div className={classes.mobileLinkWrapper} >
+                <a href="hhttps://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>GitHub</a>
+              </div>
+              <div className={classes.mobileLinkWrapper} >
+                <a href="https://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Community</a>
+              </div>
+              <div className={classes.mobileLinkWrapper} >
+                <a href="https://medium.com/chainsafe-systems" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Blog</a>
+              </div>
+            </ul>
+          </div>
+        </Grid>
+        </Grid>
       )}
     </nav >
   );
