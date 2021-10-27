@@ -3,8 +3,7 @@ import { ITheme, makeStyles, createStyles } from "@chainsafe/common-theme";
 import { Typography } from "@chainsafe/common-components";
 import clsx from "clsx";
 import { Trans } from "@lingui/macro";
-import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import ReactEmbedGist from "react-embed-gist";
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
@@ -129,6 +128,7 @@ const CodeSnippets: React.FC = () => {
           <Typography variant="h1" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
             <Trans>Examples</Trans>
           </Typography>
+          {/* use an embed instead of lib. */}
           <div className={clsx(classes.snippetsContainer)}>
             <article className={classes.snippetRow}>
               <div className={classes.bodyTextContainer}>
@@ -137,23 +137,23 @@ const CodeSnippets: React.FC = () => {
                 <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Get an Ethereum account balance with a simple query to an Etheruem node provider via JSON-RPC.</Typography>
               </div>
               <div className={classes.syntaxSection}>
-                <SyntaxHighlighter language="javascript" style={nightOwl} wrapLines={true} customStyle={{fontSize: "16px", fontWeight: "bold"}}>
-                web3.eth.getBalance("0x407d73d8a49eeb85d32cf465507dd71d507100c1").then(console.log);
-                </SyntaxHighlighter>
+                <ReactEmbedGist 
+                gist="luu-alex/a0ef27f3bfa5d6920ca960e95a73dc6b"
+                />
               </div>
             </article>
-            <article className={classes.snippetRow}>
+            {/* <article className={classes.snippetRow}>
               <div className={classes.bodyTextContainer}>
                 <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Interact with smart contracts.</Typography>
                 <br/>
                 <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Examine recent transfer events by querying or subscribing to their events.</Typography>
               </div>
               <div className={classes.syntaxSection}>
-                <SyntaxHighlighter language="javascript" style={nightOwl} wrapLines={true} customStyle={{fontSize: "16px", fontWeight: "bold"}}>
-                web3.eth.getBalance("0x407d73d8a49eeb85d32cf465507dd71d507100c1").then(console.log);
-                </SyntaxHighlighter>
+                <ReactEmbedGist 
+                gist="luu-alex/bea638fb1cec2d3b6e61fc16b6a8eed5"
+                />
               </div>
-            </article>
+            </article> */}
             <article className={classes.snippetRow}>
               <div className={classes.bodyTextContainer}>
                 <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Simplify your code with built-in utilities.</Typography>
@@ -161,9 +161,9 @@ const CodeSnippets: React.FC = () => {
                 <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Calculate the sha3 hash of your input data, convert your Ether values in wei, and more.</Typography>
               </div>
               <div className={classes.syntaxSection}>
-                <SyntaxHighlighter language="javascript" style={nightOwl} wrapLines={true} customStyle={{fontSize: "16px", fontWeight: "bold"}}>
-                web3.eth.getBalance("0x407d73d8a49eeb85d32cf465507dd71d507100c1").then(console.log);
-                </SyntaxHighlighter>
+                <ReactEmbedGist 
+                gist="luu-alex/a0ef27f3bfa5d6920ca960e95a73dc6b"
+                />
               </div>
             </article>
 
