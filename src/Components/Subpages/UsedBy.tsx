@@ -45,7 +45,7 @@ const useStyles = makeStyles(
         [breakpoints.down("md")]: {
           fontSize: "48px",
           lineHeight: "55px",
-          maxWidth: "90%",
+          maxWidth: "100%",
           textAlign: "left",
           marginBottom: constants.generalUnit * 2,
         }
@@ -84,6 +84,9 @@ const useStyles = makeStyles(
         [breakpoints.down('md')]: {
           flexDirection: "column",
           justifyContent: "space-evenly",
+        },
+        [breakpoints.down('sm')]: {
+          alignItems: "flex-start",
         }
       },
       img: {
