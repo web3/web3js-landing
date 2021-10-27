@@ -130,18 +130,6 @@ const CodeSnippets: React.FC = () => {
           </Typography>
           {/* use an embed instead of lib. */}
           <div className={clsx(classes.snippetsContainer)}>
-            {/* <article className={classes.snippetRow}>
-              <div className={classes.bodyTextContainer}>
-                <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Interact with smart contracts.</Typography>
-                <br/>
-                <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Examine recent transfer events by querying or subscribing to their events.</Typography>
-              </div>
-              <div className={classes.syntaxSection}>
-                <ReactEmbedGist 
-                gist="luu-alex/bea638fb1cec2d3b6e61fc16b6a8eed5"
-                />
-              </div>
-            </article> */}
             <article className={classes.snippetRow}>
               <div className={classes.bodyTextContainer}>
                 <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Simplify your code with built-in utilities.</Typography>
@@ -163,6 +151,18 @@ const CodeSnippets: React.FC = () => {
               <div className={classes.syntaxSection}>
                 <ReactEmbedGist 
                 gist="luu-alex/bea638fb1cec2d3b6e61fc16b6a8eed5"
+                />
+              </div>
+            </article>
+                        <article className={classes.snippetRow}>
+              <div className={classes.bodyTextContainer}>
+                <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Interact with smart contracts.</Typography>
+                <br/>
+                <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Examine recent transfer events by querying or subscribing to their events.</Typography>
+              </div>
+              <div className={classes.syntaxSection}>
+                <ReactEmbedGist 
+                gist="luu-alex/8685a331330454a16c5aadd7b24e637c"
                 />
               </div>
             </article>
