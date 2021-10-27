@@ -115,7 +115,12 @@ const useStyles = makeStyles(
           margin: "1rem 0",
           width: "100%",
         }
-      }
+      },
+      scrollable: {
+        maxHeight: "350px",
+        height: "350px",
+        overflowY: "scroll",
+      },
     })
   })
 
@@ -154,16 +159,19 @@ const CodeSnippets: React.FC = () => {
                 />
               </div>
             </article>
-                        <article className={classes.snippetRow}>
+            <article className={classes.snippetRow}>
               <div className={classes.bodyTextContainer}>
                 <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Interact with smart contracts.</Typography>
                 <br/>
                 <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Examine recent transfer events by querying or subscribing to their events.</Typography>
               </div>
               <div className={classes.syntaxSection}>
-                <ReactEmbedGist 
-                gist="luu-alex/8685a331330454a16c5aadd7b24e637c"
-                />
+                <div className={classes.scrollable}>
+                  <ReactEmbedGist 
+                  gist="luu-alex/8685a331330454a16c5aadd7b24e637c"
+                  // wrapperClass={classes.scrollable}
+                  />
+                </div>
               </div>
             </article>
           </div>
