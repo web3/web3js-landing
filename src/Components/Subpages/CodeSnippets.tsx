@@ -133,7 +133,6 @@ const CodeSnippets: React.FC = () => {
           <Typography variant="h1" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
             <Trans>Examples</Trans>
           </Typography>
-          {/* use an embed instead of lib. */}
           <div className={clsx(classes.snippetsContainer)}>
             <article className={classes.snippetRow}>
               <div className={classes.bodyTextContainer}>
@@ -169,7 +168,6 @@ const CodeSnippets: React.FC = () => {
                 <div className={classes.scrollable}>
                   <ReactEmbedGist 
                   gist="luu-alex/8685a331330454a16c5aadd7b24e637c"
-                  // wrapperClass={classes.scrollable}
                   />
                 </div>
               </div>
