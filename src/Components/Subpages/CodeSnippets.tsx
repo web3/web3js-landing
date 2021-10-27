@@ -117,8 +117,8 @@ const useStyles = makeStyles(
         }
       },
       scrollable: {
-        maxHeight: "350px",
-        height: "350px",
+        maxHeight: "330px",
+        height: "330px",
         overflowY: "scroll",
       },
     })
@@ -136,25 +136,13 @@ const CodeSnippets: React.FC = () => {
           <div className={clsx(classes.snippetsContainer)}>
             <article className={classes.snippetRow}>
               <div className={classes.bodyTextContainer}>
-                <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Simplify your code with built-in utilities.</Typography>
-                <br/>
-                <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Calculate the sha3 hash of your input data, convert your Ether values in wei, and more.</Typography>
-              </div>
-              <div className={classes.syntaxSection}>
-                <ReactEmbedGist 
-                gist="luu-alex/a0ef27f3bfa5d6920ca960e95a73dc6b"
-                />
-              </div>
-            </article>
-            <article className={classes.snippetRow}>
-              <div className={classes.bodyTextContainer}>
                 <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Fetch data from the Ethereum blockchain.</Typography>
                 <br/>
                 <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Get an Ethereum account balance with a simple query to an Etheruem node provider via JSON-RPC.</Typography>
               </div>
               <div className={classes.syntaxSection}>
                 <ReactEmbedGist 
-                gist="luu-alex/bea638fb1cec2d3b6e61fc16b6a8eed5"
+                gist="luu-alex/a0ef27f3bfa5d6920ca960e95a73dc6b"
                 />
               </div>
             </article>
@@ -170,6 +158,18 @@ const CodeSnippets: React.FC = () => {
                   gist="luu-alex/8685a331330454a16c5aadd7b24e637c"
                   />
                 </div>
+              </div>
+            </article>
+            <article className={classes.snippetRow}>
+              <div className={classes.bodyTextContainer}>
+                <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Simplify your code with built-in utilities.</Typography>
+                <br/>
+                <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Calculate the sha3 hash of your input data, convert your Ether values in wei, and more.</Typography>
+              </div>
+              <div className={classes.syntaxSection}>
+                <ReactEmbedGist 
+                gist="luu-alex/bea638fb1cec2d3b6e61fc16b6a8eed5"
+                />
               </div>
             </article>
           </div>
