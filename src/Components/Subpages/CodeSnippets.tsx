@@ -130,18 +130,6 @@ const CodeSnippets: React.FC = () => {
           </Typography>
           {/* use an embed instead of lib. */}
           <div className={clsx(classes.snippetsContainer)}>
-            <article className={classes.snippetRow}>
-              <div className={classes.bodyTextContainer}>
-                <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Fetch data from the Ethereum blockchain.</Typography>
-                <br/>
-                <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Get an Ethereum account balance with a simple query to an Etheruem node provider via JSON-RPC.</Typography>
-              </div>
-              <div className={classes.syntaxSection}>
-                <ReactEmbedGist 
-                gist="luu-alex/a0ef27f3bfa5d6920ca960e95a73dc6b"
-                />
-              </div>
-            </article>
             {/* <article className={classes.snippetRow}>
               <div className={classes.bodyTextContainer}>
                 <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Interact with smart contracts.</Typography>
@@ -166,7 +154,18 @@ const CodeSnippets: React.FC = () => {
                 />
               </div>
             </article>
-
+            <article className={classes.snippetRow}>
+              <div className={classes.bodyTextContainer}>
+                <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Fetch data from the Ethereum blockchain.</Typography>
+                <br/>
+                <Typography variant="body1" className={clsx(classes.bold, classes.singleColText, classes.bodyText)}>Get an Ethereum account balance with a simple query to an Etheruem node provider via JSON-RPC.</Typography>
+              </div>
+              <div className={classes.syntaxSection}>
+                <ReactEmbedGist 
+                gist="luu-alex/bea638fb1cec2d3b6e61fc16b6a8eed5"
+                />
+              </div>
+            </article>
           </div>
         </article>
       </div >
