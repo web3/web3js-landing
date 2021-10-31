@@ -78,6 +78,7 @@ const useStyles = makeStyles(
         display: "flex",
         flexDirection: "column",
         width: "100%",
+        margin: "2.5rem 0",
         padding: constants.generalUnit * 4,
         [breakpoints.down('md')]: {
           flexDirection: "column",
@@ -110,6 +111,7 @@ const useStyles = makeStyles(
         textDecoration: "none",
       },
       syntaxSection: {
+        marginTop: "2rem",
         width: "50%",
         [breakpoints.down('md')]: {
           margin: "1rem 0",
@@ -117,8 +119,8 @@ const useStyles = makeStyles(
         }
       },
       scrollable: {
-        maxHeight: "330px",
-        height: "330px",
+        maxHeight: "320px",
+        height: "320px",
         overflowY: "scroll",
       },
     })
