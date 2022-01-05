@@ -4,9 +4,8 @@ import {
 } from "@chainsafe/common-theme";
 import { Grid, Typography, useScrollToTop } from "@chainsafe/common-components";
 import { Trans } from "@lingui/macro"
+import { MobileNav } from "./MobileNav";
 
-import nav from "./nav.svg";
-import darknav from "./darknav.svg"
 
 const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: ITheme) => {
   return createStyles({
@@ -74,56 +73,6 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
           marginRight: `${constants.generalUnit * 2}px`
         }
       },
-    menuToggle: {
-      [breakpoints.down(1170)]: {
-        display: "block",
-        cursor: "pointer",
-      },
-      display: "none",
-      width: "30px",
-      marginTop: "13px",
-      zIndex: 400000,
-      height: "30px",
-      transition: "transform 0.4s ease-in",
-    },
-    wrapper: {
-      background: palette.additional["gray"][9],
-      position: "absolute",
-      marginTop: "-3rem",
-      left: 0,
-      width: "100%",
-      height: "33vh",
-      zIndex: 400000,
-    },
-    mobileLinkContainer: {
-      zIndex: 1000,
-      display: "flex",
-      width: "100%",
-      height: "auto",
-      flexDirection: "column",
-      justifyContent: "flex-start",
-      alignItems: "flex-end",
-      paddingRight: "16px",
-    },
-    mobileLinkWrapper: {
-      marginTop: "1rem",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "flex-start",
-      alignItems: "center",
-    },
-    mobileLink: {
-      textDecoration: "none",
-      fontSize: "1rem",
-      color: palette.primary.main,
-      transition: "0.1s ease-in-out",
-      '&:hover': {
-        color: palette.additional["gray"][5],
-      },
-      '&:active': {
-        color: palette.primary.main,
-      },
-    },
     flex: {
       display: "flex",
       alignItems: "center",
@@ -132,7 +81,7 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
 })
 
 
-const NavBar2: React.FC = () => {
+const NavBar: React.FC = () => {
 
   const classes = useStyles();
 
@@ -143,6 +92,7 @@ const NavBar2: React.FC = () => {
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible);
   }
+
   const scrollToTop = useScrollToTop();
 
   return (
@@ -242,55 +192,15 @@ const NavBar2: React.FC = () => {
                 </a>
               </Typography>
             </div>
-        </Grid>
-        <Grid item alignItems="flex-end">
-          <div className={classes.menuToggle} onClick={toggleNav}>
-          < img src={darknav} alt="menuIcon" />
-          </div>
-        </Grid>
-        </Grid>
-      )}
-      {(isMobile && isNavVisible) && (
-      <Grid item alignItems="center" className={classes.linksMenu}>
-         <Grid item alignItems="flex-start">
-            <div style={{display: "flex", alignItems: "center"}}>
-              <img
-                className={classes.logo}
-                src="/web3js.png"
-                alt="web3js logo"
-              />
-              <Typography variant="h5">
-                <a href="/" className={classes.navlink}>
-                  Web3.js
-                </a>
-              </Typography>
-            </div>
           </Grid>
-         <Grid item alignItems="flex-end">
-          <div className={classes.wrapper}>
-            <div className={classes.menuToggle} onClick={toggleNav} style={{ float: "right", margin: "1.5rem .5rem" }}>
-              <img src={nav} alt="menuIcon" />
-            </div>
-            <ul className={classes.mobileLinkContainer}>
-              <div className={classes.mobileLinkWrapper} >
-                <a href="https://web3js.readthedocs.io/en/v1.5.2/" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Docs</a>
-              </div>
-              <div className={classes.mobileLinkWrapper} >
-                <a href="https://github.com/chainsafe/web3.js" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>GitHub</a>
-              </div>
-              <div className={classes.mobileLinkWrapper} >
-                <a href="https://discord.com/invite/xSAwrnCWcg" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Community</a>
-              </div>
-              <div className={classes.mobileLinkWrapper} >
-                <a href="https://medium.com/chainsafe-systems" target="_blank" rel="noopener noreferrer" className={classes.mobileLink}>Blog</a>
-              </div>
-            </ul>
-          </div>
-        </Grid>
+          <Grid item alignItems="flex-end">
+            <MobileNav/>
+          </Grid>
         </Grid>
       )}
+   
     </nav >
   );
 };
 
-export default NavBar2
+export default NavBar

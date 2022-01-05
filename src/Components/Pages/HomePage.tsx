@@ -8,7 +8,7 @@ import FactBanner from "../Subpages/FactBanner"
 import CodeSnippets from "../Subpages/CodeSnippets"
 import InternalNav from "../Modules/InternalNav"
 import Footer from "../Modules/Footer"
-import NavBar2 from "../Modules/Navbar2"
+import NavBar2 from "../Modules/NavBar"
 import UsedBy from "../Subpages/UsedBy"
 const HomePage: React.FC = () => {
   const { lang } = useParams()
