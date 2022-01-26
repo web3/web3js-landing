@@ -4,6 +4,9 @@ import { motion, useCycle } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
 import { MobileMenu } from "./MobileMenu";
 import "./styles.css";
+import {
+  createStyles, ITheme, makeStyles
+} from "@chainsafe/common-theme";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -25,10 +28,24 @@ const sidebar = {
   }
 };
 
+const useStyles = makeStyles(({ constants}: ITheme) => {
+  return createStyles({
+    background: {
+      position: "absolute",
+      top: 0, left: 0, bottom: 0,
+      height: "100vh",
+      width: "100vw",
+      background: "white",
+    },
+    
+  })
+})
+
+
 export const MobileNav = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const {dynamicHeight} = useDimensions();
-  console.log(dynamicHeight);
+  const classes = useStyles();
   return (
     <motion.nav
       initial={false}
@@ -36,7 +53,7 @@ export const MobileNav = () => {
       custom={dynamicHeight}
       
     >
-      <motion.div className="background" variants={sidebar} />
+      <motion.div className={classes.background} variants={sidebar} />
       <MobileMenu />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>

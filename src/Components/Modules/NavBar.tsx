@@ -15,7 +15,7 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
       justifyContent: "flex-start",
       alignItems: "center",
       height: constants.generalUnit * 9,
-      position: "fixed",
+      position: "absolute",
       padding: "0.7rem",
       zIndex: zIndex?.layer4,
       background: "#fafafa",
