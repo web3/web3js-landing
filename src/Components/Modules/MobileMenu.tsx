@@ -27,19 +27,19 @@ const navlinks: NavLink[] = [
     linkUrl: "https://web3js.readthedocs.io/en/v1.5.2/"
   },
   {
-    id: 2,
-    name: "Maintainers",
-    linkUrl: "https://web3js.readthedocs.io/en/v1.5.2/"
-  },
-  {
     id: 3,
     name: "Join Discord",
     linkUrl: "https://discord.com/invite/xSAwrnCWcg"
   },
   {
     id: 4,
-    name: "Updates",
+    name: "Blog",
     linkUrl: "https://medium.com/chainsafe-systems"
+  },
+  {
+    id: 5,
+    name: "GitHub",
+    linkUrl: "https://github.com/chainsafe/web3.js"
   },
 ]
 

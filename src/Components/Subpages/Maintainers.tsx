@@ -22,13 +22,12 @@ const useStyles = makeStyles(
           alignItems: "center",
           margin: "0 auto",
         },
-        [breakpoints.down(799)]: {
+        [breakpoints.down(1099)]: {
           padding: "80px 20px"
-        }
+        },
       },
       gridContainer: {
         maxWidth: "1200px",
-        padding: "0 32px",
       },
       titleContainer: {
         display: "flex",

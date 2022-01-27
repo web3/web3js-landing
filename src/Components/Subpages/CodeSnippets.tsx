@@ -15,8 +15,11 @@ const useStyles = makeStyles(
         justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
-        [breakpoints.down(767)]: {
+        [breakpoints.down(1099)]: {
           alignItems: "flex-start",
+          padding: "0 40px",
+        },
+        [breakpoints.down(767)]: {
           padding: "0 20px",
         },
       },

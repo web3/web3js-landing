@@ -163,7 +163,7 @@ const NavBar: React.FC = () => {
                 href="https://github.com/chainsafe/web3.js"
                 className={classes.navlink}
               >
-                <Trans>Github</Trans>
+                <Trans>GitHub</Trans>
               </a>
             </Typography>
           </Grid>
