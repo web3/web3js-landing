@@ -32,7 +32,7 @@ const useStyles = makeStyles(
       titleContainer: {
         display: "flex",
         flexDirection: "column",
-        margin: "2rem 1rem",
+        margin: "1.5rem 1rem 3rem 1rem",
       },
       bold: {
         fontWeight: "bolder",
@@ -48,6 +48,11 @@ const useStyles = makeStyles(
           lineHeight: "42px",
           marginBottom: constants.generalUnit * 2,
         }
+      },
+      bodyText: {
+        fontSize: "18px",
+        lineHeight: "26px",
+        maxWidth: "500px",
       },
       timelineItem: {
         marginTop: "20px",
@@ -134,6 +139,11 @@ const Maintainers: React.FC = () => {
           <Typography variant="h2" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
             <Trans>
               Project history
+            </Trans>
+          </Typography>
+          <Typography variant="body1" className={clsx(classes.bodyText)}>
+            <Trans>
+              Since 2014, Web3.js is an open-source collection of libraries which allow you to interact with a local or remote Ethereum node. Throughout its rich history, Web3.js would not have been possible without the vision, expertise and contributions made by committed individuals and organizations throughout the years.
             </Trans>
           </Typography>
         </div>
