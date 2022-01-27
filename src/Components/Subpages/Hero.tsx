@@ -130,6 +130,7 @@ const Hero: React.FC = () => {
             </Trans>
           </Typography>
           <br />
+          <br />
           <div className={classes.buttonGroup}>
             <Button size="large" variant="danger" className={clsx(classes.bold, classes.lightButton)}
             >

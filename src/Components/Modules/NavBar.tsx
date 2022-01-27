@@ -139,7 +139,7 @@ const NavBar: React.FC = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://medium.com/chainsafe-systems"
+                href="https://medium.com/chainsafe-systems/tagged/ethereum"
                 className={classes.navlink}
               >
                 <Trans>Blog</Trans>

@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
             </Grid>
             <Grid item className={classes.item}>
               <a
-                href="https://app.files.chainsafe.io"
+                href="https://web3js.readthedocs.io/en/v1.5.2/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -110,34 +110,12 @@ const Footer: React.FC = () => {
             </Grid>
             <Grid item className={classes.item}>
               <a
-                href="/terms-of-service"
+                href="https://web3js.readthedocs.io/en/v1.5.2/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
                 <Typography variant="h5" className={classes.bold}>
                   Documentation
-                  </Typography>
-              </a>
-            </Grid>
-            <Grid item className={classes.item}>
-              <a
-                href="/privacy-policy"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Typography variant="h5" className={classes.bold}>
-                  API
-                  </Typography>
-              </a>
-            </Grid>
-            <Grid item className={classes.item}>
-              <a
-                href="https://chainsafe.io"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Typography variant="h5" className={classes.bold}>
-                  About ChainSafe
                   </Typography>
               </a>
             </Grid>
@@ -172,18 +150,7 @@ const Footer: React.FC = () => {
           </Grid>
           <Grid item className={classes.item}>
             <a
-              href="https://twitter.com/ChainSafeth"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Typography variant="h5" className={classes.bold}>
-                Twitter
-              </Typography>
-            </a>
-          </Grid>
-          <Grid item className={classes.item}>
-            <a
-              href="https://twitter.com/ChainSafeth"
+              href="hhttps://medium.com/chainsafe-systems/tagged/ethereum"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -205,7 +172,7 @@ const Footer: React.FC = () => {
         >
           <Grid item>
             <Typography component="p" variant="body1" className={classes.copyright}>
-              &copy; {currentYear} ChainSafe Systems, <Trans>All Rights Reserved.</Trans>
+              &copy; {currentYear} Maintained by ChainSafe Systems
             </Typography>
           </Grid>
         </Grid>
