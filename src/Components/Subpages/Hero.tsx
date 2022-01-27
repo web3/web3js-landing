@@ -21,10 +21,10 @@ const useStyles = makeStyles(
           minHeight: "60vh",
         },
         [breakpoints.up(2560)]: {
-          height: "calc(100% - 600px)",
-          paddingTop: "300px",
-          paddingBottom: "300px",
-          minHeight: "60vh",
+          height: "calc(100% - 200px)",
+          paddingTop: "100px",
+          paddingBottom: "100px",
+          minHeight: "40vh",
         },
         [breakpoints.down(1300)]: {
           height: "calc(100% - 140px)",

@@ -125,15 +125,7 @@ const NavBar: React.FC = () => {
                 <Trans>Tutorial</Trans>
               </a>
             </Typography>
-             */}
-            <Typography variant="h5">
-              <a
-                href="/maintainers"
-                className={classes.navlink}
-              >
-                <Trans>History</Trans>
-              </a>
-            </Typography>
+      */}
             <Typography variant="h5">
               <a
                 target="_blank"

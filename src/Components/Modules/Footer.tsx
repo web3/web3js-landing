@@ -9,10 +9,11 @@ const useStyles = makeStyles(({ palette, constants, breakpoints }: ITheme) => {
       padding: "2rem 0 2rem 0",
       [breakpoints.up("xl")]: {
         maxWidth: "2560px",
-        padding: `80px 72px 80px 72px`,
+        padding: "80px 72px",
       },
       [breakpoints.up("3800")]: {
-        maxWidth: "2560px",
+        width: "100%",
+        maxWidth: "unset",
       },
       paddingLeft: constants.generalUnit * 2,
       background: palette.additional["gray"][10],

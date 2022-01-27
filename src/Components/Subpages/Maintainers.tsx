@@ -1,6 +1,6 @@
 import React from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
-import { Button, Typography } from "@chainsafe/common-components";
+import { Typography } from "@chainsafe/common-components";
 import clsx from "clsx";
 import { Trans } from "@lingui/macro";
 
@@ -8,13 +8,19 @@ const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
     return createStyles({
       container: {
-        maxWidth: "1200px",
         display: "flex",
-        justifyContent: "flex-start",
+        maxWidth: "1200px",
         flexDirection: "column",
-        alignItems: "flex-start",
         [breakpoints.up(800)]:{
           padding: "80px 96px",
+          justifyContent: "flex-start",
+          alignItems: "flex-start",
+        },
+        [breakpoints.up(1800)]: {
+          padding: "80px 0",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "0 auto",
         },
         [breakpoints.down(799)]: {
           padding: "80px 20px"

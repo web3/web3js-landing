@@ -38,6 +38,7 @@ const useStyles = makeStyles(
       singleColText: {
         textAlign: "left",
         maxWidth: 420,
+        fontWeight: 600,
       },
       titleText: {
         textAlign: "center",
@@ -72,7 +73,6 @@ const useStyles = makeStyles(
         display: "flex",
         [breakpoints.down('md')]: {
           flexDirection: "column",
-          justifyContent: "space-evenly",
         }
       },
       fact: {
@@ -83,16 +83,18 @@ const useStyles = makeStyles(
         maxWidth: "350px",
         borderRadius: constants.generalUnit,
         border: "1px solid #e8e8e8",
-        padding: "1.5rem 1rem",
+        padding: "2.5rem 2rem",
         marginRight: constants.generalUnit * 3,
         [breakpoints.down('md')]: {
-          margin: ".5rem 0 .5rem 0",
-          justifyContent: "space-evenly",
+          maxWidth: "100%",
+          marginBottom: "1rem",
         },
         "& > span": {
           fontSize: "18px",
           maxWidth: "350px",
-
+          [breakpoints.down('md')]: {
+            maxWidth: "100%",
+          },
         },
       },
       arrow: {
@@ -128,9 +130,9 @@ const Why: React.FC = () => {
                   <Trans>Interact with smart contracts as JS objects.</Trans>
                 </a>
               </Typography>
-              <a href="/" target="__blank" rel="noopener noreferrer">
+              {/* <a href="/" target="__blank" rel="noopener noreferrer">
                 <img className={classes.arrow} src="/arrow.png" alt="orange arrow link" />
-              </a>
+              </a> */}
             </div>
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={classes.singleColText}>
@@ -138,9 +140,9 @@ const Why: React.FC = () => {
                   <Trans>Subscribe to specific on-chain events.</Trans>
                 </a>
               </Typography>
-              <a href="/" target="__blank" rel="noopener noreferrer">
+              {/* <a href="/" target="__blank" rel="noopener noreferrer">
                 <img className={classes.arrow} src="/arrow.png" alt="orange arrow link" />
-              </a>
+              </a> */}
             </div>
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={clsx(classes.singleColText)}>
@@ -148,9 +150,9 @@ const Why: React.FC = () => {
                   <Trans>Interact with the Ethereum Name Service.</Trans>
                 </a>
               </Typography>
-              <a href="/" target="__blank" rel="noopener noreferrer">
+              {/* <a href="/" target="__blank" rel="noopener noreferrer">
                 <img className={classes.arrow} src="/arrow.png" alt="orange arrow link" />
-              </a>
+              </a> */}
             </div>
           </div>
           <div className={clsx(classes.marginTop, classes.factsContainer)}>
@@ -160,9 +162,9 @@ const Why: React.FC = () => {
                   <Trans>Utilities with built-in helpers for Ethereum dapps and web3 packages.</Trans>
                 </a>
               </Typography>
-              <a href="/" target="__blank" rel="noopener noreferrer">
+              {/* <a href="/" target="__blank" rel="noopener noreferrer">
                 <img className={classes.arrow} src="/arrow.png" alt="orange arrow link" />
-              </a>
+              </a> */}
             </div>
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={classes.singleColText}>
@@ -170,9 +172,9 @@ const Why: React.FC = () => {
                   <Trans>Get block and state information from Ethereum nodes. </Trans>
                 </a>
               </Typography>
-              <a href="/" target="__blank" rel="noopener noreferrer">
+              {/* <a href="/" target="__blank" rel="noopener noreferrer">
                 <img className={classes.arrow} src="/arrow.png" alt="orange arrow link" />
-              </a>
+              </a> */}
             </div>
             <div className={clsx(classes.levitate, classes.fact)}>
               <Typography variant="body1" className={clsx(classes.singleColText)}>
@@ -180,9 +182,9 @@ const Why: React.FC = () => {
                   <Trans>Create accounts, process and sign transactions.</Trans>
                 </a>
               </Typography>
-              <a href="/" target="__blank" rel="noopener noreferrer">
+              {/* <a href="/" target="__blank" rel="noopener noreferrer">
                 <img className={classes.arrow} src="/arrow.png" alt="orange arrow link" />
-              </a>
+              </a> */}
             </div>
           </div>
         </article>
