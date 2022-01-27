@@ -13,16 +13,21 @@ const useStyles = makeStyles(
         justifyContent: "flex-start",
         flexDirection: "column",
         alignItems: "flex-start",
-        padding: "0 90px",
+        [breakpoints.up(800)]:{
+          padding: "80px 96px",
+        },
+        [breakpoints.down(799)]: {
+          padding: "80px 20px"
+        }
       },
-      heroContentContainer: {
+      gridContainer: {
+        maxWidth: "1200px",
+        padding: "0 32px",
+      },
+      titleContainer: {
         display: "flex",
         flexDirection: "column",
-        padding: "1rem 3rem",
-        marginBottom: "24px",
-      },
-      semibold: {
-        fontWeight: 800,
+        margin: "2rem 1rem",
       },
       bold: {
         fontWeight: "bolder",
@@ -30,36 +35,24 @@ const useStyles = makeStyles(
       reduceLeading: {
         letterSpacing: "-1.25px",
       },
-      white: {
-        color: palette.common.white.main,
-      },
-      singleColText: {
-        [breakpoints.up('md')]: {
-          textAlign: "center",
-        },
-        [breakpoints.down('md')]: {
-          textAlign: "left"
-        },
-        maxWidth: 600,
-      },
-      orange: {
-        color: palette.primary.main,
-      },
       titleText: {
-        textAlign: "center",
-        maxWidth: "800px",
+        textAlign: "left",
+        marginBottom: constants.generalUnit * 4,
         [breakpoints.down("md")]: {
-          textAlign: "left",
-          fontSize: "56px",
-          lineHeight: "63px",
+          fontSize: "36px",
+          lineHeight: "42px",
+          marginBottom: constants.generalUnit * 2,
         }
       },
       timelineItem: {
-        marginLeft: "20px",
+        marginTop: "20px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "flex-start",
         marginBottom: constants.generalUnit * 4,
+        [breakpoints.down('799px')]: {
+          marginLeft: 0,
+        }
       },
       timelineDate: {
         marginTop: constants.generalUnit,
@@ -87,12 +80,11 @@ const useStyles = makeStyles(
         lineHeight: "27px",
         marginLeft: constants.generalUnit * 4,
         maxWidth: "500px",
-        [breakpoints.down('sm')]: {
+        [breakpoints.down('md')]: {
           maxWidth: "80%",
           fontSize: "16px",
           lineHeight: `${constants.generalUnit * 3}px`,
         }
-        
       },
       timelineAvi: {
         margin: `0 ${constants.generalUnit * 4}px`,
@@ -112,6 +104,9 @@ const useStyles = makeStyles(
         background: palette.additional["gray"][4],
         top: 24, left: -14,
         bottom: 0,
+        [breakpoints.down('md')]: {
+          height: "115%",
+        }
       },
       avatar: {
         "& > img": {
@@ -129,7 +124,8 @@ const Maintainers: React.FC = () => {
   const classes = useStyles();
   return (
       <div className={classes.container}>
-        <div className={classes.heroContentContainer}>
+      <div className={classes.gridContainer}>
+        <div className={classes.titleContainer}>
           <Typography variant="h2" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
             <Trans>
               Project history
@@ -224,6 +220,7 @@ const Maintainers: React.FC = () => {
             </div>
           </span>
         </span>
+      </div>
     </div>
   )
 }

@@ -84,12 +84,11 @@ const useStyles = makeStyles(
         [breakpoints.down('md')]: {
           flexWrap: "wrap",
           justifyContent: "flex-start",
-          marginTop: "8px",
+          marginTop: "16px",
         }
       },
       img: {
-        marginRight: "24px",
-        marginBottom: "24px",
+        margin: "24px 16px 24px 0",
         transition: "all 0.3s ease-in",
         "&:hover": {
           transform: "translateY(-5px)",

@@ -17,6 +17,7 @@ const useStyles = makeStyles(
         alignItems: "center",
         [breakpoints.down(767)]: {
           alignItems: "flex-start",
+          padding: "0 20px",
         },
       },
       gridContainer: {
@@ -127,13 +128,10 @@ const CodeSnippets: React.FC = () => {
     <section className={classes.container}>
       <div className={classes.gridContainer}>
         <article className={classes.contentContainer}>
-          {/* <Typography variant="h2" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
-            <Trans>Examples</Trans>
-          </Typography> */}
           <div className={clsx(classes.snippetsContainer)}>
             <article className={classes.snippetRow}>
               <div className={classes.bodyTextContainer}>
-                <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Fetch data from the Ethereum blockchain.</Typography>
+                <Typography variant="h4" className={clsx(classes.bold)}>Fetch data from the Ethereum blockchain.</Typography>
                 <br/>
                 <Typography variant="body1" className={clsx( classes.singleColText, classes.bodyText)}>Get an Ethereum account balance with a simple query to a node provider via JSON-RPC.</Typography>
               </div>
@@ -145,7 +143,7 @@ const CodeSnippets: React.FC = () => {
             </article>
             <article className={classes.snippetRow}>
               <div className={classes.bodyTextContainer}>
-                <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Interact with smart contracts.</Typography>
+                <Typography variant="h4" className={clsx(classes.bold)}>Interact with smart contracts.</Typography>
                 <br/>
                 <Typography variant="body1" className={clsx( classes.singleColText, classes.bodyText)}>Examine recent transfer events by querying or subscribing to their events.</Typography>
               </div>
@@ -159,7 +157,7 @@ const CodeSnippets: React.FC = () => {
             </article>
             <article className={classes.snippetRow}>
               <div className={classes.bodyTextContainer}>
-                <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Simplify your code with built-in utilities.</Typography>
+                <Typography variant="h4" className={clsx(classes.bold)}>Simplify your code with built-in utilities.</Typography>
                 <br/>
                 <Typography variant="body1" className={clsx( classes.singleColText, classes.bodyText)}>Calculate the sha3 hash of your input data, convert your Ether values in wei, and more.</Typography>
               </div>
