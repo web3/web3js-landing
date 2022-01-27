@@ -83,7 +83,7 @@ const useStyles = makeStyles(
         maxWidth: "350px",
         borderRadius: constants.generalUnit,
         border: "1px solid #e8e8e8",
-        padding: "2.5rem 2rem",
+        padding: "1.5rem 2rem",
         marginRight: constants.generalUnit * 3,
         [breakpoints.down('md')]: {
           maxWidth: "100%",
