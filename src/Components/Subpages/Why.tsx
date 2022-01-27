@@ -88,6 +88,7 @@ const useStyles = makeStyles(
         [breakpoints.down('md')]: {
           maxWidth: "100%",
           marginBottom: "1rem",
+          justifyContent: "flex-start",
         },
         "& > span": {
           fontSize: "18px",
