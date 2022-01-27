@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Trans } from "@lingui/macro";
 
 const useStyles = makeStyles(
-  ({ constants, palette, breakpoints, typography }: ITheme) => {
+  ({ constants, palette, breakpoints }: ITheme) => {
     return createStyles({
       container: {
         overflowX: "hidden",

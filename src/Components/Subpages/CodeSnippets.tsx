@@ -2,11 +2,10 @@ import React from "react";
 import { ITheme, makeStyles, createStyles } from "@chainsafe/common-theme";
 import { Typography } from "@chainsafe/common-components";
 import clsx from "clsx";
-import { Trans } from "@lingui/macro";
 import ReactEmbedGist from "react-embed-gist";
 
 const useStyles = makeStyles(
-  ({ constants, palette, breakpoints, typography }: ITheme) => {
+  ({ constants, palette, breakpoints }: ITheme) => {
     return createStyles({
       container: {
         overflowX: "hidden",

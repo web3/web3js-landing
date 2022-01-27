@@ -1,8 +1,6 @@
 import React, { useEffect } from "react"
 import { useParams } from "@chainsafe/common-components"
 import { useLanguageContext } from "../../LanguageContext"
-import Footer from "../Modules/Footer"
-import NavBar2 from "../Modules/NavBar"
 import Maintainers from "../Subpages/Maintainers"
 
 const MaintainersPage: React.FC = () => {
@@ -22,9 +20,7 @@ const MaintainersPage: React.FC = () => {
   )
   return (
     <div>
-      {/* <NavBar2/> */}
       <Maintainers/>
-      {/* <Footer/> */}
     </div>
   )
 }
