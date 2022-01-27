@@ -20,7 +20,7 @@ const useStyles = makeStyles(
         },
       },
       gridContainer: {
-        padding: "40px",
+        padding: "30px",
         width: "calc(100% - 16px)",
         display: "block",
         maxWidth: "1200px",

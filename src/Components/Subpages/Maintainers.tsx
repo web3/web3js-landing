@@ -8,32 +8,18 @@ const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
     return createStyles({
       container: {
-        [breakpoints.up(1300)]: {
-          height: "calc(100% - 180px)",
-          paddingTop: "90px",
-          paddingBottom: "90px",
-        },
-        [breakpoints.down(1300)]: {
-          height: "calc(100% - 140px)",
-          paddingTop: "70px",
-          paddingBottom: "70px",
-        },
-        [breakpoints.down(1079)]: {
-          height: "calc(100% - 100px)",
-          paddingTop: "50px",
-          paddingBottom: "50px",
-        },
         maxWidth: "1200px",
         display: "flex",
         justifyContent: "flex-start",
         flexDirection: "column",
         alignItems: "flex-start",
+        padding: "0 90px",
       },
       heroContentContainer: {
         display: "flex",
         flexDirection: "column",
-        padding: "1rem 2rem",
-        marginBottom: "50px",
+        padding: "1rem 3rem",
+        marginBottom: "24px",
       },
       semibold: {
         fontWeight: 800,
@@ -68,32 +54,15 @@ const useStyles = makeStyles(
           lineHeight: "63px",
         }
       },
-      buttonGroup: {
-        display: "flex",
-      },
-      noUnderline: {
-        textDecoration: "none",
-      },
-      lightButton: {
-        background: palette.additional["gray"][4],
-        color: palette.common.black.main,
-        fontSize: "18px",
-        lineHeight: "26px",
-        marginRight: constants.generalUnit * 2,
-        padding: constants.generalUnit,
-        transition: "all ease-in-out 0.2s",
-        "&:hover, &:active, &:focus": {
-          background: palette.primary.main,
-        }
-      },
       timelineItem: {
+        marginLeft: "20px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "flex-start",
-        marginBottom: "32px",
+        marginBottom: constants.generalUnit * 4,
       },
       timelineDate: {
-        marginTop: "60px",
+        marginTop: constants.generalUnit,
         fontSize: "20px",
         textAlign: "center",
       },
@@ -103,12 +72,12 @@ const useStyles = makeStyles(
       timelineHeader: {
         fontSize: "20px",
         fontWeight: 600,
-        marginLeft: "2rem",
-        marginBottom: "1rem",
+        marginLeft: constants.generalUnit * 4,
+        marginBottom: constants.generalUnit * 2,
         [breakpoints.down('sm')]: {
           marginBottom: ".5rem",
           fontSize: "18px",
-          lineHeight: "25px",
+          lineHeight: `${constants.generalUnit * 3}px`,
         }
       },
       timelineBody: {
@@ -116,17 +85,17 @@ const useStyles = makeStyles(
         justifyContent: "space-between",
         fontSize: "18px",
         lineHeight: "27px",
-        marginLeft: "2rem",
+        marginLeft: constants.generalUnit * 4,
         maxWidth: "500px",
         [breakpoints.down('sm')]: {
           maxWidth: "80%",
           fontSize: "16px",
-          lineHeight: "25px",
+          lineHeight: `${constants.generalUnit * 3}px`,
         }
         
       },
       timelineAvi: {
-        margin: "0 2rem",
+        margin: `0 ${constants.generalUnit * 4}px`,
       },
       dot: {
         width: "26px",
@@ -139,16 +108,18 @@ const useStyles = makeStyles(
       line: {
         position: "absolute",
         width: "2px",
-        height: "120%",
-        background: palette.additional["gray"][6],
+        height: "105%",
+        background: palette.additional["gray"][4],
         top: 24, left: -14,
         bottom: 0,
       },
       avatar: {
-        width: "60px",
-        height: "60px",
-        background: "#b8b8b8",
-        borderRadius: "50%",
+        "& > img": {
+          borderRadius: "50%",
+          objectFit: "contain",
+          width: "60px",
+          height: "60px",
+        }
       },
 
     })
@@ -168,7 +139,7 @@ const Maintainers: React.FC = () => {
         <span className={classes.timelineItem}>
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
-              <img src="" />
+              <img src="/jeffrey.jpg" alt="Jeffrey Wilcke"/>
             <div className={classes.timelineDate}>2014</div>
             </div>
           </span>
@@ -182,7 +153,7 @@ const Maintainers: React.FC = () => {
         <span className={classes.timelineItem}>
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
-              <img src="" />
+              <img src="/marek.jpeg" alt="Marek Kotewicz" />
             <div className={classes.timelineDate}>2014</div>
             </div>
           </span>
@@ -196,7 +167,7 @@ const Maintainers: React.FC = () => {
         <span className={classes.timelineItem}>
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
-              <img src="" />
+              <img src="fabian.jpeg" alt="Fabian Vogelsteller" />
             <div className={classes.timelineDate}>2015</div>
             </div>
           </span>
@@ -210,7 +181,7 @@ const Maintainers: React.FC = () => {
         <span className={classes.timelineItem}>
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
-              <img src="" />
+              <img src="/samuel.jpeg" alt="Samuel Furter" />
             <div className={classes.timelineDate}>2018</div>
             </div>
           </span>
@@ -224,7 +195,7 @@ const Maintainers: React.FC = () => {
         <span className={classes.timelineItem}>
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
-              <img src="" />
+              <img src="/ethereumjs.png" alt="ethereumjs" />
             <div className={classes.timelineDate}>2019</div>
             </div>
           </span>
@@ -240,7 +211,7 @@ const Maintainers: React.FC = () => {
         <span className={classes.timelineItem}>
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
-              <img src="" />
+              <img src="chainsafe.png" alt="ChainSafe" />
             <div className={classes.timelineDate}>2020</div>
             </div>
           </span>

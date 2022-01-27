@@ -4,6 +4,7 @@ import { useLanguageContext } from "../../LanguageContext"
 import Footer from "../Modules/Footer"
 import NavBar2 from "../Modules/NavBar"
 import Maintainers from "../Subpages/Maintainers"
+import UsedBy2 from "../Subpages/Usedby2"
 
 const MaintainersPage: React.FC = () => {
   const { lang } = useParams()
@@ -23,7 +24,7 @@ const MaintainersPage: React.FC = () => {
   return (
     <div>
       {/* <NavBar2/> */}
-      <Maintainers />
+      <UsedBy2/>
       {/* <Footer/> */}
     </div>
   )

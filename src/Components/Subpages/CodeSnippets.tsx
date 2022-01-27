@@ -20,9 +20,6 @@ const useStyles = makeStyles(
         },
       },
       gridContainer: {
-        paddingTop: "80px",
-        paddingLeft: "20px",
-        paddingRight: "20px",
         width: "calc(100% - 16px)",
         display: "block",
         maxWidth: "1200px",
@@ -59,8 +56,6 @@ const useStyles = makeStyles(
       },
       contentContainer: {
         width: "100%",
-        paddingLeft: constants.generalUnit,
-        paddingRight: constants.generalUnit,
         display: "flex",
         flexDirection: "column",
         float: "left",
@@ -79,7 +74,7 @@ const useStyles = makeStyles(
         flexDirection: "column",
         width: "100%",
         margin: "2.5rem 0",
-        padding: constants.generalUnit * 4,
+        padding: "0 32px",
         [breakpoints.down('md')]: {
           flexDirection: "column",
           justifyContent: "flex-start",
@@ -91,7 +86,7 @@ const useStyles = makeStyles(
         maxWidth: "100%",
         display: "flex",
         flexDirection: "row",
-        justifyContent:"space-evenly",
+        justifyContent:"space-between",
         alignItems: "center",
         [breakpoints.down('md')]: {
           margin: ".5rem 0 .5rem 0",
@@ -132,15 +127,15 @@ const CodeSnippets: React.FC = () => {
     <section className={classes.container}>
       <div className={classes.gridContainer}>
         <article className={classes.contentContainer}>
-          <Typography variant="h2" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
+          {/* <Typography variant="h2" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
             <Trans>Examples</Trans>
-          </Typography>
+          </Typography> */}
           <div className={clsx(classes.snippetsContainer)}>
             <article className={classes.snippetRow}>
               <div className={classes.bodyTextContainer}>
                 <Typography variant="h4" className={clsx(classes.bold, classes.reduceLeading)}>Fetch data from the Ethereum blockchain.</Typography>
                 <br/>
-                <Typography variant="body1" className={clsx( classes.singleColText, classes.bodyText)}>Get an Ethereum account balance with a simple query to an Etheruem node provider via JSON-RPC.</Typography>
+                <Typography variant="body1" className={clsx( classes.singleColText, classes.bodyText)}>Get an Ethereum account balance with a simple query to a node provider via JSON-RPC.</Typography>
               </div>
               <div className={classes.syntaxSection}>
                 <ReactEmbedGist 

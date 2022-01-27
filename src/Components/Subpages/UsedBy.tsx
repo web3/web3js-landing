@@ -43,8 +43,8 @@ const useStyles = makeStyles(
         textAlign: "center",
         marginBottom: constants.generalUnit * 4,
         [breakpoints.down("md")]: {
-          fontSize: "48px",
-          lineHeight: "55px",
+          fontSize: "36px",
+          lineHeight: "42px",
           maxWidth: "100%",
           textAlign: "left",
           marginBottom: constants.generalUnit * 2,
@@ -82,27 +82,29 @@ const useStyles = makeStyles(
         alignItems: "center",
         justifyContent: "center",
         [breakpoints.down('md')]: {
-          flexDirection: "column",
-          justifyContent: "space-evenly",
-        },
-        [breakpoints.down('sm')]: {
-          alignItems: "flex-start",
+          flexWrap: "wrap",
+          justifyContent: "flex-start",
+          marginTop: "8px",
         }
       },
       img: {
-        margin: "20px",
+        marginRight: "24px",
+        marginBottom: "24px",
         transition: "all 0.3s ease-in",
         "&:hover": {
           transform: "translateY(-5px)",
+        },
+        [breakpoints.down('sm')]: {
+          marginRight: "16px",
         }
       },
       logo: {
         width: "200px",
         maxWidth: "200px",
         [breakpoints.down('md')]: {
-          width: "100px",
-          maxWidth: "100px",
-        }
+          width: "120px",
+          maxWidth: "120px",
+        },
       }
     })
   })
@@ -127,7 +129,7 @@ const UsedBy: React.FC = () => {
               <img className={classes.logo} src="/oz_color.png" alt="open zeppelin logo" />
             </div>
             <div className={classes.img}>
-              <img style={{width:"100px"}} className={classes.logo} src="/ens.png" alt="ethereum name service logo" />
+              <img style={{width:"70px"}} className={classes.logo} src="/ens.png" alt="ethereum name service logo" />
             </div>
             <div className={classes.img}>
               <img className={classes.logo} src="/opensea.png" alt="open sea nft marketplace" />

@@ -10,6 +10,8 @@ import InternalNav from "../Modules/InternalNav"
 import Footer from "../Modules/Footer"
 import NavBar2 from "../Modules/NavBar"
 import UsedBy from "../Subpages/UsedBy"
+import Maintainers from "../Subpages/Maintainers"
+
 const HomePage: React.FC = () => {
   const { lang } = useParams()
   const { availableLanguages, selectedLanguage, setActiveLanguage } = useLanguageContext()
@@ -32,8 +34,9 @@ const HomePage: React.FC = () => {
       <Hero />
       <Featured />
       <Why />
-      <FactBanner/>
       <CodeSnippets/>
+      <FactBanner/>
+      <Maintainers/>
       <UsedBy/>
       <Footer/>
     </div>
