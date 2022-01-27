@@ -113,12 +113,12 @@ const UsedBy: React.FC = () => {
     <section className={classes.container}>
       <div className={classes.gridContainer}>
         <article className={classes.contentContainer}>
-          <Typography variant="h1" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
+          <Typography variant="h2" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
             <Trans>Used by leading projects</Trans>
           </Typography>
           <div className={classes.imageContainer}>
             <div className={classes.img}>
-              <img style={{width:"100px"}} className={classes.logo} src="/truffle.png" alt="truffle suite logo" />
+              <img style={{width:"70px"}} className={classes.logo} src="/truffle.png" alt="truffle suite logo" />
             </div>
             <div className={classes.img}>
               <img className={classes.logo} src="/yearn.png" alt="yearn finance" />

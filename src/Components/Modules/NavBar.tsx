@@ -115,7 +115,7 @@ const NavBar: React.FC = () => {
               </Typography>
             </div>
           </Grid>
-            <Typography variant="h5">
+            {/* <Typography variant="h5">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -125,14 +125,13 @@ const NavBar: React.FC = () => {
                 <Trans>Tutorial</Trans>
               </a>
             </Typography>
+             */}
             <Typography variant="h5">
               <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://web3js.readthedocs.io/en/v1.5.2/"
+                href="/maintainers"
                 className={classes.navlink}
               >
-                <Trans>API</Trans>
+                <Trans>History</Trans>
               </a>
             </Typography>
             <Typography variant="h5">

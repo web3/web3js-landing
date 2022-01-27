@@ -126,7 +126,7 @@ const Hero: React.FC = () => {
         <div className={classes.heroContentContainer}>
           <Typography variant="h1" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
             <Trans>
-              Want to connect to Ethereum in JS? Look no further.
+              The JavaScript library for building on Ethereum.
             </Trans>
           </Typography>
           <br />

@@ -118,8 +118,8 @@ const Why: React.FC = () => {
     <section className={classes.container}>
       <div className={classes.gridContainer}>
         <article className={classes.contentContainer}>
-          <Typography variant="h1" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
-            <Trans>Why Web3.js?</Trans>
+          <Typography variant="h2" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
+            <Trans>What you can do with Web3.js</Trans>
           </Typography>
           <div className={clsx(classes.marginTop, classes.factsContainer)}>
             <div className={clsx(classes.levitate, classes.fact)}>
