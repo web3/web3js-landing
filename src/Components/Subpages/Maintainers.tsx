@@ -138,7 +138,7 @@ const Maintainers: React.FC = () => {
         <div className={classes.titleContainer}>
           <Typography variant="h2" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
             <Trans>
-              Project history
+              About Web3.js
             </Trans>
           </Typography>
           <Typography variant="body1" className={clsx(classes.bodyText)}>
