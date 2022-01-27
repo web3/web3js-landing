@@ -95,8 +95,8 @@ const useStyles = makeStyles(
         margin: `0 ${constants.generalUnit * 4}px`,
       },
       dot: {
-        width: "26px",
-        height: "26px",
+        width: "22px",
+        height: "22px",
         borderRadius: "50%",
         background: palette.primary.main,
         zIndex: 500,
@@ -107,7 +107,7 @@ const useStyles = makeStyles(
         width: "2px",
         height: "105%",
         background: palette.additional["gray"][4],
-        top: 24, left: -14,
+        top: 24, left: -12,
         bottom: 0,
         [breakpoints.down('md')]: {
           height: "115%",
