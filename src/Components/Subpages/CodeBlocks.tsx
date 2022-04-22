@@ -11,32 +11,42 @@ const useStyles = makeStyles(
     return createStyles({
       container: {
         display: "flex",
-        padding: "2rem",
         flexDirection: "column",
-        [breakpoints.up(799)]: {
+        [breakpoints.up(599)]: {
+          padding: "2rem",
           flexDirection: "row",
         }
       },
       demo: {
         maxWidth: "100%",
-        marginBottom: 20,
-        "&:first-of-type":{
-          marginRight: 10,
-        },
-        [breakpoints.up(799)]: {
-          maxWidth: "50%",
+        width: "100%",
+        marginBottom: "3rem",
+        [breakpoints.up(599)]: {
+          maxWidth: "48%",
+          "&:nth-of-type(1n)": {
+            marginRight: "1rem",
+          }
         }
       },
       header: {
         fontWeight: 600,
         color: palette.additional["gray"][4],
+        lineHeight: "28px",
       },
       desc: {
         fontSize: "20px",
-        lineWeight: "28px",
+        lineHeight: "28px",
         maxWidth: "85%",
         color: palette.additional["gray"][7],
-      }
+      },
+      demosWrapper: {
+        display: "flex",
+        flexDirection: "column",
+        [breakpoints.up(599)]: {
+          flexDirection: "row",
+          flexWrap: "wrap",
+        }
+      },
     })
   })
 
@@ -48,27 +58,40 @@ const CodeBlocks: React.FC = () => {
   }
   return (
     <div className={classes.container}>
-      <div className={classes.demo}>
-        <CopyBlock
-          text={sample["interact"]}
-          language="javascript"
-          theme={atomOneDark}
-          wrapLines={true}
-          customStyle={codeCSS}
-        />
-        <h1 className={classes.header}>Interact with smart contracts.</h1>
-        <p className={classes.desc}>Examine recent transfer events by querying or subscribing to their events.</p>
-      </div>
-      <div className={classes.demo}>
-        <CopyBlock
-          text={sample["fetch"]}
-          language="javascript"
-          theme={atomOneDark}
-          wrapLines={true}
-          customStyle={codeCSS}
+      <div className={classes.demosWrapper}>
+        <div className={classes.demo}>
+          <CopyBlock
+            text={sample["interact"]}
+            language="javascript"
+            theme={atomOneDark}
+            wrapLines={true}
+            customStyle={codeCSS}
           />
-          <h1 className={classes.header}>Fetch data from the blockchain.</h1>
-          <p className={classes.desc}>Get an Ethereum account balance with a simple query to a node provider via JSON-RPC.</p>
+          <h1 className={classes.header}>Interact with smart contracts.</h1>
+          <p className={classes.desc}>Examine recent transfer events by querying or subscribing to their events.</p>
+        </div>
+        <div className={classes.demo}>
+          <CopyBlock
+            text={sample["fetch"]}
+            language="javascript"
+            theme={atomOneDark}
+            wrapLines={true}
+            customStyle={codeCSS}
+            />
+            <h1 className={classes.header}>Fetch data from the blockchain.</h1>
+            <p className={classes.desc}>Get an Ethereum account balance with a simple query to a node provider via JSON-RPC.</p>
+        </div>
+        <div className={classes.demo}>
+          <CopyBlock
+            text={sample["simplify"]}
+            language="javascript"
+            theme={atomOneDark}
+            wrapLines={true}
+            customStyle={codeCSS}
+            />
+            <h1 className={classes.header}>Simplify your code with built-in utilities.</h1>
+            <p className={classes.desc}>Calculate the sha3 hash of your input data, convert your Ether values in wei, and more.</p>
+        </div>
       </div>
     </div>
   )

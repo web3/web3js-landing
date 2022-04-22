@@ -31,7 +31,7 @@ const useStyles = makeStyles(
         [breakpoints.up(1199)]: {
           flexDirection: "row",
           padding: "2rem 0",
-          marginLeft: "10rem",
+          // marginLeft: "10rem",
         },
         "&:first-of-type":{
           [breakpoints.up(799)]:{
@@ -45,7 +45,7 @@ const useStyles = makeStyles(
         width: "100%",
         [breakpoints.up(799)]: {
           flexDirection: "row",
-          width: "70%",
+          width: "60%",
         },
         [breakpoints.up(1199)]: {
           flexDirection: "row",

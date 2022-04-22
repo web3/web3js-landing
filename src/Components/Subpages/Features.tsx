@@ -7,14 +7,12 @@ const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
     return createStyles({
       container: {
-        [breakpoints.up(360)]:{
-          flexDirection: "column",
-          padding: "2rem 0",
-        },
         [breakpoints.up(799)]:{
           marginTop: "2rem",
           flexDirection: "row",
         },
+        flexDirection: "column",
+        padding: "2rem 0",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -24,7 +22,9 @@ const useStyles = makeStyles(
         flexDirection: "column",
         alignItems: "flex-start",
         width: "100%",
-        padding: "0 2rem",
+        [breakpoints.up(599)]: {
+          padding: "0 2rem",
+        }
       },      
       bold: {
         fontWeight: 600,
