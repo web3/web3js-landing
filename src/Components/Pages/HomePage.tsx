@@ -11,6 +11,7 @@ import Features from "../Subpages/Features"
 import CodeBlocks from "../Subpages/CodeBlocks"
 import UsedBy from "../Subpages/UsedBy"
 import Stats from "../Subpages/Stats"
+import Timeline from "../Subpages/Timeline"
 
 const useStyles = makeStyles(({constants, breakpoints}:ITheme) => {
   return createStyles({
@@ -62,6 +63,7 @@ const HomePage: React.FC = () => {
         <CodeBlocks/>
         <UsedBy/>
         <Stats/>
+        <Timeline/>
       </div>
       <Footer/>
     </>

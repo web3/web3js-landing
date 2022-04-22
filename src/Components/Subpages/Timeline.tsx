@@ -1,7 +1,7 @@
 import React from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import clsx from "clsx";
-import { Typography } from "@chainsafe/common-components";
+import { Button, Typography } from "@chainsafe/common-components";
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
@@ -64,22 +64,32 @@ const useStyles = makeStyles(
       noUnderline: {
         textDecoration: "none",
       },
-      logosContainer: {
-        display: "grid",
-        alignContent: "center",
-        gridTemplateColumns: "repeat(4, 1fr)",
-        [breakpoints.up(1199)]: {
-          gridTemplateColumns: "repeat(5, 1fr)",
+      itemsContainer: {
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+      },
+      item:{
+        margin: ".5rem 0",
+        padding: "1.5rem 1rem",
+        background: "#292929",
+        borderRadius: "12px",
+        width: "100%",
+        "& > p": {
+          fontSize: "20px",
+          color: palette.additional["gray"][5],
         }
       },
-      logo: {
-        margin: "0 2rem 2rem 0",
-        width: "70px",
-        [breakpoints.up(799)]: {
-          padding: "1rem",
-          margin: 0,
-          width: "120px",
-        },
+      button: {
+        fontSize: "18px",
+        fontWeight: 600,
+        borderRadius: "8px",
+        padding: "2rem .5rem",
+        color: palette.common.black.main,
+        transition: "ease-in 0.25s",
+        "&:hover": {
+          opacity: "60%",
+        }
       }
     })
   })
@@ -91,18 +101,24 @@ const Timeline: React.FC = () => {
       <div className={classes.leftColumn}>
         <div className={classes.columnContentWrapper}>   
           <Typography variant="h3" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
-            Used by leading projects
+            Latest Updates
           </Typography>
+          <br></br>
+          <Button className={classes.button} size="large">View full timeline</Button>
         </div>
       </div>
       <div className={classes.rightColumn}>
         <div className={classes.columnContentWrapper}>
-          <div className={classes.logosContainer}>
-            <img className={classes.logo} src="/truffle.png" alt="truffle suite logo" />
-            <img className={classes.logo} src="/yfi.png" alt="Yearn Finance yield aggregator logo" />
-            <img className={classes.logo} src="/oz.png" alt="truffle suite logo" />
-            <img className={classes.logo} src="/ens.png" alt="Ethereum Name Service Logo" />
-            <img className={classes.logo} src="/opensea.png" alt="OpenSea NFT Platform" />
+          <div className={classes.itemsContainer}>
+            <div className={classes.item}>
+              <p>POAPs get released</p>
+            </div>
+            <div className={classes.item}>
+              <p>POAPs get released</p>
+            </div>
+            <div className={classes.item}>
+              <p>POAPs get released</p>
+            </div>
           </div>
         </div>
       </div>
