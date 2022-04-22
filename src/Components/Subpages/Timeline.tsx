@@ -1,5 +1,5 @@
 import React from "react";
-import { createStyles, darken, ITheme, makeStyles } from "@chainsafe/common-theme";
+import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import clsx from "clsx";
 import { Typography } from "@chainsafe/common-components";
 
@@ -80,17 +80,11 @@ const useStyles = makeStyles(
           margin: 0,
           width: "120px",
         },
-      },
-      link: {
-        transition: "ease-in 0.3s",
-        "&:hover": {
-          opacity: "50%",
-        }
       }
     })
   })
 
-const UsedBy: React.FC = () => {
+const Timeline: React.FC = () => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
@@ -104,21 +98,11 @@ const UsedBy: React.FC = () => {
       <div className={classes.rightColumn}>
         <div className={classes.columnContentWrapper}>
           <div className={classes.logosContainer}>
-            <a className={classes.link} href="https://trufflesuite.com/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src="/truffle.png" alt="Truffle Suite Logo"/>
-            </a>
-            <a className={classes.link} href="https://yearn.finance/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src="/yfi.png" alt="Yearn Finance DeFi Yield Aggregator Logo" />
-            </a>
-            <a className={classes.link} href="https://openzeppelin.com/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src="/oz.png" alt="Open Zeppelin, Smart Contract Development Tools Logo" />
-            </a>
-            <a className={classes.link} href="https://ens.domains/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src="/ens.png" alt="Ethereum Name Service Logo" />
-            </a>
-            <a className={classes.link} href="https://opensea.io/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src="/opensea.png" alt="OpenSea NFT Platform Logo" />
-            </a>
+            <img className={classes.logo} src="/truffle.png" alt="truffle suite logo" />
+            <img className={classes.logo} src="/yfi.png" alt="Yearn Finance yield aggregator logo" />
+            <img className={classes.logo} src="/oz.png" alt="truffle suite logo" />
+            <img className={classes.logo} src="/ens.png" alt="Ethereum Name Service Logo" />
+            <img className={classes.logo} src="/opensea.png" alt="OpenSea NFT Platform" />
           </div>
         </div>
       </div>
@@ -126,4 +110,4 @@ const UsedBy: React.FC = () => {
   )
 }
 
-export default UsedBy;
+export default Timeline;
