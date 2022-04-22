@@ -8,6 +8,7 @@ import NavBar2 from "../Modules/NavBar"
 import Hero2 from "../Subpages/Hero2"
 import About from "../Subpages/About"
 import Features from "../Subpages/Features"
+import CodeBlocks from "../Subpages/CodeBlocks"
 
 const useStyles = makeStyles(({constants, breakpoints}:ITheme) => {
   return createStyles({
@@ -56,6 +57,7 @@ const HomePage: React.FC = () => {
         <Hero2/>
         <About/>
         <Features/>
+        <CodeBlocks/>
         {/* <Featured /> */}
         {/* <Why /> */}
         {/* <CodeSnippets/> */}

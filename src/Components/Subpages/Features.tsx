@@ -24,6 +24,7 @@ const useStyles = makeStyles(
         flexDirection: "column",
         alignItems: "flex-start",
         width: "100%",
+        padding: "0 2rem",
       },      
       bold: {
         fontWeight: 600,
