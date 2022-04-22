@@ -72,6 +72,7 @@ const useStyles = makeStyles(({ palette, constants, breakpoints }: ITheme) => {
     },
     copyright: {
       position: "absolute",
+      fontSize: "15px",
       color: palette.additional["gray"][8],
       [breakpoints.down("xl")]:{
         marginLeft: constants.generalUnit * 2,

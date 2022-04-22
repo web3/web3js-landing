@@ -6,10 +6,10 @@ const useStyles = makeStyles(
   ({constants, palette, breakpoints}: ITheme) => {
     return createStyles({
       container: {
-        paddingTop: `${constants.headerHeight}px`,
+        paddingTop: "70px",
         display: "flex",
         justifyContent: "center",
-        background: palette.primary.main,
+        background: "#292929",
         height: "auto",
       },
       linksContainer: {
@@ -27,7 +27,7 @@ const useStyles = makeStyles(
         height: "40px",
       },
       navlink: {
-        color: palette.common.black.main,
+        color: palette.primary.main,
         [breakpoints.up("sm")]:{
           margin: `0 ${constants.generalUnit * 2}px`,
         },
@@ -38,7 +38,7 @@ const useStyles = makeStyles(
         margin: "0 1rem",
         textDecoration: "none",
         "&:hover": {
-          color: palette.additional["gray"][9],
+          color: palette.additional["gray"][8],
           transition: "ease-in 0.2s",
         },
       },

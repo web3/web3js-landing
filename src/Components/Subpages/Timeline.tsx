@@ -111,13 +111,13 @@ const Timeline: React.FC = () => {
         <div className={classes.columnContentWrapper}>
           <div className={classes.itemsContainer}>
             <div className={classes.item}>
-              <p>POAPs get released</p>
+              <p>Update text goes here</p>
             </div>
             <div className={classes.item}>
-              <p>POAPs get released</p>
+              <p>Update text goes here</p>
             </div>
             <div className={classes.item}>
-              <p>POAPs get released</p>
+              <p>Update text goes here</p>
             </div>
           </div>
         </div>
