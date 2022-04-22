@@ -9,6 +9,7 @@ import Hero2 from "../Subpages/Hero2"
 import About from "../Subpages/About"
 import Features from "../Subpages/Features"
 import CodeBlocks from "../Subpages/CodeBlocks"
+import UsedBy2 from "../Subpages/UsedBy2"
 
 const useStyles = makeStyles(({constants, breakpoints}:ITheme) => {
   return createStyles({
@@ -58,6 +59,7 @@ const HomePage: React.FC = () => {
         <About/>
         <Features/>
         <CodeBlocks/>
+        <UsedBy2/>
       </div>
       <Footer/>
     </>
