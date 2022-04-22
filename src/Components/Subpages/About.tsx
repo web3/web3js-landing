@@ -70,7 +70,7 @@ const useStyles = makeStyles(
         marginTop: constants.generalUnit,
       },
       descText: {
-        color: palette.additional["gray"][6],
+        color: palette.additional["gray"][7],
         fontSize: "24px",
         lineHeight: "30px",
         fontWeight: 400,
