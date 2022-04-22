@@ -58,12 +58,6 @@ const HomePage: React.FC = () => {
         <About/>
         <Features/>
         <CodeBlocks/>
-        {/* <Featured /> */}
-        {/* <Why /> */}
-        {/* <CodeSnippets/> */}
-        {/* <FactBanner/> */}
-        {/* <Maintainers/> */}
-        {/* <UsedBy/> */}
       </div>
       <Footer/>
     </>
