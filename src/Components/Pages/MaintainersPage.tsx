@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import { useParams } from "@chainsafe/common-components"
 import { useLanguageContext } from "../../LanguageContext"
 import Maintainers from "../Subpages/Maintainers"
+import FullTimeline from "../Subpages/FullTimeline"
 
 const MaintainersPage: React.FC = () => {
   const { lang } = useParams()
@@ -20,7 +21,8 @@ const MaintainersPage: React.FC = () => {
   )
   return (
     <div>
-      <Maintainers/>
+      <FullTimeline/>
+      {/* <Maintainers/> */}
     </div>
   )
 }

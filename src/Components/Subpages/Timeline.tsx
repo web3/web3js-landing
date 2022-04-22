@@ -84,12 +84,18 @@ const useStyles = makeStyles(
         fontSize: "18px",
         fontWeight: 600,
         borderRadius: "8px",
-        padding: "2rem .5rem",
-        color: palette.common.black.main,
+        padding: ".7rem 1rem",
+        color: palette.common.white.main,
         transition: "ease-in 0.25s",
+        marginBottom: "1rem",
+        background: "#292929",
         "&:hover": {
           opacity: "60%",
-        }
+        },
+        "&:first-of-type":{
+          color: palette.common.black.main,
+          background: palette.primary.main,
+        },
       }
     })
   })
@@ -104,7 +110,8 @@ const Timeline: React.FC = () => {
             Latest Updates
           </Typography>
           <br></br>
-          <Button className={classes.button} size="large">View full timeline</Button>
+          <a className={classes.button} href="/maintainers">About the maintainers</a>
+          {/* <a className={classes.button} href="/maintainers">Read Project History</a> */}
         </div>
       </div>
       <div className={classes.rightColumn}>

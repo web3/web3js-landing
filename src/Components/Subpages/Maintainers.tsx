@@ -12,18 +12,14 @@ const useStyles = makeStyles(
         maxWidth: "1200px",
         flexDirection: "column",
         [breakpoints.up(800)]:{
-          padding: "80px 96px",
+          padding: "20px 0",
           justifyContent: "flex-start",
           alignItems: "flex-start",
         },
         [breakpoints.up(1800)]: {
-          padding: "80px 0",
           justifyContent: "center",
           alignItems: "center",
           margin: "0 auto",
-        },
-        [breakpoints.down(1099)]: {
-          padding: "80px 20px"
         },
       },
       gridContainer: {
@@ -32,7 +28,7 @@ const useStyles = makeStyles(
       titleContainer: {
         display: "flex",
         flexDirection: "column",
-        margin: "1.5rem 1rem 3rem 1rem",
+        marginBottom: "2rem",
       },
       bold: {
         fontWeight: "bolder",
@@ -42,6 +38,7 @@ const useStyles = makeStyles(
       },
       titleText: {
         textAlign: "left",
+        color: palette.additional["gray"][3],
         marginBottom: constants.generalUnit * 4,
         [breakpoints.down("md")]: {
           fontSize: "36px",
@@ -50,7 +47,8 @@ const useStyles = makeStyles(
         }
       },
       bodyText: {
-        fontSize: "18px",
+        color: palette.additional["gray"][6],
+        fontSize: "20px",
         lineHeight: "26px",
         maxWidth: "500px",
       },
@@ -65,6 +63,7 @@ const useStyles = makeStyles(
         }
       },
       timelineDate: {
+        color: palette.additional["gray"][6],
         marginTop: constants.generalUnit,
         fontSize: "20px",
         textAlign: "center",
@@ -75,6 +74,7 @@ const useStyles = makeStyles(
       timelineHeader: {
         fontSize: "20px",
         fontWeight: 600,
+        color: palette.additional["gray"][6],
         marginLeft: constants.generalUnit * 4,
         marginBottom: constants.generalUnit * 2,
         [breakpoints.down('sm')]: {
@@ -88,6 +88,7 @@ const useStyles = makeStyles(
         justifyContent: "space-between",
         fontSize: "18px",
         lineHeight: "27px",
+        color: palette.additional["gray"][6],
         marginLeft: constants.generalUnit * 4,
         maxWidth: "500px",
         [breakpoints.down('md')]: {
@@ -97,7 +98,7 @@ const useStyles = makeStyles(
         }
       },
       timelineAvi: {
-        margin: `0 ${constants.generalUnit * 4}px`,
+        margin: "0 1rem 0 0",
       },
       dot: {
         width: "22px",
@@ -111,7 +112,7 @@ const useStyles = makeStyles(
         position: "absolute",
         width: "2px",
         height: "105%",
-        background: palette.additional["gray"][4],
+        background: palette.additional["gray"][8],
         top: 24, left: -12,
         bottom: 0,
         [breakpoints.down('md')]: {
@@ -136,11 +137,6 @@ const Maintainers: React.FC = () => {
       <div className={classes.container}>
       <div className={classes.gridContainer}>
         <div className={classes.titleContainer}>
-          <Typography variant="h2" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
-            <Trans>
-              About Web3.js
-            </Trans>
-          </Typography>
           <Typography variant="body1" className={clsx(classes.bodyText)}>
             <Trans>
               Since 2014, Web3.js is an open-source collection of libraries which allow you to interact with a local or remote Ethereum node. Throughout its rich history, Web3.js would not have been possible without the vision, expertise and contributions made by committed individuals and organizations throughout the years.

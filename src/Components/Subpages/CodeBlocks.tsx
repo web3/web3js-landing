@@ -33,7 +33,7 @@ const useStyles = makeStyles(
       header: {
         fontWeight: 600,
         color: palette.additional["gray"][4],
-        lineHeight: "28px",
+        lineHeight: "20px",
       },
       desc: {
         fontSize: "20px",

@@ -55,7 +55,7 @@ const InternalNav: React.FC = () => {
     <div className={classes.container}>
       <div className={classes.linksContainer}>
           <Typography variant="h5" className={classes.bold}>
-            <a href="https://github.com/ChainSafe/web3.js/releases/tag/v1.6.0" target="__blank" rel="noreferrer noopener"className={classes.navlink}>Banner with some text announcing latest version number</a>
+            <a href="https://github.com/ChainSafe/web3.js/releases/tag/v1.6.0" target="__blank" rel="noreferrer noopener"className={classes.navlink}>Banner with some text announcing latest release!</a>
           </Typography>
        
       </div>

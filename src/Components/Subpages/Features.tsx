@@ -65,7 +65,7 @@ const useStyles = makeStyles(
         "& > p": {
           color: palette.additional["gray"][5],
           fontSize: "24px",
-          lineHeight: "28px",
+          lineHeight: "26px",
           maxWidth: "85%",
           [breakpoints.up(599)]: {
             maxWidth: "400px",
