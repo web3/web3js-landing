@@ -27,7 +27,7 @@ const theme = createTheme({
       }
     },
     constants: {
-      desktopMargin: 32,
+      desktopMargin: 48,
       mobileMargin: 16,
     },
     typography: {
