@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import { Button, Typography } from "@chainsafe/common-components";
 import clsx from "clsx";
-import { CopyBlock, atomOneDark } from "react-code-blocks";
+import { CopyBlock, monokaiSublime } from "react-code-blocks";
 import sample from "./snippets";
 
 
@@ -36,7 +36,7 @@ const useStyles = makeStyles(
         lineHeight: "20px",
       },
       desc: {
-        fontSize: "20px",
+        fontSize: "22px",
         lineHeight: "28px",
         maxWidth: "85%",
         color: palette.additional["gray"][7],
@@ -65,7 +65,7 @@ const CodeBlocks: React.FC = () => {
           <CopyBlock
             text={sample["interact"]}
             language="javascript"
-            theme={atomOneDark}
+            theme={monokaiSublime}
             wrapLines={true}
             customStyle={codeCSS}
           />
@@ -76,7 +76,7 @@ const CodeBlocks: React.FC = () => {
           <CopyBlock
             text={sample["fetch"]}
             language="javascript"
-            theme={atomOneDark}
+            theme={monokaiSublime}
             wrapLines={true}
             customStyle={codeCSS}
             />
@@ -87,7 +87,7 @@ const CodeBlocks: React.FC = () => {
           <CopyBlock
             text={sample["simplify"]}
             language="javascript"
-            theme={atomOneDark}
+            theme={monokaiSublime}
             wrapLines={true}
             customStyle={codeCSS}
             />
