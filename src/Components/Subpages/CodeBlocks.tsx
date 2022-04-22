@@ -13,15 +13,17 @@ const useStyles = makeStyles(
         display: "flex",
         flexDirection: "column",
         [breakpoints.up(599)]: {
-          padding: "2rem",
+          padding: "2rem 2rem 0 2rem",
+        },
+        [breakpoints.up(799)]: {
           flexDirection: "row",
         }
       },
       demo: {
-        maxWidth: "100%",
+        maxWidth: "90%",
         width: "100%",
-        marginBottom: "3rem",
-        [breakpoints.up(599)]: {
+        marginBottom: "2rem",
+        [breakpoints.up(899)]: {
           maxWidth: "48%",
           "&:nth-of-type(1n)": {
             marginRight: "1rem",
@@ -42,7 +44,7 @@ const useStyles = makeStyles(
       demosWrapper: {
         display: "flex",
         flexDirection: "column",
-        [breakpoints.up(599)]: {
+        [breakpoints.up(799)]: {
           flexDirection: "row",
           flexWrap: "wrap",
         }

@@ -73,6 +73,7 @@ const useStyles = makeStyles(
         }
       },
       square: {
+        minWidth: "32px",
         width: "32px",
         height: "32px",
         borderRadius: "4px",

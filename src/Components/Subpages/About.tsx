@@ -80,21 +80,24 @@ const useStyles = makeStyles(
       titleText: {
         color: palette.primary.main,
         textAlign: "left",
-        fontSize: "250px",
-        lineHeight: "250px",
         display: "none",
         fontWeight: "bold",
         [breakpoints.up(599)]:{
           display: "block",
           marginRight: "4rem",
-          // marginLeft: "-2rem",
+          fontSize: "180px",
+          lineHeight: "180px",
+        },
+        [breakpoints.up(1099)]:{
+          fontSize: "250px",
+          lineHeight: "250px",
         },
       },
       aboutTextWrapper: {
         display: "flex",
         flexDirection: "column",
         [breakpoints.up(799)]: {
-          width: "65%",
+          width: "70%",
         }
       },
       aboutItem: {

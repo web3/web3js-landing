@@ -1,108 +1,84 @@
 import React from "react";
-import { ITheme, makeStyles, createStyles } from "@chainsafe/common-theme";
-import { Typography } from "@chainsafe/common-components";
+import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import clsx from "clsx";
-import { Trans } from "@lingui/macro";
+import { Typography } from "@chainsafe/common-components";
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
     return createStyles({
       container: {
-        overflowX: "hidden",
-        minHeight: "30vh",
-        display: "flex",
-        justifyContent: "center",
         flexDirection: "column",
-        alignItems: "center",
-        [breakpoints.down(767)]: {
-          alignItems: "flex-start",
+        [breakpoints.up(599)]:{
+          padding: "2rem",
+          flexDirection: "row",
+        },
+        display: "flex",
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
+      },
+      leftColumn: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        padding: "2rem 0",
+        [breakpoints.up(799)]: {
+          flexDirection: "row",
+          width: "50%",
+        },
+        [breakpoints.up(1199)]: {
+          flexDirection: "row",
         },
       },
-      gridContainer: {
-        paddingTop: "80px",
-        paddingLeft: "20px",
-        paddingRight: "20px",
-        width: "calc(100% - 16px)",
-        display: "block",
-        maxWidth: "1200px",
+      rightColumn: {
+        padding: "0",
+        width: "100%",
+        [breakpoints.up(799)]: {
+          flexDirection: "row",
+          width: "50%",
+        },
+        [breakpoints.up(1199)]: {
+          flexDirection: "row",
+        },
       },
+      columnContentWrapper: {
+        display: "flex", 
+        flexDirection: "column",
+        alignItems: "flex-start",
+        width: "100%",
+      },      
       bold: {
-        fontWeight: 800,
+        fontWeight: 600,
       },
       reduceLeading: {
-        letterSpacing: "-1px",
+        letterSpacing: "-1.25px",
       },
       white: {
         color: palette.common.white.main,
       },
-      singleColText: {
-        textAlign: "left",
-        maxWidth: 420,
-      },
       titleText: {
-        textAlign: "center",
-        marginBottom: constants.generalUnit * 4,
-        [breakpoints.down("md")]: {
-          fontSize: "36px",
-          lineHeight: "42px",
-          maxWidth: "100%",
-          textAlign: "left",
-          marginBottom: constants.generalUnit * 2,
-        }
-      },
-      marginTop: {
-        marginTop: "1.25rem",
-        [breakpoints.down(767)]: {
-          marginTop: "1rem",
-        },
-      },
-      contentContainer: {
-        width: "100%",
-        marginBottom: "80px",
-        paddingLeft: constants.generalUnit,
-        paddingRight: constants.generalUnit,
-        display: "flex",
-        flexDirection: "column",
-        float: "left",
-        [breakpoints.down(599)]: {
-          marginBottom: "20px",
-        }
-      },
-
-      bodyText: {
-        fontSize: "18px",
-        lineHeight: "26px",
-        maxWidth: "90%",
+        color: palette.additional["gray"][3],
+        textAlign: "left",
+        fontSize: "48px",
+        lineHeight: "56px",
       },
       noUnderline: {
         textDecoration: "none",
       },
-      imageContainer: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        [breakpoints.down('md')]: {
-          flexWrap: "wrap",
-          justifyContent: "flex-start",
-          marginTop: "16px",
-        }
-      },
-      img: {
-        margin: "24px 16px 24px 0",
-        transition: "all 0.3s ease-in",
-        "&:hover": {
-          transform: "translateY(-5px)",
-        },
-        [breakpoints.down('sm')]: {
-          marginRight: "16px",
+      logosContainer: {
+        display: "grid",
+        alignContent: "center",
+        gridTemplateColumns: "repeat(4, 1fr)",
+        [breakpoints.up(1199)]: {
+          gridTemplateColumns: "repeat(5, 1fr)",
         }
       },
       logo: {
-        width: "200px",
-        maxWidth: "200px",
-        [breakpoints.down('md')]: {
+        margin: "0 2rem 2rem 0",
+        width: "70px",
+        [breakpoints.up(799)]: {
+          padding: "1rem",
+          margin: 0,
           width: "120px",
-          maxWidth: "120px",
         },
       }
     })
@@ -111,32 +87,26 @@ const useStyles = makeStyles(
 const UsedBy: React.FC = () => {
   const classes = useStyles();
   return (
-    <section className={classes.container}>
-      <div className={classes.gridContainer}>
-        <article className={classes.contentContainer}>
-          <Typography variant="h2" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
-            <Trans>Used by leading projects</Trans>
+    <div className={classes.container}>
+      <div className={classes.leftColumn}>
+        <div className={classes.columnContentWrapper}>   
+          <Typography variant="h3" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
+            Used by leading projects
           </Typography>
-          <div className={classes.imageContainer}>
-            <div className={classes.img}>
-              <img style={{width:"70px"}} className={classes.logo} src="/truffle.png" alt="truffle suite logo" />
-            </div>
-            <div className={classes.img}>
-              <img className={classes.logo} src="/yearn.png" alt="yearn finance" />
-            </div>
-            <div className={classes.img}>
-              <img className={classes.logo} src="/oz_color.png" alt="open zeppelin logo" />
-            </div>
-            <div className={classes.img}>
-              <img style={{width:"70px"}} className={classes.logo} src="/ens.png" alt="ethereum name service logo" />
-            </div>
-            <div className={classes.img}>
-              <img className={classes.logo} src="/opensea.png" alt="open sea nft marketplace" />
-            </div>
+        </div>
+      </div>
+      <div className={classes.rightColumn}>
+        <div className={classes.columnContentWrapper}>
+          <div className={classes.logosContainer}>
+            <img className={classes.logo} src="/truffle.png" alt="truffle suite logo" />
+            <img className={classes.logo} src="/yfi.png" alt="Yearn Finance yield aggregator logo" />
+            <img className={classes.logo} src="/oz.png" alt="truffle suite logo" />
+            <img className={classes.logo} src="/ens.png" alt="Ethereum Name Service Logo" />
+            <img className={classes.logo} src="/opensea.png" alt="OpenSea NFT Platform" />
           </div>
-        </article>
-      </div >
-    </section >
+        </div>
+      </div>
+    </div>
   )
 }
 
