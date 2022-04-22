@@ -47,9 +47,10 @@ const useStyles = makeStyles(
         }
       },
       bodyText: {
-        color: palette.additional["gray"][6],
-        fontSize: "20px",
-        lineHeight: "26px",
+        color: palette.additional["gray"][7],
+        fontSize: "22px",
+        lineHeight: "28px",
+        letterSpacing: ".25px",
         maxWidth: "500px",
       },
       timelineItem: {
@@ -74,27 +75,21 @@ const useStyles = makeStyles(
       timelineHeader: {
         fontSize: "20px",
         fontWeight: 600,
-        color: palette.additional["gray"][6],
+        color: palette.primary.main,
         marginLeft: constants.generalUnit * 4,
         marginBottom: constants.generalUnit * 2,
-        [breakpoints.down('sm')]: {
-          marginBottom: ".5rem",
-          fontSize: "18px",
-          lineHeight: `${constants.generalUnit * 3}px`,
-        }
       },
       timelineBody: {
         display: "flex",
         justifyContent: "space-between",
-        fontSize: "18px",
-        lineHeight: "27px",
+        fontSize: "20px",
+        lineHeight: "29px",
+        letterSpacing: ".25px",
         color: palette.additional["gray"][6],
         marginLeft: constants.generalUnit * 4,
         maxWidth: "500px",
         [breakpoints.down('md')]: {
-          maxWidth: "80%",
-          fontSize: "16px",
-          lineHeight: `${constants.generalUnit * 3}px`,
+          maxWidth: "85%",
         }
       },
       timelineAvi: {
@@ -111,12 +106,12 @@ const useStyles = makeStyles(
       line: {
         position: "absolute",
         width: "2px",
-        height: "105%",
+        height: "101%",
         background: palette.additional["gray"][8],
         top: 24, left: -12,
         bottom: 0,
         [breakpoints.down('md')]: {
-          height: "115%",
+          height: "101%",
         }
       },
       avatar: {
@@ -127,7 +122,6 @@ const useStyles = makeStyles(
           height: "60px",
         }
       },
-
     })
   })
 
@@ -139,7 +133,7 @@ const Maintainers: React.FC = () => {
         <div className={classes.titleContainer}>
           <Typography variant="body1" className={clsx(classes.bodyText)}>
             <Trans>
-              Since 2014, Web3.js is an open-source collection of libraries which allow you to interact with a local or remote Ethereum node. Throughout its rich history, Web3.js would not have been possible without the vision, expertise and contributions made by committed individuals and organizations throughout the years.
+              Since 2014, Web3.js has existed as an open-source collection of libraries that allow you to interact with a local or remote Ethereum node. Throughout its rich history, Web3.js would not have been possible without the vision, expertise and contributions made by committed individuals and organizations throughout the years.
             </Trans>
           </Typography>
         </div>
@@ -147,7 +141,6 @@ const Maintainers: React.FC = () => {
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
               <img src="/jeffrey.jpg" alt="Jeffrey Wilcke"/>
-            <div className={classes.timelineDate}>2014</div>
             </div>
           </span>
           <span className={classes.dot}></span>
@@ -161,7 +154,6 @@ const Maintainers: React.FC = () => {
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
               <img src="/marek.jpeg" alt="Marek Kotewicz" />
-            <div className={classes.timelineDate}>2014</div>
             </div>
           </span>
           <span className={classes.dot}></span>
@@ -175,7 +167,6 @@ const Maintainers: React.FC = () => {
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
               <img src="fabian.jpeg" alt="Fabian Vogelsteller" />
-            <div className={classes.timelineDate}>2015</div>
             </div>
           </span>
           <span className={classes.dot}></span>
@@ -189,7 +180,6 @@ const Maintainers: React.FC = () => {
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
               <img src="/samuel.jpeg" alt="Samuel Furter" />
-            <div className={classes.timelineDate}>2018</div>
             </div>
           </span>
           <span className={classes.dot}></span>
@@ -203,7 +193,6 @@ const Maintainers: React.FC = () => {
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
               <img src="/ethereumjs.png" alt="ethereumjs" />
-            <div className={classes.timelineDate}>2019</div>
             </div>
           </span>
           <span className={classes.dot}></span>
@@ -219,7 +208,6 @@ const Maintainers: React.FC = () => {
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
               <img src="chainsafe.png" alt="ChainSafe" />
-            <div className={classes.timelineDate}>2020</div>
             </div>
           </span>
           <span className={classes.dot}></span>

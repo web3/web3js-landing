@@ -15,7 +15,7 @@ const useStyles = makeStyles(
           padding: "1rem 0",
           flexDirection: "row",
         },
-        marginTop: "4rem",
+        marginTop: "2rem",
         display: "flex",
         justifyContent: "center",
         alignItems: "flex-start",
@@ -32,7 +32,6 @@ const useStyles = makeStyles(
         [breakpoints.up(1199)]: {
           flexDirection: "row",
           padding: "2rem 0",
-          // marginLeft: "10rem",
         },
         "&:first-of-type":{
           [breakpoints.up(799)]:{
@@ -162,9 +161,6 @@ const FullTimeline: React.FC = () => {
       <div className={classes.leftColumn}>
         <div className={classes.columnContentWrapper}>   
           <img className={classes.brand} src="/web3js.png" alt="Abstract pattern of gemoetric shapes"/>
-          <Typography variant="h3" className={clsx(classes.reduceLeading, classes.titleText)}>
-            web3.js is a Javascript library for building on Ethereum. 
-          </Typography>
           <div className={classes.linksWrapper}>
             <div className={classes.link}>
               <div className={clsx(classes.primDark, classes.stackedIndicator)}></div><a className={classes.stackedLink} href="/">Back to home</a>
