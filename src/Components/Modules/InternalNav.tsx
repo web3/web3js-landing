@@ -9,7 +9,7 @@ const useStyles = makeStyles(
         paddingTop: `${constants.headerHeight}px`,
         display: "flex",
         justifyContent: "center",
-        background: "#1b1b1b",
+        background: palette.primary.main,
         height: "auto",
       },
       linksContainer: {
@@ -27,7 +27,7 @@ const useStyles = makeStyles(
         height: "40px",
       },
       navlink: {
-        color: palette.common.white.main,
+        color: palette.common.black.main,
         [breakpoints.up("sm")]:{
           margin: `0 ${constants.generalUnit * 2}px`,
         },
@@ -38,8 +38,8 @@ const useStyles = makeStyles(
         margin: "0 1rem",
         textDecoration: "none",
         "&:hover": {
-          color: palette.additional["gray"][6],
-          transition: "ease-in 0.1s",
+          color: palette.additional["gray"][9],
+          transition: "ease-in 0.2s",
         },
       },
       bold: {

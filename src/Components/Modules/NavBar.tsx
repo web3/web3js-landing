@@ -17,8 +17,8 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
       height: constants.generalUnit * 9,
       position: "absolute",
       padding: "0.7rem",
+      background: palette.background.default,
       zIndex: zIndex?.layer4,
-      background: "#fafafa",
       [breakpoints.down('1170px')]: {
         justifyContent: "flex-end",
       },
@@ -37,7 +37,7 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
       margin: constants.generalUnit,
     },
     brandName: {
-      color: palette.common.black.main,
+      color: palette.common.white.main,
       marginLeft: constants.generalUnit,
       textDecoration: "none",
     },
@@ -46,7 +46,7 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
       fontSize: "20px",
       cursor: "pointer",
       padding: "1rem",
-      color: palette.common.black.main,
+      color: palette.common.white.main,
       transition: "all .2s ease-out",
       '&:hover': {
         transform: "translateY(-2px)",
@@ -62,7 +62,7 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
       }
     },
     navlink: {
-        color: palette.common.black.main,
+        color: palette.common.white.main,
         textDecoration: "none",
         fontWeight: "bold",
         "&:hover": {

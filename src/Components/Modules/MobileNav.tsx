@@ -28,14 +28,14 @@ const sidebar = {
   }
 };
 
-const useStyles = makeStyles(({ constants}: ITheme) => {
+const useStyles = makeStyles(({ palette}: ITheme) => {
   return createStyles({
     background: {
       position: "absolute",
       top: 0, left: 0, bottom: 0,
       height: "100vh",
       width: "100vw",
-      background: "white",
+      background: palette.background.default,
     },
     
   })

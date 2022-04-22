@@ -1,16 +1,34 @@
 import React, { useEffect } from "react"
 import { useParams } from "@chainsafe/common-components"
+import { makeStyles, ITheme, createStyles } from "@chainsafe/common-theme"
 import { useLanguageContext } from "../../LanguageContext"
-import Hero from "../Subpages/Hero"
-import Why from "../Subpages/Why"
-import Featured from "../Subpages/Featured"
-import FactBanner from "../Subpages/FactBanner"
-import CodeSnippets from "../Subpages/CodeSnippets"
 import InternalNav from "../Modules/InternalNav"
 import Footer from "../Modules/Footer"
 import NavBar2 from "../Modules/NavBar"
-import UsedBy from "../Subpages/UsedBy"
-import Maintainers from "../Subpages/Maintainers"
+import Hero2 from "../Subpages/Hero2"
+import About from "../Subpages/About"
+
+const useStyles = makeStyles(({constants, breakpoints}:ITheme) => {
+  return createStyles({
+    globalWrap: {
+      [breakpoints.up(1599)]: {
+        maxWidth: "70%",
+        left: "50%",
+        position: "relative",
+        transform: "translate(-50%)",
+      },
+      [breakpoints.up(1199)]: {
+        margin: `0 ${constants.desktopMargin}px 0`,
+      },
+      [breakpoints.up(599)]: {
+        margin: `0 ${constants.mobileMargin}px 0`,
+      },
+      [breakpoints.up(360)]: {
+        margin: `0 ${constants.mobileMargin}px 0`,
+      },
+    }
+  })
+})
 
 const HomePage: React.FC = () => {
   const { lang } = useParams()
@@ -27,19 +45,24 @@ const HomePage: React.FC = () => {
   }
     , [availableLanguages, lang, selectedLanguage, setActiveLanguage]
   )
+  const classes = useStyles();
+
   return (
-    <div>
-      <NavBar2/>
-      <InternalNav/>
-      <Hero />
-      <Featured />
-      <Why />
-      <CodeSnippets/>
-      <FactBanner/>
-      <Maintainers/>
-      <UsedBy/>
+    <>
+      <div className={classes.globalWrap}>
+        <NavBar2/>
+        <InternalNav/>
+        <Hero2/>
+        <About/>
+        {/* <Featured /> */}
+        {/* <Why /> */}
+        {/* <CodeSnippets/> */}
+        {/* <FactBanner/> */}
+        {/* <Maintainers/> */}
+        {/* <UsedBy/> */}
+      </div>
       <Footer/>
-    </div>
+    </>
   )
 }
 

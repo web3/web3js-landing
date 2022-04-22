@@ -8,35 +8,55 @@ import Routes from "./Components/Routes"
 const theme = createTheme({
   globalStyling: {
     body: {
-      backgroundColor: "#fafafa",
+      backgroundColor: "#1D1A1A",
       overflowX: "hidden",
+    },
+    a: {
+      textDecoration: "none",
     },
   },
   themeConfig: {
     palette: {
       primary: {
         main: "#F16822",
+        dark: "#E03000",
+        light: "#FDA733",
+      },
+      background: {
+        default: "#1D1A1A",
       }
     },
     constants: {
-      headerHeight: 70,
+      desktopMargin: 32,
+      mobileMargin: 16,
     },
     typography: {
       h1: {
-        fontSize: "72px",
-        lineHeight: "80px",
+        fontSize: "56px",
+        lineHeight: "66px",
       },
       h2: {
-        fontSize: "48px",
-        lineHeight: "56px",
+        fontSize: "34px",
+        lineHeight: "44px",
       },
-      h3: {
-        fontSize: "30px",
-        lineHeight: "38px",
+      h2med: {
+        fontSize: "34px",
+        lineHeight: "44px",
+        fontWeight: 600,
       },
-      h4: {
+      body1: {
         fontSize: "24px",
-        lineHeight: "28px"
+        lineHeight: "32px",
+      },
+      body1med: {
+        fontSize: "24px",
+        lineHeight: "32px",
+        fontWeight: 600,
+      },
+      body2: {
+        fontSize: "18px",
+        lineHeight: "26px",
+        fontWeight: 600,
       }
     }
   }

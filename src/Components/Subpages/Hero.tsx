@@ -82,6 +82,7 @@ const useStyles = makeStyles(
         maxWidth: "800px",
         [breakpoints.down("md")]: {
           textAlign: "left",
+          maxWidth: "100%",
           fontSize: "56px",
           lineHeight: "63px",
         }
@@ -98,7 +99,6 @@ const useStyles = makeStyles(
         fontSize: "18px",
         lineHeight: "26px",
         marginRight: constants.generalUnit * 2,
-        padding: constants.generalUnit,
         transition: "all ease-in-out 0.2s",
         "&:hover, &:active, &:focus": {
           background: palette.primary.main,
@@ -109,7 +109,6 @@ const useStyles = makeStyles(
         color: palette.common.white.main,
         fontSize: "18px",
         lineHeight: "26px",
-        padding: constants.generalUnit,
         transition: "all ease-in-out 0.2s",
         "&:hover, &:active, &:focus": {
           background: palette.primary.main,

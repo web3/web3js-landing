@@ -8,10 +8,11 @@ import {
 const useStyles = makeStyles(({ constants}: ITheme) => {
   return createStyles({
     navlink: {
-      fontSize: "25px", listStyle: "none", display: "flex", alignItems: "center", justifyContent: "flex-end", cursor: "pointer", margin: `${constants.generalUnit * 2.5}px ${constants.generalUnit * 1}px`
+      fontSize: "25px", listStyle: "none", display: "flex", alignItems: "center", justifyContent: "flex-end", cursor: "pointer", margin: `${constants.generalUnit * 2.5}px ${constants.generalUnit * 1}px`,
     },
     noUnderline: {
       textDecoration: "none",
+      color: "#fff",
     }
   })
 })
