@@ -151,7 +151,7 @@ const Footer: React.FC = () => {
           </Grid>
           <Grid item className={classes.item}>
             <a
-              href="hhttps://medium.com/chainsafe-systems/tagged/ethereum"
+              href="https://medium.com/chainsafe-systems/tagged/ethereum"
               target="_blank"
               rel="noopener noreferrer"
             >
