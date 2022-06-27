@@ -169,10 +169,10 @@ const Hero2: React.FC = () => {
               <div className={clsx(classes.primDark, classes.stackedIndicator)}></div><a className={classes.stackedLink} href="https://www.npmjs.com/package/web3" rel="noopener noreferrer" target="_blank">Download on npm</a>
             </div>
             <div className={classes.link}>
-              <div className={classes.stackedIndicator}></div><a className={classes.stackedLink} href="https://web3js.readthedocs.io/en/v1.5.2/" rel="noopener noreferrer" target="_blank">Visit Docs/Ethereum API</a>
+              <div className={classes.stackedIndicator}></div><a className={classes.stackedLink} href="https://web3js.readthedocs.io/en/v1.5.2/" rel="noopener noreferrer" target="_blank">Read the docs</a>
             </div>
             <div className={classes.link}>
-              <div className={clsx(classes.primLight, classes.stackedIndicator)}></div><a className={classes.stackedLink} href="https://www.npmjs.com/package/web3" rel="noopener noreferrer" target="_blank">Follow Tutorial</a>
+              <div className={clsx(classes.primLight, classes.stackedIndicator)}></div><a className={classes.stackedLink} href="https://www.npmjs.com/package/web3" rel="noopener noreferrer" target="_blank">Access Tutorial</a>
             </div>
           </div>
         </div>
@@ -181,7 +181,7 @@ const Hero2: React.FC = () => {
         <div className={classes.columnContentWrapper}>
           <div className={classes.testCard}><img src="/hero.png" alt="Abstract pattern of gemoetric shapes"/></div>
           <Typography variant="h1" className={clsx(classes.reduceLeading, classes.titleText, classes.displayOnWide)}>
-            web3.js is a Javascript library for building on Ethereum. 
+            A JavaScript library for building on Ethereum
           </Typography>
         </div>
       </div>

@@ -74,6 +74,17 @@ const CodeBlocks: React.FC = () => {
         </div>
         <div className={classes.demo}>
           <CopyBlock
+            text={sample["listen"]}
+            language="javascript"
+            theme={monokaiSublime}
+            wrapLines={true}
+            customStyle={codeCSS}
+            />
+            <h1 className={classes.header}>Listen for on-chain envents.</h1>
+            <p className={classes.desc}>Subscribe to changes on smart contracts and more.</p>
+        </div>
+        <div className={classes.demo}>
+          <CopyBlock
             text={sample["fetch"]}
             language="javascript"
             theme={monokaiSublime}
@@ -91,7 +102,7 @@ const CodeBlocks: React.FC = () => {
             wrapLines={true}
             customStyle={codeCSS}
             />
-            <h1 className={classes.header}>Simplify your code with built-in utilities.</h1>
+            <h1 className={classes.header}>Simplify your code with built-in utilities..</h1>
             <p className={classes.desc}>Calculate the sha3 hash of your input data, convert your Ether values in wei, and more.</p>
         </div>
       </div>

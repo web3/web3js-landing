@@ -75,9 +75,14 @@ const useStyles = makeStyles(
         background: "#292929",
         borderRadius: "12px",
         width: "100%",
-        "& > p": {
+        "& > a > p": {
           fontSize: "20px",
           color: palette.additional["gray"][5],
+          transition: "0.2s ease-in",
+          "&:hover": {
+            opacity: "60%",
+          },
+
         }
       },
       button: {
@@ -118,13 +123,13 @@ const Timeline: React.FC = () => {
         <div className={classes.columnContentWrapper}>
           <div className={classes.itemsContainer}>
             <div className={classes.item}>
-              <p>Update text goes here</p>
+              <a href="https://twitter.com/ChainSafeth/status/1541434996094709763" target="_blank" rel="noopener noreferrer"><p>Version 1.7.4 is live!</p></a>
             </div>
             <div className={classes.item}>
-              <p>Update text goes here</p>
+              <a href="https://twitter.com/ChainSafeth/status/1507414169725075456" target="_blank" rel="noopener noreferrer"><p>Announcing the Chainlink integration into web3.js</p></a>
             </div>
             <div className={classes.item}>
-              <p>Update text goes here</p>
+              <a href="https://blog.chainsafe.io/the-future-of-web3-js-v3-0-0-release-ecc9feecb2de" target="_blank" rel="noopener noreferrer"><p>The Future of web3.js</p></a>
             </div>
           </div>
         </div>

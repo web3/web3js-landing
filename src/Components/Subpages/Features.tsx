@@ -104,7 +104,7 @@ const Features: React.FC = () => {
     <div className={classes.container}>
       <div className={classes.columnContentWrapper}>        
         <Typography variant="h2" className={clsx(classes.reduceLeading, classes.titleText, classes.white)}>
-          What you can do with web3.js
+          With web3.js, you can:
         </Typography>
         <div className={classes.featureContainer}>
           <div className={classes.spec}>

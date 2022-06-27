@@ -81,16 +81,13 @@ const useStyles = makeStyles(
         color: palette.primary.main,
         textAlign: "left",
         display: "none",
+        letterSpacing: "0.3px",
         fontWeight: "bold",
         [breakpoints.up(599)]:{
           display: "block",
           marginRight: "4rem",
-          fontSize: "180px",
-          lineHeight: "180px",
-        },
-        [breakpoints.up(1099)]:{
-          fontSize: "250px",
-          lineHeight: "250px",
+          fontSize: "120px",
+          lineHeight: "120px",
         },
       },
       aboutTextWrapper: {
@@ -122,8 +119,8 @@ const About: React.FC = () => {
       </div>
       <div className={classes.rightColumn}>
         <div className={classes.columnContentWrapper}>
-          <Typography variant="h3" className={clsx(classes.reduceLeading, classes.titleText)}>
-            It's
+          <Typography variant="h1" className={clsx(classes.reduceLeading, classes.titleText)}>
+            web3.js is
           </Typography>
           <div className={classes.aboutTextWrapper}>
             <div className={classes.aboutItem}>
@@ -131,7 +128,7 @@ const About: React.FC = () => {
                 Comprehensive.
               </Typography>
               <Typography variant="body2" className={classes.descText}>
-                Everything you need to start interacting with the Ethereum blockchain, whether you're using HTTP, IPC or websocket.
+                Everything you need to start interacting with the Ethereum blockchain
               </Typography>
             </div>
             <div className={classes.aboutItem}>
@@ -139,7 +136,7 @@ const About: React.FC = () => {
                 Community-driven.
               </Typography>
               <Typography variant="body2" className={classes.descText}>
-                Launched as an open-source library in 2015, and frequently updated to support 200k+ downloads each week on NPM.
+                Open-source and continuously updated since 2015
               </Typography>
             </div>
             <div className={classes.aboutItem}>
@@ -147,7 +144,7 @@ const About: React.FC = () => {
                 Modular.
               </Typography>
               <Typography variant="body2" className={classes.descText}>
-                Import only the packages you require; interact with smart contracts, query the blockchain, and more.
+                Import only the packages you need
               </Typography>
             </div>
           </div>
