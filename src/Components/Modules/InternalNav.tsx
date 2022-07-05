@@ -37,10 +37,10 @@ const useStyles = makeStyles(
         },
         margin: "0 1rem",
         textDecoration: "none",
-        "&:hover": {
-          color: palette.additional["gray"][8],
-          transition: "ease-in 0.2s",
-        },
+        // "&:hover": {
+        //   color: palette.additional["gray"][8],
+        //   transition: "ease-in 0.2s",
+        // },
       },
       bold: {
         fontWeight: 600,
@@ -54,8 +54,8 @@ const InternalNav: React.FC = () => {
   return(
     <div className={classes.container}>
       <div className={classes.linksContainer}>
-          <Typography variant="h5" className={classes.bold}>
-            <a href="https://github.com/ChainSafe/web3.js/releases/tag/v1.6.0" target="__blank" rel="noreferrer noopener"className={classes.navlink}>Banner with some text announcing latest release!</a>
+          <Typography variant="h5" className={classes.navlink}>
+            4.x alpha release coming soon!
           </Typography>
        
       </div>
