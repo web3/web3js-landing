@@ -86,8 +86,8 @@ const useStyles = makeStyles(
         [breakpoints.up(599)]:{
           display: "block",
           marginRight: "4rem",
-          fontSize: "120px",
-          lineHeight: "120px",
+          fontSize: "100px",
+          lineHeight: "100px",
         },
       },
       aboutTextWrapper: {

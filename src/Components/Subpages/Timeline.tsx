@@ -75,6 +75,7 @@ const useStyles = makeStyles(
         background: "#292929",
         borderRadius: "12px",
         width: "100%",
+        transition: "all .3s ease-out",
         "& > a > p": {
           fontSize: "20px",
           color: palette.additional["gray"][5],
@@ -82,7 +83,9 @@ const useStyles = makeStyles(
           "&:hover": {
             opacity: "60%",
           },
-
+        },
+        "&:hover": {
+          background: "#121212",
         }
       },
       button: {
@@ -116,6 +119,7 @@ const Timeline: React.FC = () => {
           </Typography>
           <br></br>
           <a className={classes.button} href="/maintainers">About the maintainers</a>
+          <a className={classes.button} href="https://discord.gg/rvwGWZPt" target="_blank" rel="noopener noreferrer">Join Discord</a>
           {/* <a className={classes.button} href="/maintainers">Read Project History</a> */}
         </div>
       </div>

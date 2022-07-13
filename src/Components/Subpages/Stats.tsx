@@ -108,7 +108,7 @@ const Stats: React.FC = () => {
             <p>A proud cornerstone of the ecosystem.</p>
             <div className={classes.statsWrapper}>
               <p>
-                <div className={classes.highlightText}>250,000+ </div>
+                <div className={classes.highlightText}>500,000+ </div>
                  weekly downloads.
               </p>
               <p>
