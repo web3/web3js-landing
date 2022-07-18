@@ -77,20 +77,8 @@ const useStyles = makeStyles(
         width: "32px",
         height: "32px",
         borderRadius: "4px",
-        background: palette.primary.dark,
+        background: palette.primary.main,
         marginRight: "1rem",
-      },
-      orange5: {
-        background: "#F06400",
-      },
-      orange4: {
-        background: "#F57500",
-      },
-      orange3: {
-        background: "#F98200",
-      },
-      orange2: {
-        background: "#FB9400",
       },
       primLight: {
         background: palette.primary.light,
@@ -112,24 +100,24 @@ const Features: React.FC = () => {
             <p>Interact with smart contracts as JS objects.</p>
           </div>
           <div className={classes.spec}>
-            <span className={clsx(classes.orange5, classes.square)}></span>
+            <span className={classes.square}></span>
             <p>Subscribe to specific on-chain events.</p>
           </div>
           <div className={classes.spec}>
-            <span className={clsx(classes.orange4, classes.square)}></span>
+            <span className={classes.square}></span>
             <p>Interact with the Ethereum Name Service.</p>
           </div>
           <div className={classes.spec}>
-            <span className={clsx(classes.orange3, classes.square)}></span>
+            <span className={classes.square}></span>
             <p>Utilities with built-in helpers for Ethereum dapps and web3 packages.</p>
           </div>
           <div className={classes.spec}>
-            <span className={clsx(classes.orange2, classes.square)}></span>
+            <span className={classes.square}></span>
             <p>Get block and state information from Ethereum nodes.</p>
           </div>
           
           <div className={classes.spec}>
-            <span className={clsx(classes.primLight, classes.square)}></span>
+            <span className={classes.square}></span>
             <p>Create accounts, process and sign transactions.</p>
           </div>
         </div>
