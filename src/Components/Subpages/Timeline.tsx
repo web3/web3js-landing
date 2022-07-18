@@ -118,7 +118,7 @@ const Timeline: React.FC = () => {
             Latest Updates
           </Typography>
           <br></br>
-          <a className={classes.button} href="/maintainers">About the maintainers</a>
+          <a className={classes.button} href="https:/web3js.org/maintainers" target="_blank" rel="noopener noreferrer">About the maintainers</a>
           <a className={classes.button} href="https://discord.gg/rvwGWZPt" target="_blank" rel="noopener noreferrer">Join Discord</a>
           {/* <a className={classes.button} href="/maintainers">Read Project History</a> */}
         </div>
@@ -130,7 +130,7 @@ const Timeline: React.FC = () => {
               <a href="https://twitter.com/ChainSafeth/status/1541434996094709763" target="_blank" rel="noopener noreferrer"><p>Version 1.7.4 is live!</p></a>
             </div>
             <div className={classes.item}>
-              <a href="https://twitter.com/ChainSafeth/status/1507414169725075456" target="_blank" rel="noopener noreferrer"><p>Announcing the Chainlink integration into web3.js</p></a>
+              <a href="https://twitter.com/ChainSafeth/status/1507414169725075456" target="_blank" rel="noopener noreferrer"><p>Announcing the Chainlink plugin into web3.js</p></a>
             </div>
             <div className={classes.item}>
               <a href="https://blog.chainsafe.io/the-future-of-web3-js-v3-0-0-release-ecc9feecb2de" target="_blank" rel="noopener noreferrer"><p>The Future of web3.js</p></a>

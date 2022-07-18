@@ -102,7 +102,7 @@ const CodeBlocks: React.FC = () => {
             wrapLines={true}
             customStyle={codeCSS}
             />
-            <h1 className={classes.header}>Simplify your code with built-in utilities..</h1>
+            <h1 className={classes.header}>Simplify your code with built-in utilities.</h1>
             <p className={classes.desc}>Calculate the sha3 hash of your input data, convert your Ether values in wei, and more.</p>
         </div>
       </div>
