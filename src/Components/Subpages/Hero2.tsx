@@ -169,7 +169,7 @@ const Hero2: React.FC = () => {
               <div className={clsx(classes.primDark, classes.stackedIndicator)}></div><a className={classes.stackedLink} href="https://www.npmjs.com/package/web3" rel="noopener noreferrer" target="_blank">Download on npm</a>
             </div>
             <div className={classes.link}>
-              <div className={classes.stackedIndicator}></div><a className={classes.stackedLink} href="https://web3js.readthedocs.io/en/v1.5.2/" rel="noopener noreferrer" target="_blank">Read the docs</a>
+              <div className={classes.stackedIndicator}></div><a className={classes.stackedLink} href="https://docs.web3js.org/" rel="noopener noreferrer" target="_blank">4.x Docs</a>
             </div>
             <div className={classes.link}>
               <div className={clsx(classes.primLight, classes.stackedIndicator)}></div><a className={classes.stackedLink} href="https://discord.gg/rvwGWZPt" rel="noopener noreferrer" target="_blank">Join Discord</a>

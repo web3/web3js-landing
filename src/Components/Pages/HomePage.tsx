@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
     <>
       <div className={classes.globalWrap}>
         <NavBar2/>
-        <InternalNav/>
+        {/* <InternalNav/> */}
         <Hero2/>
         <About/>
         <Features/>

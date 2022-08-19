@@ -23,8 +23,13 @@ export interface NavLink {
 const navlinks: NavLink[] = [
   {
     id: 1,
-    name: "Docs",
-    linkUrl: "https://web3js.readthedocs.io/en/v1.5.2/"
+    name: "1.x Docs",
+    linkUrl: "https://web3js.readthedocs.io/en/v1.7.5/"
+  },
+  {
+    id: 1,
+    name: "4.x Docs",
+    linkUrl: "https://docs.web3js.org/"
   },
   {
     id: 3,

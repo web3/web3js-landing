@@ -119,10 +119,10 @@ const NavBar: React.FC = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://web3js.readthedocs.io/en/v1.5.2/"
+                href="https://web3js.readthedocs.io/en/v1.7.5/"
                 className={classes.navlink}
               >
-                <Trans>Docs</Trans>
+                <Trans>1.x Docs</Trans>
               </a>
             </Typography>
             <Typography variant="h5">

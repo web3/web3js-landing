@@ -27,6 +27,7 @@ const useStyles = makeStyles(
         height: "40px",
       },
       navlink: {
+        fontSize: "18px",
         color: palette.primary.main,
         [breakpoints.up("sm")]:{
           margin: `0 ${constants.generalUnit * 2}px`,
@@ -37,10 +38,9 @@ const useStyles = makeStyles(
         },
         margin: "0 1rem",
         textDecoration: "none",
-        // "&:hover": {
-        //   color: palette.additional["gray"][8],
-        //   transition: "ease-in 0.2s",
-        // },
+        "&:hover": { 
+          filter: "brightness(0.5)",
+        }
       },
       bold: {
         fontWeight: 600,
@@ -54,9 +54,9 @@ const InternalNav: React.FC = () => {
   return(
     <div className={classes.container}>
       <div className={classes.linksContainer}>
-          <Typography variant="h5" className={classes.navlink}>
-            4.x alpha release coming soon!
-          </Typography>
+          <a href="https://web3js.readthedocs.io/&sa=D&source=docs&ust=1660940171404385&usg=AOvVaw11T6otrXxz39Ak5xXy24X9" target="_blank" rel="noopener noreferrer" className={classes.navlink}>
+            1.x docs
+          </a>
        
       </div>
     </div>
