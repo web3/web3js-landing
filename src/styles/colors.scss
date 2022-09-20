@@ -1,0 +1,23 @@
+// global color setup
+:root {
+  --gray-color-hue: 0;
+  --gray-color-saturation: 5%;
+}
+
+// sass variables
+$primary: #F16822;
+$primary-dark: #E03000;
+$primary-lgiht: #FDA733;
+
+$background: #1D1A1A;
+
+$secondary: hsl(0, 0, 18%);
+$secondary-dark: hsl(0, 0, 10%);
+
+$gray-100: hsl(35, 38%, 94%); //#F5F0E9
+
+$gray-200: hsl(35, 21%, 89%); //#F5F5F5
+$gray-300: hsl(35, 11%, 77%); //#cac5bd
+
+$white: hsl(var(--gray-color-hue), var(--gray-color-saturation), 100%);
+$black: hsl(var(--gray-color-hue), var(--gray-color-saturation), 0%);

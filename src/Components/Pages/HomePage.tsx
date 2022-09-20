@@ -12,6 +12,10 @@ import CodeBlocks from "../Subpages/CodeBlocks"
 import UsedBy from "../Subpages/UsedBy"
 import Stats from "../Subpages/Stats"
 import Timeline from "../Subpages/Timeline"
+import { Hero } from '../Subpages/Hero/Hero';
+import { About2 } from '../Subpages/About/About';
+import { Features2 } from '../Subpages/Features/Features';
+import { CodeBlocks2 } from '../Subpages/CodeBlocks/CodeBlocks';
 
 const useStyles = makeStyles(({constants, breakpoints}:ITheme) => {
   return createStyles({
@@ -55,19 +59,18 @@ const HomePage: React.FC = () => {
   return (
     <>
       <div className={classes.globalWrap}>
-        <NavBar2/>
-        {/* <InternalNav/> */}
-        <Hero2/>
-        <About/>
-        <Features/>
-        <CodeBlocks/>
-        <UsedBy/>
-        <Stats/>
-        <Timeline/>
+        <NavBar2 />
+        <Hero />
+        <About2 />
+        <Features2 />
+        <CodeBlocks2 />
+        <UsedBy />
+        <Stats />
+        <Timeline />
       </div>
-      <Footer/>
+      <Footer />
     </>
-  )
+  );
 }
 
 export default HomePage

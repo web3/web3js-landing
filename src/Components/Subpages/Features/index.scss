@@ -1,0 +1,73 @@
+@import 'src/styles/breakpoints.scss';
+@import 'src/styles/colors.scss';
+@import 'src/styles/typography.scss';
+
+.features {
+  @media #{$mq-xl} {
+    max-width: 90%;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media #{$mq-md} {
+    margin-top: 2rem;
+    flex-direction: row;;
+  }
+  flex-direction: column;
+  display: flex;
+  padding: 2rem 0;
+  justify-content: center;
+  align-items: flex-start;
+
+  .content-wrapper {
+    @media #{$mq-sm} {
+      padding: 0 2rem;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .features-container {
+
+    @media #{$mq-md} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    display: grid; 
+    margin-top: 1.5rem;
+    grid-template-columns: minmax(100%, 1fr);
+    align-content: center;
+    
+    &--item {
+
+      @media #{$mq-md} {
+        max-width: 400px;
+      }
+
+      display: flex;
+      flex-direction: row;
+      padding: 1rem 1rem 1rem 0;
+
+      p {
+        @media #{$mq-md} {
+          // hmm...
+          max-width: 400px
+        }
+        @extend %body-lg;
+        max-width: 85%;
+        color: $gray-400;
+
+      }
+    }
+    .square {
+      width: 32px;
+      min-width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      background: $primary;
+      margin-right: 1rem;
+    }
+  }
+}
