@@ -1,4 +1,3 @@
-
 const sample = {
   interact: `const Web3 = require("web3");
     // set a provider in the ropsten testnet using infura
@@ -60,7 +59,7 @@ const sample = {
 const subscription = await contract.events.VALUE_CHANGE();
 subscription.on("data", console.log); // new value every time the event is emitted
 `,
-fetch: `
+  fetch: `
 const Web3 = require("web3")
   
 // set a provider such as using infura
@@ -72,7 +71,7 @@ web3.eth.getBalance("0x1b3cB81E51011b549d78bf720b0d924ac763A7C2").then(console.l
 // Get the latest block number
  web3.eth.getBlockNumber().then(console.log) // result: BigInt(13497160)
 `,
-simplify: `
+  simplify: `
 const Web3 = require("web3")
 
 // Create a sha3 hash of a string input
@@ -85,6 +84,6 @@ Web3.utils.sha3("example") // '0x6fd43e7cffc31bb581d7421c8698e29aa2bd8e7186a394b
 // Adds a padding on the left of a string, useful for adding paddings to HEX strings.
 Web3.utils.padLeft('0x3456ff', 20); // '0x000000000000003456ff'
 `,
-}
+};
 
 export default sample;
