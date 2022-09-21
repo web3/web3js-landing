@@ -2,9 +2,9 @@ import React, { useEffect } from "react"
 import { useParams, } from "@chainsafe/common-components"
 import { useLanguageContext } from "../../LanguageContext"
 import { makeStyles, ITheme, createStyles } from "@chainsafe/common-theme"
-import FullTimeline from "../Subpages/FullTimeline"
-import NavBar from "../Modules/NavBar"
-import Footer from "../Modules/Footer"
+import FullTimeline from '../Subpages/FullTimeline';
+import NavBar from '../Modules/NavBar';
+import Footer from '../Modules/Footer';
 
 
 const useStyles = makeStyles(({constants, breakpoints}:ITheme) => {

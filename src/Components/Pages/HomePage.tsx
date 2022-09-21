@@ -1,30 +1,29 @@
-import React, { useEffect } from "react"
-import { useParams } from "@chainsafe/common-components"
-import { makeStyles, ITheme, createStyles } from "@chainsafe/common-theme"
-import { useLanguageContext } from "../../LanguageContext"
-import InternalNav from "../Modules/InternalNav"
-import Footer from "../Modules/Footer"
-import NavBar2 from "../Modules/NavBar"
-import Hero2 from "../Subpages/Hero2"
-import About from "../Subpages/About"
-import Features from "../Subpages/Features"
-import CodeBlocks from "../Subpages/CodeBlocks"
-import UsedBy from "../Subpages/UsedBy"
-import Stats from "../Subpages/Stats"
-import Timeline from "../Subpages/Timeline"
-import { Hero } from '../Subpages/Hero/Hero';
-import { About2 } from '../Subpages/About/About';
-import { Features2 } from '../Subpages/Features/Features';
-import { CodeBlocks2 } from '../Subpages/CodeBlocks/CodeBlocks';
+import React, { useEffect } from 'react';
+import { useParams } from '@chainsafe/common-components';
+import { makeStyles, ITheme, createStyles } from '@chainsafe/common-theme';
+import { useLanguageContext } from '../../LanguageContext';
+import NavBar2 from '../Modules/NavBar';
+import Footer from '../Modules/Footer';
+import Hero2 from '../Subpages/Hero2';
+import About from '../Subpages/About';
+import Features from '../Subpages/Features';
+import CodeBlocks from '../Subpages/CodeBlocks';
+import UsedBy from '../Subpages/UsedBy';
+import Stats from '../Subpages/Stats';
+import Timeline from '../Subpages/Timeline';
+// import { Hero } from '../Subpages/Hero/Hero';
+// import { About2 } from '../Subpages/About/About';
+// import { Features2 } from '../Subpages/Features/Features';
+// import { CodeBlocks2 } from '../Subpages/CodeBlocks/CodeBlocks';
 
-const useStyles = makeStyles(({constants, breakpoints}:ITheme) => {
+const useStyles = makeStyles(({ constants, breakpoints }: ITheme) => {
   return createStyles({
     globalWrap: {
       [breakpoints.up(1599)]: {
-        maxWidth: "70%",
-        left: "50%",
-        position: "relative",
-        transform: "translate(-50%)",
+        maxWidth: '70%',
+        left: '50%',
+        position: 'relative',
+        transform: 'translate(-50%)',
       },
       [breakpoints.up(1199)]: {
         margin: `0 ${constants.desktopMargin}px 0`,
@@ -35,35 +34,36 @@ const useStyles = makeStyles(({constants, breakpoints}:ITheme) => {
       [breakpoints.up(360)]: {
         margin: `0 ${constants.mobileMargin}px 0`,
       },
-    }
-  })
-})
+    },
+  });
+});
 
 const HomePage: React.FC = () => {
-  const { lang } = useParams()
-  const { availableLanguages, selectedLanguage, setActiveLanguage } = useLanguageContext()
+  const { lang } = useParams();
+  const { availableLanguages, selectedLanguage, setActiveLanguage } =
+    useLanguageContext();
 
   useEffect(() => {
-    if (!lang) return
+    if (!lang) return;
 
-    const availableRoute = availableLanguages.find((availableLanguage) => availableLanguage.id === lang)
+    const availableRoute = availableLanguages.find(
+      (availableLanguage) => availableLanguage.id === lang
+    );
 
     if (availableRoute !== undefined && selectedLanguage !== lang) {
-      setActiveLanguage(lang, false)
+      setActiveLanguage(lang, false);
     }
-  }
-    , [availableLanguages, lang, selectedLanguage, setActiveLanguage]
-  )
+  }, [availableLanguages, lang, selectedLanguage, setActiveLanguage]);
   const classes = useStyles();
 
   return (
     <>
       <div className={classes.globalWrap}>
         <NavBar2 />
-        <Hero />
-        <About2 />
-        <Features2 />
-        <CodeBlocks2 />
+        <Hero2 />
+        <About />
+        <Features />
+        <CodeBlocks />
         <UsedBy />
         <Stats />
         <Timeline />
@@ -71,6 +71,6 @@ const HomePage: React.FC = () => {
       <Footer />
     </>
   );
-}
+};
 
-export default HomePage
+export default HomePage;

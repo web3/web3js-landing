@@ -1,7 +1,7 @@
 import React from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import clsx from "clsx";
-import { Button, Typography } from "@chainsafe/common-components";
+import { Typography } from '@chainsafe/common-components';
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
