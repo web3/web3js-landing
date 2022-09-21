@@ -113,13 +113,31 @@ const Timeline: React.FC = () => {
   return (
     <div className={classes.container}>
       <div className={classes.leftColumn}>
-        <div className={classes.columnContentWrapper}>   
-          <Typography variant="h3" className={clsx(classes.bold, classes.reduceLeading, classes.titleText)}>
+        <div className={classes.columnContentWrapper}>
+          <Typography
+            variant='h3'
+            className={clsx(
+              classes.bold,
+              classes.reduceLeading,
+              classes.titleText
+            )}>
             Latest Updates
           </Typography>
           <br></br>
-          <a className={classes.button} href="https:/web3js.org/maintainers" target="_blank" rel="noopener noreferrer">About the maintainers</a>
-          <a className={classes.button} href="https://discord.gg/rvwGWZPt" target="_blank" rel="noopener noreferrer">Join Discord</a>
+          <a
+            className={classes.button}
+            href='https:/web3js.org/maintainers'
+            target='_blank'
+            rel='noopener noreferrer'>
+            About the maintainers
+          </a>
+          <a
+            className={classes.button}
+            href='https://discord.gg/rvwGWZPt'
+            target='_blank'
+            rel='noopener noreferrer'>
+            Join Discord
+          </a>
           {/* <a className={classes.button} href="/maintainers">Read Project History</a> */}
         </div>
       </div>
@@ -127,19 +145,34 @@ const Timeline: React.FC = () => {
         <div className={classes.columnContentWrapper}>
           <div className={classes.itemsContainer}>
             <div className={classes.item}>
-              <a href="https://twitter.com/ChainSafeth/status/1541434996094709763" target="_blank" rel="noopener noreferrer"><p>Version 1.7.4 is live!</p></a>
+              <a
+                href='https://blog.chainsafe.io/web3-js-repository-migration-announcement-96cbb34e0c7e'
+                target='_blank'
+                rel='noopener noreferrer'>
+                <p>Web3.js Repository Migration Announcement</p>
+              </a>
             </div>
             <div className={classes.item}>
-              <a href="https://twitter.com/ChainSafeth/status/1507414169725075456" target="_blank" rel="noopener noreferrer"><p>Announcing the Chainlink plugin into web3.js</p></a>
+              <a
+                href='https://blog.chainsafe.io/alpha-release-of-web3-js-v4-x-4a5c7bfb16b1'
+                target='_blank'
+                rel='noopener noreferrer'>
+                <p>Alpha Release of Web3.js v4.x</p>
+              </a>
             </div>
             <div className={classes.item}>
-              <a href="https://blog.chainsafe.io/the-future-of-web3-js-v3-0-0-release-ecc9feecb2de" target="_blank" rel="noopener noreferrer"><p>The Future of web3.js</p></a>
+              <a
+                href='https://blog.chainsafe.io/the-future-of-web3-js-v3-0-0-release-ecc9feecb2de'
+                target='_blank'
+                rel='noopener noreferrer'>
+                <p>The Future of web3.js</p>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Timeline;
