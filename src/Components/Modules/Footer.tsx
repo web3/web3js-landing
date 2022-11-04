@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
             </Grid>
             <Grid item className={classes.item}>
               <a
-                href="https://web3js.readthedocs.io/en/v1.5.2/"
+                href="https://web3js.readthedocs.io/en/latest/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
             </Grid>
             <Grid item className={classes.item}>
               <a
-                href="https://web3js.readthedocs.io/en/v1.5.2/"
+                href="https://web3js.readthedocs.io/en/latest/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
