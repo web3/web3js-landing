@@ -32,7 +32,7 @@ const defaultContext: LanguageContext = {
   setActiveLanguage: () => { console.error("setActiveLanguage not implemented") }
 }
 
-const LanguageContext = React.createContext<LanguageContext>(defaultContext)
+const languageContext = React.createContext<LanguageContext>(defaultContext)
 
 const getLanguages = (preferred = ""): string[] => {
   const { languages, language } = window.navigator
@@ -114,7 +114,7 @@ const LanguageProvider = ({ children, availableLanguages }: LanguageProviderProp
   }, [availableLanguages, localStorageGet, setLanguage])
 
   return (
-    <LanguageContext.Provider
+    <languageContext.Provider
       value={{
         availableLanguages,
         selectedLanguage,
@@ -123,12 +123,12 @@ const LanguageProvider = ({ children, availableLanguages }: LanguageProviderProp
       }}
     >
       <I18nProvider i18n={i18n}>{children}</I18nProvider>
-    </LanguageContext.Provider>
+    </languageContext.Provider>
   )
 }
 
 function useLanguageContext() {
-  const context = React.useContext(LanguageContext)
+  const context = React.useContext(languageContext)
   if (context === undefined) {
     throw new Error("useLanguageContext must be used within a LanguageProvider")
   }

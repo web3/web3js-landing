@@ -126,7 +126,7 @@ const Timeline: React.FC = () => {
           <br></br>
           <a
             className={classes.button}
-            href='https:/web3js.org/maintainers'
+            href='/maintainers'
             target='_blank'
             rel='noopener noreferrer'>
             About the maintainers

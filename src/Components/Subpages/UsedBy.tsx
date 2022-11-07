@@ -1,5 +1,5 @@
 import React from "react";
-import { createStyles, darken, ITheme, makeStyles } from "@chainsafe/common-theme";
+import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import clsx from "clsx";
 import { Typography } from "@chainsafe/common-components";
 
