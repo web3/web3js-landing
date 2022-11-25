@@ -86,7 +86,7 @@ const CodeBlocks: React.FC = () => {
             wrapLines={true}
             customStyle={codeCSS}
           />
-          <h1 className={classes.header}>Listen for on-chain envents.</h1>
+          <h1 className={classes.header}>Listen for on-chain events.</h1>
           <p className={classes.desc}>
             Subscribe to changes on smart contracts and more.
           </p>
