@@ -85,13 +85,13 @@ const NavBar: React.FC = () => {
 
   const classes = useStyles();
 
-  const [isNavVisible, setIsNavVisible] = useState(false);
+  const [isNavVisible] = useState(false);
 
   const isMobile = useMediaQuery("(max-width: 1170px)");
 
-  const toggleNav = () => {
-    setIsNavVisible(!isNavVisible);
-  }
+  // const toggleNav = () => {
+  //   setIsNavVisible(!isNavVisible);
+  // }
 
   const scrollToTop = useScrollToTop();
 

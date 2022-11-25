@@ -3,7 +3,7 @@ import { ThemeProvider, createTheme } from "@chainsafe/common-theme"
 import { LanguageProvider } from "./LanguageContext"
 import { CssBaseline, Router } from "@chainsafe/common-components"
 import "@chainsafe/common-theme/dist/font-faces.css"
-import Routes from "./components/Routes"
+import Routes from "./Components/Routes"
 
 const theme = createTheme({
   globalStyling: {
