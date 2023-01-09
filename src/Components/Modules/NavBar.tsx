@@ -129,7 +129,7 @@ const NavBar: React.FC = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://discord.com/invite/xSAwrnCWcg"
+                href="https://discord.gg/rvwGWZPt"
                 className={classes.navlink}
               >
                 <Trans>Community</Trans>
