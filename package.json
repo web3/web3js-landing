@@ -2,7 +2,6 @@
   "name": "web3js-landing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://web3.github.io/web3js-landing",
   "dependencies": {
     "@chainsafe/common-components": "^1.0.30",
     "@chainsafe/common-theme": "^1.0.10",
