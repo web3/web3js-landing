@@ -3,6 +3,12 @@ import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import { Typography } from "@chainsafe/common-components";
 import clsx from "clsx";
 import { Trans } from "@lingui/macro";
+import chainsafe from "../../assets/images/chainsafe.png"
+import ethereum from "../../assets/images/ethereumjs.png"
+import samuel from "../../assets/images/samuel.jpeg"
+import fabian from "../../assets/images/fabian.jpeg"
+import marek from "../../assets/images/marek.jpeg"
+import jeffrey from "../../assets/images/jeffrey.jpg"
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints }: ITheme) => {
@@ -140,7 +146,7 @@ const Maintainers: React.FC = () => {
         <span className={classes.timelineItem}>
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
-              <img src="/jeffrey.jpg" alt="Jeffrey Wilcke"/>
+              <img src={jeffrey} alt="Jeffrey Wilcke"/>
             </div>
           </span>
           <span className={classes.dot}></span>
@@ -153,7 +159,7 @@ const Maintainers: React.FC = () => {
         <span className={classes.timelineItem}>
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
-              <img src="/marek.jpeg" alt="Marek Kotewicz" />
+              <img src={marek} alt="Marek Kotewicz" />
             </div>
           </span>
           <span className={classes.dot}></span>
@@ -166,7 +172,7 @@ const Maintainers: React.FC = () => {
         <span className={classes.timelineItem}>
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
-              <img src="fabian.jpeg" alt="Fabian Vogelsteller" />
+              <img src={fabian} alt="Fabian Vogelsteller" />
             </div>
           </span>
           <span className={classes.dot}></span>
@@ -179,7 +185,7 @@ const Maintainers: React.FC = () => {
         <span className={classes.timelineItem}>
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
-              <img src="/samuel.jpeg" alt="Samuel Furter" />
+              <img src={samuel} alt="Samuel Furter" />
             </div>
           </span>
           <span className={classes.dot}></span>
@@ -192,7 +198,7 @@ const Maintainers: React.FC = () => {
         <span className={classes.timelineItem}>
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
-              <img src="/ethereumjs.png" alt="ethereumjs" />
+              <img src={ethereum} alt="ethereumjs" />
             </div>
           </span>
           <span className={classes.dot}></span>
@@ -207,7 +213,7 @@ const Maintainers: React.FC = () => {
         <span className={classes.timelineItem}>
           <span className={classes.timelineAvi}>
             <div className={classes.avatar}>
-              <img src="chainsafe.png" alt="ChainSafe" />
+              <img src={chainsafe} alt="ChainSafe" />
             </div>
           </span>
           <span className={classes.dot}></span>

@@ -1,8 +1,10 @@
 import React from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import clsx from "clsx";
-import { Typography } from "@chainsafe/common-components";
+import { Link, Typography } from "@chainsafe/common-components";
 import Maintainers from "./Maintainers";
+import web3js from "../../assets/images/web3js.png"
+import hero from "../../assets/images/hero.png"
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
@@ -160,10 +162,10 @@ const FullTimeline: React.FC = () => {
     <div className={classes.container}>
       <div className={classes.leftColumn}>
         <div className={classes.columnContentWrapper}>   
-          <img className={classes.brand} src="/web3js.png" alt="Abstract pattern of gemoetric shapes"/>
+          <img className={classes.brand} src={web3js} alt="Abstract pattern of gemoetric shapes"/>
           <div className={classes.linksWrapper}>
             <div className={classes.link}>
-              <div className={clsx(classes.primDark, classes.stackedIndicator)}></div><a className={classes.stackedLink} href="/">Back to home</a>
+              <div className={clsx(classes.primDark, classes.stackedIndicator)}></div><Link className={classes.stackedLink} to="/">Back to home</Link>
             </div>
             {/* <div className={classes.link}>
               <div className={classes.stackedIndicator}></div><a className={classes.stackedLink} href="https://web3js.readthedocs.io/en/v1.5.2/" rel="noopener noreferrer" target="_blank">Visit Docs/Ethereum API</a>
@@ -176,7 +178,7 @@ const FullTimeline: React.FC = () => {
       </div>
       <div className={classes.rightColumn}>
         <div className={classes.columnContentWrapper}>
-          <div className={classes.testCard}><img src="/hero.png" alt="Abstract pattern of gemoetric shapes"/></div>
+          <div className={classes.testCard}><img src={hero} alt="Abstract pattern of gemoetric shapes"/></div>
           <Typography variant="h1" className={clsx(classes.reduceLeading, classes.titleText, classes.displayOnWide)}>
             The maintainers behind web3.js
           </Typography>

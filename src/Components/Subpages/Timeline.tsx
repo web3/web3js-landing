@@ -1,7 +1,7 @@
 import React from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import clsx from "clsx";
-import { Typography } from '@chainsafe/common-components';
+import { Link, Typography } from '@chainsafe/common-components';
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
@@ -124,13 +124,7 @@ const Timeline: React.FC = () => {
             Latest Updates
           </Typography>
           <br></br>
-          <a
-            className={classes.button}
-            href='/maintainers'
-            target='_blank'
-            rel='noopener noreferrer'>
-            About the maintainers
-          </a>
+          <Link className={classes.button} to="/maintainers">About the maintainers</Link>
           <a
             className={classes.button}
             href='https://discord.gg/rvwGWZPt'

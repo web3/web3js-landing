@@ -1,5 +1,6 @@
 import React from 'react';
 import { createStyles, ITheme, makeStyles } from '@chainsafe/common-theme';
+import graphic from "../../assets/images/graphic.png"
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
@@ -102,7 +103,7 @@ const Stats: React.FC = () => {
     <div className={classes.container}>
       <div className={classes.columnContentWrapper}>
         <div className={classes.featureContainer}>
-          <img src='/graphic.png' alt='' />
+          <img src={graphic} alt='' />
           <div className={classes.spec}>
             <p>A proud cornerstone of the ecosystem.</p>
             <div className={classes.statsWrapper}>

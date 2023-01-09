@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 import './index.scss';
+import web3js from "../../../assets/images/web3js.png"
+import hero from "../../../assets/images/hero.png"
 
 export const Hero: React.FC = () => {
 
@@ -8,7 +10,7 @@ export const Hero: React.FC = () => {
       <div className='hero'>
         <div className='left-column'>
           <div className='content-wrapper'>
-            <img className='brand' src='/web3js.png' alt='web3js logo' />
+            <img className='brand' src={web3js} alt='web3js logo' />
             <h3 className='title'>
               web3.js is a Javascript library for building on Ethereum.
             </h3>
@@ -49,7 +51,7 @@ export const Hero: React.FC = () => {
         <div className='right-column'>
           <div className='content-wrapper'>
             <div className='hero-img'>
-              <img src='/hero.png' alt='' />
+              <img src={hero} alt='' />
               <h1 className='title display-text'>
                 A JavaScript library for building on Ethereum
               </h1>

@@ -2,6 +2,11 @@ import React from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import clsx from "clsx";
 import { Typography } from "@chainsafe/common-components";
+import truffle from "../../assets/images/truffle.png"
+import yfi from "../../assets/images/yfi.png"
+import oz from "../../assets/images/oz.png"
+import ens from "../../assets/images/ens.png"
+import opensea from "../../assets/images/opensea.png"
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
@@ -105,19 +110,19 @@ const UsedBy: React.FC = () => {
         <div className={classes.columnContentWrapper}>
           <div className={classes.logosContainer}>
             <a className={classes.link} href="https://trufflesuite.com/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src="/truffle.png" alt="Truffle Suite Logo"/>
+              <img className={classes.logo} src={truffle} alt="Truffle Suite Logo"/>
             </a>
             <a className={classes.link} href="https://yearn.finance/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src="/yfi.png" alt="Yearn Finance DeFi Yield Aggregator Logo" />
+              <img className={classes.logo} src={yfi} alt="Yearn Finance DeFi Yield Aggregator Logo" />
             </a>
             <a className={classes.link} href="https://openzeppelin.com/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src="/oz.png" alt="Open Zeppelin, Smart Contract Development Tools Logo" />
+              <img className={classes.logo} src={oz} alt="Open Zeppelin, Smart Contract Development Tools Logo" />
             </a>
             <a className={classes.link} href="https://ens.domains/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src="/ens.png" alt="Ethereum Name Service Logo" />
+              <img className={classes.logo} src={ens} alt="Ethereum Name Service Logo" />
             </a>
             <a className={classes.link} href="https://opensea.io/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src="/opensea.png" alt="OpenSea NFT Platform Logo" />
+              <img className={classes.logo} src={opensea} alt="OpenSea NFT Platform Logo" />
             </a>
           </div>
         </div>

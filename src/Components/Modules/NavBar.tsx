@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import {
   createStyles, ITheme, makeStyles, useMediaQuery
 } from "@chainsafe/common-theme";
-import { Grid, Typography, useScrollToTop } from "@chainsafe/common-components";
+import { Grid, Link, Typography, useScrollToTop } from "@chainsafe/common-components";
 import { Trans } from "@lingui/macro"
 import { MobileNav } from "./MobileNav";
-
+import web3js from "../../assets/images/web3js.png"
 
 const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: ITheme) => {
   return createStyles({
@@ -105,13 +105,13 @@ const NavBar: React.FC = () => {
             <div className={classes.flex}>
               <img
                 className={classes.logo}
-                src="/web3js.png"
+                src={web3js}
                 alt="web3js logo"
               />
               <Typography variant="h5">
-                <a href="/" className={classes.navlink}>
+                <Link href="/" className={classes.navlink}>
                   Web3.js
-                </a>
+                </Link>
               </Typography>
             </div>
           </Grid>
@@ -163,7 +163,7 @@ const NavBar: React.FC = () => {
             <div style={{display: "flex", alignItems: "center"}}>
               <img
                 className={classes.logo}
-                src="/web3js.png"
+                src={web3js}
                 alt="web3js logo"
               />
               <Typography variant="h5">
