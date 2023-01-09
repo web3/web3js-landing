@@ -1,0 +1,43 @@
+name: Deploy preview
+
+on:
+  push:
+    branches-ignore: 
+      - main
+
+jobs:
+  build-and-deploy:
+    concurrency: ci-preview-${{ github.ref }}
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        cache: yarn
+        node-version: 16
+
+    - run: corepack enable
+
+    - name: Install dependencies
+      run: yarn
+
+    - name: Build
+      run: yarn run build
+
+    - name: Publish to Cloudflare Pages
+      uses: cloudflare/pages-action@1
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: 2238a825c5aca59233eab1f221f7aefb
+        projectName: web3js-landing
+        directory: ./build
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
