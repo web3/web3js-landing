@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from '@chainsafe/common-components';
+import { Switch, Route, Router } from '@chainsafe/common-components';
 import HomePage from './Pages/HomePage';
 import MaintainersPage from './Pages/MaintainersPage';
 
@@ -11,11 +11,13 @@ export const ROUTE_LINKS = {
 
 const Routes = () => {
   return (
-    <Switch>
-      <Route exact path='/' component={HomePage} />
-      <Route exact path='/maintainers' component={MaintainersPage} />
-      <Route path={ROUTE_LINKS.HomeLang()} component={HomePage} />
-    </Switch>
+    <Router basename={process.env.PUBLIC_URL ?? ""}>
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route exact path='/maintainers' component={MaintainersPage} />
+        <Route path={ROUTE_LINKS.HomeLang()} component={HomePage} />
+      </Switch>
+    </Router>
   );
 };
 
