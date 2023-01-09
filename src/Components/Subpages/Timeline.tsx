@@ -127,7 +127,7 @@ const Timeline: React.FC = () => {
           <Link className={classes.button} to="/maintainers">About the maintainers</Link>
           <a
             className={classes.button}
-            href='https://discord.gg/rvwGWZPt'
+            href='http://discord.gg/n2U6x9c'
             target='_blank'
             rel='noopener noreferrer'>
             Join Discord

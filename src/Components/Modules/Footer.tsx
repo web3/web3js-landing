@@ -140,7 +140,7 @@ const Footer: React.FC = () => {
             </Grid>
             <Grid item className={classes.item}>
               <a
-                href="https://discord.gg/rvwGWZPt"
+                href="http://discord.gg/n2U6x9c"
                 rel="noopener noreferrer"
                 target="_blank"
               >

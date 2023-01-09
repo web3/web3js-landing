@@ -174,7 +174,7 @@ const Hero2: React.FC = () => {
               <div className={classes.stackedIndicator}></div><a className={classes.stackedLink} href="https://docs.web3js.org/" rel="noopener noreferrer" target="_blank">4.x Docs</a>
             </div>
             <div className={classes.link}>
-              <div className={clsx(classes.primLight, classes.stackedIndicator)}></div><a className={classes.stackedLink} href="https://discord.gg/rvwGWZPt" rel="noopener noreferrer" target="_blank">Join Discord</a>
+              <div className={clsx(classes.primLight, classes.stackedIndicator)}></div><a className={classes.stackedLink} href="http://discord.gg/n2U6x9c" rel="noopener noreferrer" target="_blank">Join Discord</a>
             </div>
           </div>
         </div>

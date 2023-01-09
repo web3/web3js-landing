@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
                 <div className='primDark indicator'></div>
                 <a
                   className='link'
-                  href='https://discord.gg/rvwGWZPt'
+                  href='http://discord.gg/n2U6x9c'
                   rel='noopener noreferrer'
                   target='_blank'>
                   Join Discord
