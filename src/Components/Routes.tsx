@@ -1,5 +1,5 @@
-import React from 'react';
-import { Switch, Route, Router } from '@chainsafe/common-components';
+import React, { useEffect } from 'react';
+import { Switch, Route, useLocation, HashRouter } from '@chainsafe/common-components';
 import HomePage from './Pages/HomePage';
 import MaintainersPage from './Pages/MaintainersPage';
 
@@ -9,15 +9,26 @@ export const ROUTE_LINKS = {
   PrivacyPolicy: '/privacy-policy',
 };
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 const Routes = () => {
   return (
-    <Router basename={process.env.PUBLIC_URL ?? ""}>
+    <HashRouter basename={process.env.PUBLIC_URL ?? ""}>
+      <ScrollToTop/>
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/maintainers' component={MaintainersPage} />
         <Route path={ROUTE_LINKS.HomeLang()} component={HomePage} />
       </Switch>
-    </Router>
+    </HashRouter>
   );
 };
 
