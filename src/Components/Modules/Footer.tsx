@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
             </Grid>
             <Grid item className={classes.item}>
               <a
-                href="https://github.com/chainsafe/web3js"
+                href="https://github.com/web3/web3js"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -151,7 +151,7 @@ const Footer: React.FC = () => {
           </Grid>
           <Grid item className={classes.item}>
             <a
-              href="https://medium.com/chainsafe-systems/tagged/ethereum"
+              href="https://blog.chainsafe.io/tagged/ethereum"
               target="_blank"
               rel="noopener noreferrer"
             >
