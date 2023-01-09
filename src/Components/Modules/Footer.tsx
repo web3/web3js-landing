@@ -105,17 +105,6 @@ const Footer: React.FC = () => {
                 target="_blank"
               >
                 <Typography variant="h5" className={classes.bold}>
-                  <Trans>Tutorial</Trans>
-                </Typography>
-              </a>
-            </Grid>
-            <Grid item className={classes.item}>
-              <a
-                href="https://web3js.readthedocs.io/en/latest/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Typography variant="h5" className={classes.bold}>
                   Documentation
                   </Typography>
               </a>
