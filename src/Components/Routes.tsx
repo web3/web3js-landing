@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { Switch, Route, useLocation, HashRouter } from '@chainsafe/common-components';
+import { Switch, Route, useLocation, Router } from '@chainsafe/common-components';
 import HomePage from './Pages/HomePage';
 import MaintainersPage from './Pages/MaintainersPage';
+import PluginsPage from './Pages/PluginsPage';
 
 export const ROUTE_LINKS = {
   HomeLang: (lang = ':lang') => `/${lang}`,
@@ -21,14 +22,15 @@ function ScrollToTop() {
 
 const Routes = () => {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL ?? ""}>
+    <Router basename={process.env.PUBLIC_URL ?? ""}>
       <ScrollToTop/>
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/maintainers' component={MaintainersPage} />
+        <Route exact path='/plugins' component={PluginsPage} />
         <Route path={ROUTE_LINKS.HomeLang()} component={HomePage} />
       </Switch>
-    </HashRouter>
+    </Router>
   );
 };
 

@@ -16,7 +16,7 @@ import Timeline from '../Subpages/Timeline';
 // import { Features2 } from '../Subpages/Features/Features';
 // import { CodeBlocks2 } from '../Subpages/CodeBlocks/CodeBlocks';
 
-const useStyles = makeStyles(({ constants, breakpoints }: ITheme) => {
+export const useStyles = makeStyles(({ constants, breakpoints }: ITheme) => {
   return createStyles({
     globalWrap: {
       [breakpoints.up(1599)]: {

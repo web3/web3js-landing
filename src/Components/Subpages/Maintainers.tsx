@@ -131,7 +131,7 @@ const useStyles = makeStyles(
     })
   })
 
-const Maintainers: React.FC = () => {
+const Maintainers = (): JSX.Element => {
   const classes = useStyles();
   return (
       <div className={classes.container}>
