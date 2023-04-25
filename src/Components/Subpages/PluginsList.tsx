@@ -14,7 +14,8 @@ const useStyles = makeStyles(
           justifyContent: "flex-start",
           alignItems: "flex-start",
         },
-        color: palette.primary.main,
+        color:"#F5F5F5",
+        // 
       },
       pluginsWrapper: {
         display: "flex",
@@ -22,7 +23,7 @@ const useStyles = makeStyles(
         fontSize: "1rem",
       },
       pluginWrapper: {
-        padding: "10px",
+        padding: "10px 0",
       },
       pluginGrid: {
         display: "grid",
@@ -34,8 +35,20 @@ const useStyles = makeStyles(
         color: palette.primary.light,
         "&:hover": {
           color: palette.primary.dark,
-        }
-      }
+        },
+        lineHeight: "1.5rem",
+      },
+      name: {
+        color: palette.primary.main,
+        fontSize: "1.75rem",
+        fontWeight: 600,
+        lineHeight: "2.25rem",
+      },
+      description: {
+        fontSize: "1.25rem",
+        lineHeight: "1.75rem",
+        marginBottom: "10px",
+      },
     })
   })
 
@@ -58,13 +71,13 @@ const PluginsList: React.FC<IPluginsList> = ({ pluginData }) => {
       {memoizedPluginsList.map((plugin) =>
         <div className={classes.pluginsWrapper}>
           <div className={classes.pluginWrapper} >
-            <h2>{plugin.name}</h2>
-            <p>{plugin.description}</p>
+            <h2 className={classes.name}>{plugin.name}</h2>
+            <p className={classes.description}>{plugin.description}</p>
             <a className={classes.link} target="_blank" rel="noreferrer" href={plugin.homepage}>{plugin.homepage}</a>
             <div className={classes.pluginGrid}>
               <p>Version: {plugin.version}</p>
               <p>Author: {plugin.author}</p>
-              <p>Downloads: {plugin.donwloads}</p>
+              <p>Weekly Downloads: {plugin.donwloads}</p>
               <p>License: {plugin.license}</p> </div>
           </div>
         </div>
