@@ -62,17 +62,17 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
       }
     },
     navlink: {
-        color: palette.common.white.main,
-        textDecoration: "none",
-        fontWeight: "bold",
-        "&:hover": {
-          color: palette.primary.main,
-          transition: "ease-in 0.2s",
-        },
-        [breakpoints.up('sm')]: {
-          marginRight: `${constants.generalUnit * 2}px`
-        }
+      color: palette.common.white.main,
+      textDecoration: "none",
+      fontWeight: "bold",
+      "&:hover": {
+        color: palette.primary.main,
+        transition: "ease-in 0.2s",
       },
+      [breakpoints.up('sm')]: {
+        marginRight: `${constants.generalUnit * 2}px`
+      }
+    },
     flex: {
       display: "flex",
       alignItems: "center",
@@ -98,23 +98,31 @@ const NavBar: React.FC = () => {
   return (
     <nav className={classes.container}>
       {scrollToTop}
-      {!isMobile && 
-      <Grid item alignItems="center" className={classes.linksMenu}>
-        <Grid container justifyContent="flex-start" alignItems="center">
-          <Grid item alignItems="flex-start">
-            <div className={classes.flex}>
-              <img
-                className={classes.logo}
-                src={web3js}
-                alt="web3js logo"
-              />
-              <Typography variant="h5">
-                <Link href="/" className={classes.navlink}>
-                  Web3.js
-                </Link>
-              </Typography>
-            </div>
-          </Grid>
+      {!isMobile &&
+        <Grid item alignItems="center" className={classes.linksMenu}>
+          <Grid container justifyContent="flex-start" alignItems="center">
+            <Grid item alignItems="flex-start">
+              <div className={classes.flex}>
+                <img
+                  className={classes.logo}
+                  src={web3js}
+                  alt="web3js logo"
+                />
+                <Typography variant="h5">
+                  <Link href="/" className={classes.navlink}>
+                    Web3.js
+                  </Link>
+                </Typography>
+              </div>
+            </Grid>
+            <Typography variant="h5">
+              <a
+                href="/plugins"
+                className={classes.navlink}
+              >
+                <Trans>Plugins</Trans>
+              </a>
+            </Typography>
             <Typography variant="h5">
               <a
                 target="_blank"
@@ -123,6 +131,16 @@ const NavBar: React.FC = () => {
                 className={classes.navlink}
               >
                 <Trans>1.x Docs</Trans>
+              </a>
+            </Typography>
+            <Typography variant="h5">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://docs.web3js.org/"
+                className={classes.navlink}
+              >
+                <Trans>4.x Docs</Trans>
               </a>
             </Typography>
             <Typography variant="h5">
@@ -158,9 +176,9 @@ const NavBar: React.FC = () => {
           </Grid>
         </Grid>}
       {(isMobile && !isNavVisible) && (
-      <Grid container justifyContent="flex-start" alignItems="center" className={classes.linksMenu}>
-        <Grid item >
-            <div style={{display: "flex", alignItems: "center"}}>
+        <Grid container justifyContent="flex-start" alignItems="center" className={classes.linksMenu}>
+          <Grid item >
+            <div style={{ display: "flex", alignItems: "center" }}>
               <img
                 className={classes.logo}
                 src={web3js}
@@ -174,11 +192,11 @@ const NavBar: React.FC = () => {
             </div>
           </Grid>
           <Grid item alignItems="flex-end">
-            <MobileNav/>
+            <MobileNav />
           </Grid>
         </Grid>
       )}
-   
+
     </nav >
   );
 };

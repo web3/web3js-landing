@@ -21,26 +21,31 @@ export interface NavLink {
 const navlinks: NavLink[] = [
   {
     id: 1,
+    name: 'Plugins',
+    linkUrl: '/plugins',
+  },
+  {
+    id: 2,
     name: '1.x Docs',
     linkUrl: 'https://web3js.readthedocs.io/en/v1.7.5/',
   },
   {
-    id: 1,
+    id: 3,
     name: '4.x Docs',
     linkUrl: 'https://docs.web3js.org/',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Join Discord',
     linkUrl: 'http://discord.gg/n2U6x9c',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Blog',
     linkUrl: 'https://medium.com/chainsafe-systems',
   },
   {
-    id: 5,
+    id: 6,
     name: 'GitHub',
     linkUrl: 'https://github.com/chainsafe/web3.js',
   },

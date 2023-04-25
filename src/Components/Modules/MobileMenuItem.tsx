@@ -47,13 +47,22 @@ export const MobileMenuItem = ({ linkUrl, name }: NavLink) => {
       variants={variants}
       whileHover={{ x: -8 }}
       whileTap={{ scale: 0.93 }}>
-      <a
-        target='__blank'
-        rel='noopener noreferrer'
-        href={linkUrl}
-        className={classes.noUnderline}>
-        {name}
-      </a>
+      {linkUrl[0] === '/' ? (
+        <a
+          href={linkUrl}
+          className={classes.noUnderline}>
+          {name}
+        </a>
+      ) : (
+        <a
+          target='__blank'
+          rel='noopener noreferrer'
+          href={linkUrl}
+          className={classes.noUnderline}>
+          {name}
+        </a>
+      )
+      }
     </motion.li>
   );
 };

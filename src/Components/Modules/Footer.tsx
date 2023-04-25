@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
             </Grid>
             <Grid item className={classes.item}>
               <a
-                href="https://github.com/web3/web3js"
+                href="https://github.com/web3/web3.js"
                 rel="noopener noreferrer"
                 target="_blank"
               >
