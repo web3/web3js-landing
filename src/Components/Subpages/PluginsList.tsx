@@ -49,6 +49,12 @@ const useStyles = makeStyles(
         lineHeight: "1.75rem",
         marginBottom: "10px",
       },
+      loading: {
+        color: palette.primary.main,
+        fontSize: "1.5rem",
+        fontWeight: 600,
+        lineHeight: "2.25rem",
+      },
     })
   })
 
@@ -62,7 +68,7 @@ const PluginsList: React.FC<IPluginsList> = ({ pluginData }) => {
 
   const memoizedPluginsList = useMemo(() => pluginsList, [pluginsList]);
 
-  if (loading) return (<div>loading...</div>)
+  if (loading) return (<div className={classes.loading}>loading plugins...</div>)
   if (error) return (<div>{error}</div>)
 
   return (
