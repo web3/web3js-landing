@@ -2,7 +2,6 @@ import React from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import clsx from "clsx";
 import { Link, Typography } from "@chainsafe/common-components";
-import Maintainers from "./Maintainers";
 import web3js from "../../assets/images/web3js.png"
 import hero from "../../assets/images/hero.png"
 

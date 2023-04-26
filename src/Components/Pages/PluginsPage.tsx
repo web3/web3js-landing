@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { useParams, } from "@chainsafe/common-components"
 import { useLanguageContext } from "../../LanguageContext"
 import FullTimeline from '../Subpages/FullTimeline';

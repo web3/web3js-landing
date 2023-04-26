@@ -1,6 +1,6 @@
-import React, { ReactNode, useEffect, useMemo } from "react";
+import React, { useMemo } from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
-import { PluginMetadata, PluginsData } from "../../hooks/usePlugins";
+import { PluginsData } from "../../hooks/usePlugins";
 
 const useStyles = makeStyles(
   ({ palette, breakpoints }: ITheme) => {
