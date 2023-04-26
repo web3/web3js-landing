@@ -3,7 +3,7 @@ import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import { PluginMetadata, PluginsData } from "../../hooks/usePlugins";
 
 const useStyles = makeStyles(
-  ({ constants, palette, breakpoints }: ITheme) => {
+  ({ palette, breakpoints }: ITheme) => {
     return createStyles({
       container: {
         display: "flex",
@@ -15,7 +15,6 @@ const useStyles = makeStyles(
           alignItems: "flex-start",
         },
         color:"#F5F5F5",
-        // 
       },
       pluginsWrapper: {
         display: "flex",

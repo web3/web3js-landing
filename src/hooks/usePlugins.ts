@@ -1,4 +1,3 @@
-import { m } from 'framer-motion';
 import { getPackageManifest, getPackageDownloads } from 'query-registry';
 import { useEffect, useState } from 'react';
 
