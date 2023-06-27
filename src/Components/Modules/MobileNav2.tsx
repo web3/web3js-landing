@@ -6,6 +6,7 @@ import "./styles.css";
 import {
   createStyles, ITheme, makeStyles
 } from "@chainsafe/common-theme";
+import { discordUrl, docsUrl } from "../../urls";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -73,22 +74,22 @@ const navlinks: NavLink[] = [
   {
     id: 1,
     name: "Docs",
-    linkUrl: "https://web3js.readthedocs.io/en/v1.5.2/"
+    linkUrl: docsUrl
+  },
+  {
+    id: 2,
+    name: "Join Discord",
+    linkUrl: discordUrl
   },
   {
     id: 3,
-    name: "Join Discord",
-    linkUrl: "http://discord.gg/n2U6x9c"
-  },
-  {
-    id: 4,
     name: "Blog",
     linkUrl: "https://medium.com/chainsafe-systems"
   },
   {
-    id: 5,
+    id: 4,
     name: "GitHub",
-    linkUrl: "https://github.com/chainsafe/web3.js"
+    linkUrl: "https://github.com/web3/web3.js"
   },
 ]
 

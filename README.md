@@ -9,4 +9,4 @@ This project is built on create-react-app so to run the development version:
 - install dependencies with `yarn`
 - run `yarn run start` and the website should open in your default browser
 
-For any questions, reach out on [Discord](http://discord.gg/n2U6x9c)
+For any questions, reach out on [Discord](https://discord.gg/yhHVtK5Wqt)
