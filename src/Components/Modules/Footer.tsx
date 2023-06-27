@@ -2,7 +2,7 @@ import React from "react"
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme"
 import { Grid, Typography } from "@chainsafe/common-components"
 import {Trans} from "@lingui/macro";
-import { discordUrl, docsUrl } from "../../urls";
+import { blogUrl, discordUrl, docsUrl } from "../../urls";
 
 const useStyles = makeStyles(({ palette, constants, breakpoints }: ITheme) => {
   return createStyles({
@@ -141,7 +141,7 @@ const Footer: React.FC = () => {
           </Grid>
           <Grid item className={classes.item}>
             <a
-              href="https://blog.chainsafe.io/tagged/ethereum"
+              href={blogUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
