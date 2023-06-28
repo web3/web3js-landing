@@ -6,6 +6,7 @@ import { Grid, Link, Typography, useScrollToTop } from "@chainsafe/common-compon
 import { Trans } from "@lingui/macro"
 import { MobileNav } from "./MobileNav";
 import web3js from "../../assets/images/web3js.png"
+import { discordUrl, docsUrl } from "../../urls";
 
 const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: ITheme) => {
   return createStyles({
@@ -119,17 +120,17 @@ const NavBar: React.FC = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://web3js.readthedocs.io/en/v1.7.5/"
+                href={docsUrl}
                 className={classes.navlink}
               >
-                <Trans>1.x Docs</Trans>
+                <Trans>Docs</Trans>
               </a>
             </Typography>
             <Typography variant="h5">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="http://discord.gg/n2U6x9c"
+                href={discordUrl}
                 className={classes.navlink}
               >
                 <Trans>Community</Trans>
@@ -149,7 +150,7 @@ const NavBar: React.FC = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://github.com/chainsafe/web3.js"
+                href="https://github.com/web3/web3.js"
                 className={classes.navlink}
               >
                 <Trans>GitHub</Trans>

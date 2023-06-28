@@ -3,13 +3,13 @@ import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import clsx from "clsx";
 import { Typography } from "@chainsafe/common-components";
 import truffle from "../../assets/images/truffle.png"
-import yfi from "../../assets/images/yfi.png"
+import remix from "../../assets/images/remix.png"
 import oz from "../../assets/images/oz.png"
-import ens from "../../assets/images/ens.png"
-import opensea from "../../assets/images/opensea.png"
+import embark from "../../assets/images/embark.svg"
+import dydx from "../../assets/images/dydx.svg"
 
 const useStyles = makeStyles(
-  ({ constants, palette, breakpoints, typography }: ITheme) => {
+  ({ palette, breakpoints }: ITheme) => {
     return createStyles({
       container: {
         flexDirection: "column",
@@ -72,6 +72,7 @@ const useStyles = makeStyles(
       logosContainer: {
         display: "grid",
         alignContent: "center",
+        alignItems: "center",
         gridTemplateColumns: "repeat(4, 1fr)",
         [breakpoints.up(1199)]: {
           gridTemplateColumns: "repeat(5, 1fr)",
@@ -112,17 +113,17 @@ const UsedBy: React.FC = () => {
             <a className={classes.link} href="https://trufflesuite.com/" target="_blank" rel="noopener noreferrer">
               <img className={classes.logo} src={truffle} alt="Truffle Suite Logo"/>
             </a>
-            <a className={classes.link} href="https://yearn.finance/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src={yfi} alt="Yearn Finance DeFi Yield Aggregator Logo" />
-            </a>
             <a className={classes.link} href="https://openzeppelin.com/" target="_blank" rel="noopener noreferrer">
               <img className={classes.logo} src={oz} alt="Open Zeppelin, Smart Contract Development Tools Logo" />
             </a>
-            <a className={classes.link} href="https://ens.domains/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src={ens} alt="Ethereum Name Service Logo" />
+            <a className={classes.link} href="https://remix.ethereum.org/" target="_blank" rel="noopener noreferrer">
+              <img className={classes.logo} src={remix} alt="Remix" />
             </a>
-            <a className={classes.link} href="https://opensea.io/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src={opensea} alt="OpenSea NFT Platform Logo" />
+            <a className={classes.link} href="https://framework.embarklabs.io/" target="_blank" rel="noopener noreferrer">
+              <img className={classes.logo} src={embark} alt="Embark" />
+            </a>
+            <a className={classes.link} href="https://dydx.exchange/" target="_blank" rel="noopener noreferrer">
+              <img className={classes.logo} src={dydx} alt="DyDx" />
             </a>
           </div>
         </div>

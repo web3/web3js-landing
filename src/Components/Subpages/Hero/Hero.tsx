@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import './index.scss';
 import web3js from "../../../assets/images/web3js.png"
 import hero from "../../../assets/images/hero.png"
+import { discordUrl, docsUrl } from '../../../urls';
 
 export const Hero: React.FC = () => {
 
@@ -19,7 +20,7 @@ export const Hero: React.FC = () => {
                 <div className='darkindicator'></div>
                 <a
                   className='link'
-                  href='https://www.npmjs.com/package/web3'
+                  href={docsUrl}
                   rel='noopener noreferrer'
                   target='_blank'>
                   Download on npm
@@ -29,7 +30,7 @@ export const Hero: React.FC = () => {
                 <div className='primDark indicator'></div>
                 <a
                   className='link'
-                  href='https://docs.web3js.org/'
+                  href={docsUrl}
                   rel='noopener noreferrer'
                   target='_blank'>
                   4.x Docs
@@ -39,7 +40,7 @@ export const Hero: React.FC = () => {
                 <div className='primDark indicator'></div>
                 <a
                   className='link'
-                  href='http://discord.gg/n2U6x9c'
+                  href={discordUrl}
                   rel='noopener noreferrer'
                   target='_blank'>
                   Join Discord

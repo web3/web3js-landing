@@ -2,6 +2,7 @@ import React from "react"
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme"
 import { Grid, Typography } from "@chainsafe/common-components"
 import {Trans} from "@lingui/macro";
+import { blogUrl, discordUrl, docsUrl } from "../../urls";
 
 const useStyles = makeStyles(({ palette, constants, breakpoints }: ITheme) => {
   return createStyles({
@@ -100,7 +101,7 @@ const Footer: React.FC = () => {
             </Grid>
             <Grid item className={classes.item}>
               <a
-                href="https://web3js.readthedocs.io/en/latest/"
+                href={docsUrl}
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -129,7 +130,7 @@ const Footer: React.FC = () => {
             </Grid>
             <Grid item className={classes.item}>
               <a
-                href="http://discord.gg/n2U6x9c"
+                href={discordUrl}
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -140,7 +141,7 @@ const Footer: React.FC = () => {
           </Grid>
           <Grid item className={classes.item}>
             <a
-              href="https://blog.chainsafe.io/tagged/ethereum"
+              href={blogUrl}
               target="_blank"
               rel="noopener noreferrer"
             >

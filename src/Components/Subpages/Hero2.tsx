@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { Typography } from "@chainsafe/common-components";
 import web3js from "../../assets/images/web3js.png"
 import hero from "../../assets/images/hero.png"
+import { discordUrl, docsUrl, npmUrl } from "../../urls";
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
@@ -168,13 +169,13 @@ const Hero2: React.FC = () => {
           </Typography>
           <div className={classes.linksWrapper}>
             <div className={classes.link}>
-              <div className={clsx(classes.primDark, classes.stackedIndicator)}></div><a className={classes.stackedLink} href="https://www.npmjs.com/package/web3" rel="noopener noreferrer" target="_blank">Download on npm</a>
+              <div className={clsx(classes.primDark, classes.stackedIndicator)}></div><a className={classes.stackedLink} href={npmUrl} rel="noopener noreferrer" target="_blank">Download on npm</a>
             </div>
             <div className={classes.link}>
-              <div className={classes.stackedIndicator}></div><a className={classes.stackedLink} href="https://docs.web3js.org/" rel="noopener noreferrer" target="_blank">4.x Docs</a>
+              <div className={classes.stackedIndicator}></div><a className={classes.stackedLink} href={docsUrl} rel="noopener noreferrer" target="_blank">Docs</a>
             </div>
             <div className={classes.link}>
-              <div className={clsx(classes.primLight, classes.stackedIndicator)}></div><a className={classes.stackedLink} href="http://discord.gg/n2U6x9c" rel="noopener noreferrer" target="_blank">Join Discord</a>
+              <div className={clsx(classes.primLight, classes.stackedIndicator)}></div><a className={classes.stackedLink} href={discordUrl} rel="noopener noreferrer" target="_blank">Join Discord</a>
             </div>
           </div>
         </div>
