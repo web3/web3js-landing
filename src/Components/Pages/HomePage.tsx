@@ -4,17 +4,13 @@ import { makeStyles, ITheme, createStyles } from '@chainsafe/common-theme';
 import { useLanguageContext } from '../../LanguageContext';
 import NavBar2 from '../Modules/NavBar';
 import Footer from '../Modules/Footer';
-import Hero2 from '../Subpages/Hero2';
+import Hero2 from '../Subpages/Hero';
 import About from '../Subpages/About';
 import Features from '../Subpages/Features';
 import CodeBlocks from '../Subpages/CodeBlocks';
 import UsedBy from '../Subpages/UsedBy';
 import Stats from '../Subpages/Stats';
 import Timeline from '../Subpages/Timeline';
-// import { Hero } from '../Subpages/Hero/Hero';
-// import { About2 } from '../Subpages/About/About';
-// import { Features2 } from '../Subpages/Features/Features';
-// import { CodeBlocks2 } from '../Subpages/CodeBlocks/CodeBlocks';
 
 const useStyles = makeStyles(({ constants, breakpoints }: ITheme) => {
   return createStyles({
