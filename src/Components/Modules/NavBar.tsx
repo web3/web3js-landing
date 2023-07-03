@@ -90,97 +90,91 @@ const NavBar: React.FC = () => {
 
   const isMobile = useMediaQuery("(max-width: 1170px)");
 
-  // const toggleNav = () => {
-  //   setIsNavVisible(!isNavVisible);
-  // }
 
   const scrollToTop = useScrollToTop();
 
-  return (
-    <nav className={classes.container}>
-      {scrollToTop}
-      {!isMobile && 
-      <Grid item alignItems="center" className={classes.linksMenu}>
-        <Grid container justifyContent="flex-start" alignItems="center">
-          <Grid item alignItems="flex-start">
-            <div className={classes.flex}>
-              <img
-                className={classes.logo}
-                src={web3js}
-                alt="web3js logo"
-              />
-              <Typography variant="h5">
-                <Link href="/" className={classes.navlink}>
-                  Web3.js
-                </Link>
-              </Typography>
-            </div>
-          </Grid>
-            <Typography variant="h5">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={docsUrl}
-                className={classes.navlink}
-              >
-                <Trans>Docs</Trans>
-              </a>
-            </Typography>
-            <Typography variant="h5">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={discordUrl}
-                className={classes.navlink}
-              >
-                <Trans>Community</Trans>
-              </a>
-            </Typography>
-            <Typography variant="h5">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://medium.com/chainsafe-systems/tagged/ethereum"
-                className={classes.navlink}
-              >
-                <Trans>Blog</Trans>
-              </a>
-            </Typography>
-            <Typography variant="h5">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/web3/web3.js"
-                className={classes.navlink}
-              >
-                <Trans>GitHub</Trans>
-              </a>
-            </Typography>
-          </Grid>
-        </Grid>}
-      {(isMobile && !isNavVisible) && (
-      <Grid container justifyContent="flex-start" alignItems="center" className={classes.linksMenu}>
-        <Grid item >
-            <div style={{display: "flex", alignItems: "center"}}>
-              <img
-                className={classes.logo}
-                src={web3js}
-                alt="web3js logo"
-              />
-              <Typography variant="h5">
-                <a href="/" className={classes.navlink}>
+  if (isMobile && !isNavVisible)
+    return (
+      <nav>
+        {scrollToTop}
+        <Grid
+          container
+          justifyContent='flex-start'
+          alignItems='center'
+          className={classes.linksMenu}>
+          <Grid item>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img className={classes.logo} src={web3js} alt='web3js logo' />
+              <Typography variant='h5'>
+                <a href='/' className={classes.navlink}>
                   Web3.js
                 </a>
               </Typography>
             </div>
           </Grid>
-          <Grid item alignItems="flex-end">
-            <MobileNav/>
+          <Grid item alignItems='flex-end'>
+            <MobileNav />
           </Grid>
         </Grid>
-      )}
-   
-    </nav >
+      </nav>
+    );
+
+  return (
+    <>
+      <nav className={classes.container}>
+        {scrollToTop}
+        <Grid item alignItems='center' className={classes.linksMenu}>
+          <Grid container justifyContent='flex-start' alignItems='center'>
+            <Grid item alignItems='flex-start'>
+              <div className={classes.flex}>
+                <img className={classes.logo} src={web3js} alt='web3js logo' />
+                <Typography variant='h5'>
+                  <Link to='/' className={classes.navlink}>
+                    Web3.js
+                  </Link>
+                </Typography>
+              </div>
+            </Grid>
+            <Typography variant='h5'>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href={docsUrl}
+                className={classes.navlink}>
+                <Trans>Docs</Trans>
+              </a>
+            </Typography>
+            <Typography variant='h5'>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href={discordUrl}
+                className={classes.navlink}>
+                <Trans>Community</Trans>
+              </a>
+            </Typography>
+            <Typography variant='h5'>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://medium.com/chainsafe-systems/tagged/ethereum'
+                className={classes.navlink}>
+                <Trans>Blog</Trans>
+              </a>
+            </Typography>
+            <Typography variant='h5'>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://github.com/web3/web3.js'
+                className={classes.navlink}>
+                <Trans>GitHub</Trans>
+              </a>
+            </Typography>
+          </Grid>
+        </Grid>
+      </nav>
+    </>
   );
 };
 
