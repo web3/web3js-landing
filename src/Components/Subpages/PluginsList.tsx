@@ -14,7 +14,7 @@ const useStyles = makeStyles(
           justifyContent: "flex-start",
           alignItems: "flex-start",
         },
-        color:"#F5F5F5",
+        color: "#F5F5F5",
       },
       pluginsWrapper: {
         display: "flex",
@@ -53,6 +53,13 @@ const useStyles = makeStyles(
         fontSize: "1.5rem",
         fontWeight: 600,
         lineHeight: "2.25rem",
+        marginBottom: "250px",
+      },
+      error: {
+        color: palette.primary.dark,
+        fontSize: "1.5rem",
+        fontWeight: 600,
+        lineHeight: "2.25rem",
       },
     })
   })
@@ -65,29 +72,39 @@ const PluginsList: React.FC<IPluginsList> = ({ pluginData }) => {
   const classes = useStyles();
   const { loading, error, pluginsList } = pluginData;
 
-  const memoizedPluginsList = useMemo(() => pluginsList, [pluginsList]);
+  const memoizedPluginsList = useMemo(() => {
+    return pluginsList.sort((a, b) => {
+      if (a.isFeatured && !b.isFeatured) return -1;
+      if (!a.isFeatured && b.isFeatured) return 1;
+      return 0;
+    }
+    )
+  }, [pluginsList]);
 
-  if (loading) return (<div className={classes.loading}>loading plugins...</div>)
-  if (error) return (<div>{error}</div>)
+  if (loading) return (<div className={classes.loading}>loading plugin details...</div>)
 
   return (
-    <div className={classes.container}>
+    <>
+      {error && <div className={classes.error}>{error}</div>}
+      <div className={classes.container}>
 
-      {memoizedPluginsList.map((plugin) =>
-        <div className={classes.pluginsWrapper}>
-          <div className={classes.pluginWrapper} >
-            <h2 className={classes.name}>{plugin.name}</h2>
-            <p className={classes.description}>{plugin.description}</p>
-            <a className={classes.link} target="_blank" rel="noreferrer" href={plugin.homepage}>{plugin.homepage}</a>
-            <div className={classes.pluginGrid}>
-              <p>Version: {plugin.version}</p>
-              <p>Author: {plugin.author}</p>
-              <p>Weekly Downloads: {plugin.donwloads}</p>
-              <p>License: {plugin.license}</p> </div>
+        {memoizedPluginsList.map((plugin) =>
+          <div className={classes.pluginsWrapper}>
+            <div className={classes.pluginWrapper} >
+              <h2 className={classes.name}>{plugin.name}</h2>
+              <p className={classes.description}>{plugin.description}</p>
+              <a className={classes.link} target="_blank" rel="noreferrer" href={plugin.homepage}>{plugin.homepage}</a>
+              {!error && (<div className={classes.pluginGrid}>
+                <p>Version: {plugin.version}</p>
+                <p>Author: {plugin.author}</p>
+                <p>Weekly Downloads: {plugin.donwloads}</p>
+                <p>License: {plugin.license}</p>
+              </div>)}
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   )
 }
 

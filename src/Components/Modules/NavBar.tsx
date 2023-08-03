@@ -103,15 +103,17 @@ const NavBar: React.FC = () => {
           <Grid container justifyContent="flex-start" alignItems="center">
             <Grid item alignItems="flex-start">
               <div className={classes.flex}>
-                <img
-                  className={classes.logo}
-                  src={web3js}
-                  alt="web3js logo"
-                />
+                <a href="/" className={classes.navlink}>
+                  <img
+                    className={classes.logo}
+                    src={web3js}
+                    alt="web3js logo"
+                  />
+                </a>
                 <Typography variant="h5">
-                  <Link href="/" className={classes.navlink}>
+                  <a href="/" className={classes.navlink}>
                     Web3.js
-                  </Link>
+                  </a>
                 </Typography>
               </div>
             </Grid>

@@ -1,19 +1,24 @@
 import { getPackageManifest, getPackageDownloads } from 'query-registry';
 import { useEffect, useState } from 'react';
+import pluginList from '../pluginList.json';
 
 export interface PluginMetadata {
   name: string;
   description?: string;
-  version: string;
+  version?: string;
   author?: string;
   homepage?: string;
-  donwloads: number;
+  donwloads?: number;
   license?: string;
+  isFeatured?: boolean;
 }
 
-const pluginNames = [
-  "@chainsafe/web3.js-chainlink-plugin"
-]
+const pluginsJSON = pluginList.map((plugin) => {
+  return {
+    name: plugin.name,
+    isFeatured: plugin.isFeatured === "true"
+  }
+});
 
 export interface PluginsData {
   loading: boolean;
@@ -29,9 +34,9 @@ export const usePlugins = (): PluginsData => {
     (async () => {
       try {
         const plugins = await Promise.all(
-          pluginNames.map(async (name) => {
-            const manifest = await getPackageManifest({ name });
-            const downloads = await getPackageDownloads({ name });
+          pluginsJSON.map(async (pluginsJSON) => {
+            const manifest = await getPackageManifest({ name: pluginsJSON.name });
+            const downloads = await getPackageDownloads({ name: pluginsJSON.name });
             const plugin: PluginMetadata = {
               name: manifest.name,
               version: manifest.version,
@@ -40,6 +45,7 @@ export const usePlugins = (): PluginsData => {
               donwloads: downloads.downloads,
               license: manifest.license,
               description: manifest.description,
+              isFeatured: pluginsJSON.isFeatured
             }
             return plugin;
           }))
@@ -48,7 +54,14 @@ export const usePlugins = (): PluginsData => {
       }
       catch (e) {
         setLoading(false);
-        setError("Error loading plugins");
+        setError("Error loading plugin details");
+        setPluginList(pluginsJSON.map((plugin) => {
+          return {
+            name: plugin.name,
+            isFeatured: plugin.isFeatured
+          }
+        })
+        );
       }
     }
     )();
