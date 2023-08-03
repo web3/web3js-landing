@@ -73,12 +73,7 @@ const PluginsList: React.FC<IPluginsList> = ({ pluginData }) => {
   const { loading, error, pluginsList } = pluginData;
 
   const memoizedPluginsList = useMemo(() => {
-    return pluginsList.sort((a, b) => {
-      if (a.isFeatured && !b.isFeatured) return -1;
-      if (!a.isFeatured && b.isFeatured) return 1;
-      return 0;
-    }
-    )
+    return pluginsList.sort((a, b) => Number(b.isFeatured) - Number(a.isFeatured))
   }, [pluginsList]);
 
   if (loading) return (<div className={classes.loading}>loading plugin details...</div>)
