@@ -107,14 +107,10 @@ const Stats: React.FC = () => {
           <div className={classes.spec}>
             <p>A proud cornerstone of the ecosystem.</p>
             <div className={classes.statsWrapper}>
-              <p>
-                <div className={classes.highlightText}>500,000+ </div>
-                weekly downloads.
-              </p>
-              <p>
-                <div className={classes.highlightText}>3000+ </div>
-                dependent projects.
-              </p>
+              <div className={classes.highlightText}>500,000+ </div>
+              weekly downloads.
+              <div className={classes.highlightText}>3000+ </div>
+              dependent projects.
             </div>
           </div>
         </div>

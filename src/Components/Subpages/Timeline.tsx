@@ -2,6 +2,7 @@ import React from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import clsx from "clsx";
 import { Link, Typography } from '@chainsafe/common-components';
+import { discordUrl } from "../../urls";
 
 const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
@@ -127,7 +128,7 @@ const Timeline: React.FC = () => {
           <Link className={classes.button} to="/maintainers">About the maintainers</Link>
           <a
             className={classes.button}
-            href='http://discord.gg/n2U6x9c'
+            href={discordUrl}
             target='_blank'
             rel='noopener noreferrer'>
             Join Discord
@@ -138,6 +139,14 @@ const Timeline: React.FC = () => {
       <div className={classes.rightColumn}>
         <div className={classes.columnContentWrapper}>
           <div className={classes.itemsContainer}>
+          <div className={classes.item}>
+              <a
+                href='https://blog.chainsafe.io/announcing-the-full-release-of-web3-js-v4-e9e26275a3dc'
+                target='_blank'
+                rel='noopener noreferrer'>
+                <p>Announcing the Full Release of Web3.js V4</p>
+              </a>
+            </div>
             <div className={classes.item}>
               <a
                 href='https://blog.chainsafe.io/web3-js-repository-migration-announcement-96cbb34e0c7e'
@@ -152,14 +161,6 @@ const Timeline: React.FC = () => {
                 target='_blank'
                 rel='noopener noreferrer'>
                 <p>Alpha Release of Web3.js v4.x</p>
-              </a>
-            </div>
-            <div className={classes.item}>
-              <a
-                href='https://blog.chainsafe.io/the-future-of-web3-js-v3-0-0-release-ecc9feecb2de'
-                target='_blank'
-                rel='noopener noreferrer'>
-                <p>The Future of web3.js</p>
               </a>
             </div>
           </div>

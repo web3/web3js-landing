@@ -2,6 +2,7 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import { MobileMenuItem } from './MobileMenuItem';
 import { createStyles, ITheme, makeStyles } from '@chainsafe/common-theme';
+import { discordUrl, docsUrl } from '../../urls';
 
 const variants = {
   open: {
@@ -19,33 +20,29 @@ export interface NavLink {
 }
 
 const navlinks: NavLink[] = [
+
   {
     id: 1,
+    name: 'Docs',
+    linkUrl: docsUrl,
+  },
+  {
+    id: 2,
     name: 'Plugins',
     linkUrl: '/plugins',
   },
   {
-    id: 2,
-    name: '1.x Docs',
-    linkUrl: 'https://web3js.readthedocs.io/en/v1.7.5/',
-  },
-  {
     id: 3,
-    name: '4.x Docs',
-    linkUrl: 'https://docs.web3js.org/',
+    name: 'Join Discord',
+    linkUrl: discordUrl,
   },
   {
     id: 4,
-    name: 'Join Discord',
-    linkUrl: 'http://discord.gg/n2U6x9c',
-  },
-  {
-    id: 5,
     name: 'Blog',
     linkUrl: 'https://medium.com/chainsafe-systems',
   },
   {
-    id: 6,
+    id: 5,
     name: 'GitHub',
     linkUrl: 'https://github.com/chainsafe/web3.js',
   },
