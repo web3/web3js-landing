@@ -86,7 +86,7 @@ const PluginsList: React.FC<IPluginsList> = ({ pluginData }) => {
         {memoizedPluginsList.map((plugin) =>
           <div className={classes.pluginsWrapper}>
             <div className={classes.pluginWrapper} >
-              <h2 className={classes.name}>{plugin.name}</h2>
+              <a target="_blank" href={"https://npmjs.com/package/" + plugin.name} rel="noreferrer"><h2 className={classes.name}>{plugin.name}</h2></a>
               <p className={classes.description}>{plugin.description}</p>
               <a className={classes.link} target="_blank" rel="noreferrer" href={plugin.homepage}>{plugin.homepage}</a>
               {!error && (<div className={classes.pluginGrid}>

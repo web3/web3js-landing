@@ -1,6 +1,6 @@
-import { getPackageManifest, getPackageDownloads } from 'query-registry';
+import { getPackageManifest, getPackageDownloads, PackageDownloads } from 'query-registry';
 import { useEffect, useState } from 'react';
-import pluginList from '../pluginList.json';
+import pluginList from '../pluginList';
 
 export interface PluginMetadata {
   name: string;
@@ -16,7 +16,7 @@ export interface PluginMetadata {
 const pluginsJSON = pluginList.map((plugin) => {
   return {
     name: plugin.name,
-    isFeatured: plugin.isFeatured === "true"
+    isFeatured: plugin.isFeatured === true
   }
 });
 
@@ -36,13 +36,17 @@ export const usePlugins = (): PluginsData => {
         const plugins = await Promise.all(
           pluginsJSON.map(async (pluginsJSON) => {
             const manifest = await getPackageManifest({ name: pluginsJSON.name });
-            const downloads = await getPackageDownloads({ name: pluginsJSON.name });
+            console.log({manifest})
+            let downloads: PackageDownloads|undefined;
+            try {
+              downloads = await getPackageDownloads({ name: pluginsJSON.name });
+            } catch(e) {}
             const plugin: PluginMetadata = {
               name: manifest.name,
               version: manifest.version,
-              author: manifest.author?.name,
+              author: manifest.author?.name ?? "Unknown",
               homepage: manifest.homepage,
-              donwloads: downloads.downloads,
+              donwloads: downloads?.downloads ?? 0,
               license: manifest.license,
               description: manifest.description,
               isFeatured: pluginsJSON.isFeatured
@@ -53,6 +57,7 @@ export const usePlugins = (): PluginsData => {
         setPluginList(plugins);
       }
       catch (e) {
+        console.log({e, pluginsJSON});
         setLoading(false);
         setError("Error loading plugin details");
         setPluginList(pluginsJSON.map((plugin) => {
