@@ -2,7 +2,6 @@ import React from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import clsx from "clsx";
 import { Link, Typography } from "@chainsafe/common-components";
-import Maintainers from "./Maintainers";
 import web3js from "../../assets/images/web3js.png"
 import hero from "../../assets/images/hero.png"
 
@@ -156,7 +155,7 @@ const useStyles = makeStyles(
     })
   })
 
-const FullTimeline: React.FC = () => {
+const FullTimeline: React.FC<{children: JSX.Element, title: string}> = ({children, title}) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
@@ -174,9 +173,9 @@ const FullTimeline: React.FC = () => {
         <div className={classes.columnContentWrapper}>
           <div className={classes.testCard}><img src={hero} alt="Abstract pattern of gemoetric shapes"/></div>
           <Typography variant="h1" className={clsx(classes.reduceLeading, classes.titleText, classes.displayOnWide)}>
-            The maintainers behind web3.js
+            {title}
           </Typography>
-          <Maintainers/>
+          {children}
         </div>
       </div>
     </div>

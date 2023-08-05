@@ -63,17 +63,17 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
       }
     },
     navlink: {
-        color: palette.common.white.main,
-        textDecoration: "none",
-        fontWeight: "bold",
-        "&:hover": {
-          color: palette.primary.main,
-          transition: "ease-in 0.2s",
-        },
-        [breakpoints.up('sm')]: {
-          marginRight: `${constants.generalUnit * 2}px`
-        }
+      color: palette.common.white.main,
+      textDecoration: "none",
+      fontWeight: "bold",
+      "&:hover": {
+        color: palette.primary.main,
+        transition: "ease-in 0.2s",
       },
+      [breakpoints.up('sm')]: {
+        marginRight: `${constants.generalUnit * 2}px`
+      }
+    },
     flex: {
       display: "flex",
       alignItems: "center",
@@ -142,6 +142,14 @@ const NavBar: React.FC = () => {
                 href={docsUrl}
                 className={classes.navlink}>
                 <Trans>Docs</Trans>
+              </a>
+            </Typography>
+            <Typography variant="h5">
+              <a
+                href="/plugins"
+                className={classes.navlink}
+              >
+                <Trans>Plugins</Trans>
               </a>
             </Typography>
             <Typography variant='h5'>

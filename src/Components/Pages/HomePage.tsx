@@ -12,7 +12,7 @@ import UsedBy from '../Subpages/UsedBy';
 import Stats from '../Subpages/Stats';
 import Timeline from '../Subpages/Timeline';
 
-const useStyles = makeStyles(({ constants, breakpoints }: ITheme) => {
+export const useStyles = makeStyles(({ constants, breakpoints }: ITheme) => {
   return createStyles({
     globalWrap: {
       [breakpoints.up(1599)]: {

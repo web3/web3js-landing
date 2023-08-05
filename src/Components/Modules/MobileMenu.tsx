@@ -28,16 +28,21 @@ const navlinks: NavLink[] = [
   },
   {
     id: 2,
+    name: 'Plugins',
+    linkUrl: '/plugins',
+  },
+  {
+    id: 3,
     name: 'Join Discord',
     linkUrl: discordUrl,
   },
   {
-    id: 3,
+    id: 4,
     name: 'Blog',
     linkUrl: 'https://medium.com/chainsafe-systems',
   },
   {
-    id: 4,
+    id: 5,
     name: 'GitHub',
     linkUrl: 'https://github.com/chainsafe/web3.js',
   },

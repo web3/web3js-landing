@@ -4,14 +4,15 @@ import { useLanguageContext } from "../../LanguageContext"
 import FullTimeline from '../Subpages/FullTimeline';
 import NavBar from '../Modules/NavBar';
 import Footer from '../Modules/Footer';
-import Maintainers from "../Subpages/Maintainers";
+import PluginsList from "../Subpages/PluginsList";
 import { useStyles } from "./HomePage";
+import { usePlugins } from "../../hooks/usePlugins";
 
-const MaintainersPage: React.FC = () => {
+const PluginsPage: React.FC = () => {
   const classes = useStyles();
-  const { lang } = useParams()
-  const { availableLanguages, selectedLanguage, setActiveLanguage } = useLanguageContext()
-
+  const { lang } = useParams();
+  const { availableLanguages, selectedLanguage, setActiveLanguage } = useLanguageContext();
+  const pluginData = usePlugins();
   useEffect(() => {
     if (!lang) return
 
@@ -28,11 +29,11 @@ const MaintainersPage: React.FC = () => {
     <>
       <div className={classes.globalWrap}>
         <NavBar />
-        <FullTimeline title="The mainteiners behind web3.js" ><Maintainers /></FullTimeline>
+        <FullTimeline title="Plugins" ><PluginsList pluginData={pluginData}/></FullTimeline>
       </div>
       <Footer />
     </>
   )
 }
 
-export default MaintainersPage
+export default PluginsPage
