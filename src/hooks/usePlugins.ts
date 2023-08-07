@@ -44,7 +44,7 @@ export const usePlugins = (): PluginsData => {
             const plugin: PluginMetadata = {
               name: manifest.name,
               version: manifest.version,
-              author: manifest.author?.name ?? "Unknown",
+              author: manifest.author?.name ?? manifest.contributors?.map(c => c.name).join(", ") ?? "Unknown",
               homepage: manifest.homepage,
               donwloads: downloads?.downloads ?? 0,
               license: manifest.license,
