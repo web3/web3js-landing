@@ -1,6 +1,6 @@
 export default [
   {
-    name: "@chainsafe/web3.js-chainlink-plugin",
+    name: "@chainsafe/web3-plugin-chainlink",
     isFeatured: true
   },
   {
