@@ -6,7 +6,6 @@ const useStyles = makeStyles(
   ({ palette, breakpoints }: ITheme) => {
     return createStyles({
       container: {
-        display: "flex",
         maxWidth: "1200px",
         flexDirection: "column",
         [breakpoints.up(800)]: {
@@ -15,10 +14,12 @@ const useStyles = makeStyles(
           alignItems: "flex-start",
         },
         color: "#F5F5F5",
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gridGap: "20px",
       },
       pluginsWrapper: {
-        display: "flex",
-        flexDirection: "column",
+        display: "grid",
         fontSize: "1rem",
       },
       pluginWrapper: {
@@ -39,6 +40,13 @@ const useStyles = makeStyles(
       },
       name: {
         color: palette.primary.main,
+        "&:hover": {
+          color: palette.primary.light,
+          textDecoration: "underline",
+        },
+        "&:active": {
+          color: palette.primary.dark,
+        },
         fontSize: "1.75rem",
         fontWeight: 600,
         lineHeight: "2.25rem",
@@ -86,6 +94,7 @@ const PluginsList: React.FC<IPluginsList> = ({ pluginData }) => {
         {memoizedPluginsList.map((plugin) =>
           <div className={classes.pluginsWrapper}>
             <div className={classes.pluginWrapper} >
+              {plugin.isFeatured && <p>Featured</p>}
               <a target="_blank" href={"https://npmjs.com/package/" + plugin.name} rel="noreferrer"><h2 className={classes.name}>{plugin.name}</h2></a>
               <p className={classes.description}>{plugin.description}</p>
               <a className={classes.link} target="_blank" rel="noreferrer" href={plugin.homepage}>{plugin.homepage}</a>
