@@ -11,4 +11,8 @@ export default [
     name: "web3-plugin-craftsman",
     isFeatured: false
   },
+  {
+    name: "@eth-optimism/web3.js-plugin",
+    isFeatured: false
+  },
 ] as {name: string, isFeatured: boolean}[];
