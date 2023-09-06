@@ -14,10 +14,9 @@ const useStyles = makeStyles(
           flexDirection: 'column',
         },
         [breakpoints.up(799)]: {
-          padding: '1rem 0',
+          padding: '3rem 0',
           flexDirection: 'row',
         },
-        marginTop: '4rem',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'flex-start',

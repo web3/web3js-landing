@@ -17,7 +17,7 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
       alignItems: "center",
       height: constants.generalUnit * 9,
       position: "absolute",
-      padding: "0.7rem",
+      padding: "2.4rem",
       background: palette.background.default,
       zIndex: zIndex?.layer4,
       [breakpoints.down('1170px')]: {
@@ -77,6 +77,15 @@ const useStyles = makeStyles(({ breakpoints, palette, zIndex, constants }: IThem
     flex: {
       display: "flex",
       alignItems: "center",
+    },
+    mobileNav: {
+      display: "flex",
+      justifyContent: "space-between",
+    },
+    mobileLogo: {
+      display: 'flex',
+      alignItems: 'center',
+      paddingTop: "1rem"
     }
   })
 })
@@ -95,27 +104,17 @@ const NavBar: React.FC = () => {
 
   if (isMobile && !isNavVisible)
     return (
-      <nav>
+      <nav className={classes.mobileNav}>
         {scrollToTop}
-        <Grid
-          container
-          justifyContent='flex-start'
-          alignItems='center'
-          className={classes.linksMenu}>
-          <Grid item>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <img className={classes.logo} src={web3js} alt='web3js logo' />
-              <Typography variant='h5'>
-                <a href='/' className={classes.navlink}>
-                  Web3.js
-                </a>
-              </Typography>
-            </div>
-          </Grid>
-          <Grid item alignItems='flex-end'>
-            <MobileNav />
-          </Grid>
-        </Grid>
+        <div className={classes.mobileLogo}>
+          <img className={classes.logo} src={web3js} alt='web3js logo' />
+          <Typography variant='h5'>
+            <a href='/' className={classes.navlink}>
+              Web3.js
+            </a>
+          </Typography>
+        </div>
+        <MobileNav />
       </nav>
     );
 

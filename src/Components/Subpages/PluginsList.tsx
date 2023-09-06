@@ -21,9 +21,20 @@ const useStyles = makeStyles(
       pluginsWrapper: {
         display: "grid",
         fontSize: "1rem",
+        height: "100%",
       },
       pluginWrapper: {
-        padding: "10px 0",
+        "&.featured": {
+          border: "1px solid #F5F5F5",
+          backgroundColor: "#383838",
+        },
+        padding: "20px",
+        border: "1px solid #F5F5F5",
+        backgroundColor: "#212121",
+        borderRadius: "0 20px 0 20px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
       },
       pluginGrid: {
         display: "grid",
@@ -52,7 +63,7 @@ const useStyles = makeStyles(
         lineHeight: "2.25rem",
       },
       description: {
-        fontSize: "1.25rem",
+        fontSize: "1rem",
         lineHeight: "1.75rem",
         marginBottom: "10px",
       },
@@ -90,14 +101,15 @@ const PluginsList: React.FC<IPluginsList> = ({ pluginData }) => {
     <>
       {error && <div className={classes.error}>{error}</div>}
       <div className={classes.container}>
-
         {memoizedPluginsList.map((plugin) =>
           <div className={classes.pluginsWrapper}>
-            <div className={classes.pluginWrapper} >
-              {plugin.isFeatured && <p>Featured</p>}
-              <a target="_blank" href={"https://npmjs.com/package/" + plugin.name} rel="noreferrer"><h2 className={classes.name}>{plugin.name}</h2></a>
-              <p className={classes.description}>{plugin.description}</p>
-              <a className={classes.link} target="_blank" rel="noreferrer" href={plugin.homepage}>{plugin.homepage}</a>
+            <div className={`${classes.pluginWrapper} ${plugin.isFeatured ? "featured" : ""}`}>
+              <div>
+                {plugin.isFeatured && <p>Featured</p>}
+                <a target="_blank" href={"https://npmjs.com/package/" + plugin.name} rel="noreferrer"><h2 className={classes.name}>{plugin.name}</h2></a>
+                <p className={classes.description}>{plugin.description}</p>
+                <a className={classes.link} target="_blank" rel="noreferrer" href={plugin.homepage}>{plugin.homepage}</a>
+              </div>
               {!error && (<div className={classes.pluginGrid}>
                 <p>Version: {plugin.version}</p>
                 <p>Author: {plugin.author}</p>

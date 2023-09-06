@@ -9,11 +9,11 @@ const useStyles = makeStyles(
   ({ constants, palette, breakpoints, typography }: ITheme) => {
     return createStyles({
       container: {
-        [breakpoints.up(360)]:{
+        [breakpoints.up(360)]: {
           flexDirection: "column",
         },
-        [breakpoints.up(799)]:{
-          padding: "1rem 0",
+        [breakpoints.up(799)]: {
+          padding: "4rem 0",
           flexDirection: "row",
         },
         marginTop: "2rem",
@@ -34,8 +34,8 @@ const useStyles = makeStyles(
           flexDirection: "row",
           padding: "2rem 0",
         },
-        "&:first-of-type":{
-          [breakpoints.up(799)]:{
+        "&:first-of-type": {
+          [breakpoints.up(799)]: {
             marginRight: "1rem",
             marginBottom: 0,
           }
@@ -55,11 +55,11 @@ const useStyles = makeStyles(
         },
       },
       columnContentWrapper: {
-        display: "flex", 
+        display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
         width: "100%",
-      },      
+      },
       bold: {
         fontWeight: 600,
       },
@@ -81,7 +81,7 @@ const useStyles = makeStyles(
         fontSize: "34px",
         lineHeight: "44px",
         display: "block",
-        [breakpoints.up(799)]:{
+        [breakpoints.up(799)]: {
           display: "none",
         },
         [breakpoints.up(1199)]: {
@@ -107,7 +107,7 @@ const useStyles = makeStyles(
       brand: {
         maxWidth: "120px",
         display: "none",
-        [breakpoints.up(799)]:{
+        [breakpoints.up(799)]: {
           display: "block",
         }
       },
@@ -129,7 +129,7 @@ const useStyles = makeStyles(
         "&:hover": {
           color: palette.additional["gray"][8],
         },
-        [breakpoints.down(799)]:{ 
+        [breakpoints.down(799)]: {
           fontSize: "18px",
         }
       },
@@ -147,21 +147,21 @@ const useStyles = makeStyles(
       },
       displayOnWide: {
         display: "none",
-        [breakpoints.up(599)]:{
+        [breakpoints.up(599)]: {
           display: "block",
-        padding: 0,
-      },
+          padding: 0,
+        },
       }
     })
   })
 
-const FullTimeline: React.FC<{children: JSX.Element, title: string}> = ({children, title}) => {
+const FullTimeline: React.FC<{ children: JSX.Element, title: string }> = ({ children, title }) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
       <div className={classes.leftColumn}>
-        <div className={classes.columnContentWrapper}>   
-          <img className={classes.brand} src={web3js} alt="Abstract pattern of gemoetric shapes"/>
+        <div className={classes.columnContentWrapper}>
+          <img className={classes.brand} src={web3js} alt="Abstract pattern of gemoetric shapes" />
           <div className={classes.linksWrapper}>
             <div className={classes.link}>
               <div className={clsx(classes.primDark, classes.stackedIndicator)}></div><Link className={classes.stackedLink} to="/">Back to home</Link>
@@ -171,7 +171,7 @@ const FullTimeline: React.FC<{children: JSX.Element, title: string}> = ({childre
       </div>
       <div className={classes.rightColumn}>
         <div className={classes.columnContentWrapper}>
-          <div className={classes.testCard}><img src={hero} alt="Abstract pattern of gemoetric shapes"/></div>
+          <div className={classes.testCard}><img src={hero} alt="Abstract pattern of gemoetric shapes" /></div>
           <Typography variant="h1" className={clsx(classes.reduceLeading, classes.titleText, classes.displayOnWide)}>
             {title}
           </Typography>
