@@ -76,8 +76,10 @@ const useStyles = makeStyles(
         display: 'flex',
         flexDirection: 'column',
         marginTop: '16px',
+        color: palette.additional['gray'][5],
         [breakpoints.up(599)]: {
           flexDirection: 'row',
+          columnGap: `10px`,
         },
         '& > p': {
           color: palette.additional['gray'][5],
@@ -107,10 +109,14 @@ const Stats: React.FC = () => {
           <div className={classes.spec}>
             <p>A proud cornerstone of the ecosystem.</p>
             <div className={classes.statsWrapper}>
-              <div className={classes.highlightText}>500,000+ </div>
-              weekly downloads.
-              <div className={classes.highlightText}>3000+ </div>
-              dependent projects.
+              <div>
+                <span className={classes.highlightText}>500,000+ </span>
+                weekly downloads.
+              </div>
+              <div>
+                <span className={classes.highlightText}>3000+ </span>
+                dependent projects.
+              </div>
             </div>
           </div>
         </div>
