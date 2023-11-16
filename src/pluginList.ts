@@ -15,4 +15,12 @@ export default [
     name: "@eth-optimism/web3.js-plugin",
     isFeatured: false
   },
+  {
+    name: "@conx3/web3-plugin-near",
+    isFeatured: false
+  },
+  {
+    name: "@conx3/web3-plugin-aurora",
+    isFeatured: false
+  },
 ] as {name: string, isFeatured: boolean}[];
