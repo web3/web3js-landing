@@ -23,4 +23,8 @@ export default [
     name: "@conx3/web3-plugin-aurora",
     isFeatured: false
   },
-] as {name: string, isFeatured: boolean}[];
+  {
+    name: "web3-plugin-superfluid",
+    isFeatured: false
+  }
+] as { name: string; isFeatured: boolean }[];
