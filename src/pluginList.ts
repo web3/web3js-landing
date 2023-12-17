@@ -26,5 +26,9 @@ export default [
   {
     name: "web3-plugin-superfluid",
     isFeatured: false
+  },
+  {
+    name: "@saileshp56/web3.js-plugin-nft-master",
+    isFeatured: false
   }
 ] as { name: string; isFeatured: boolean }[];
