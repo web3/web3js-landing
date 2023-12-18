@@ -63,8 +63,7 @@ const theme = createTheme({
 })
 
 const availableLanguages = [
-  { id: "en", label: "English" },
-  { id: "fr", label: "Français" }
+  { id: "en", label: "English" }
 ]
 
 const App: React.FC<{}> = () => {
