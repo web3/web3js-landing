@@ -5,7 +5,6 @@ import { Typography } from "@chainsafe/common-components";
 import truffle from "../../assets/images/truffle.png"
 import remix from "../../assets/images/remix.png"
 import oz from "../../assets/images/oz.png"
-import embark from "../../assets/images/embark.svg"
 import dydx from "../../assets/images/dydx.svg"
 
 const useStyles = makeStyles(
@@ -118,9 +117,6 @@ const UsedBy: React.FC = () => {
             </a>
             <a className={classes.link} href="https://remix.ethereum.org/" target="_blank" rel="noopener noreferrer">
               <img className={classes.logo} src={remix} alt="Remix" />
-            </a>
-            <a className={classes.link} href="https://framework.embarklabs.io/" target="_blank" rel="noopener noreferrer">
-              <img className={classes.logo} src={embark} alt="Embark" />
             </a>
             <a className={classes.link} href="https://dydx.exchange/" target="_blank" rel="noopener noreferrer">
               <img className={classes.logo} src={dydx} alt="DyDx" />
