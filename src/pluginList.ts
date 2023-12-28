@@ -26,5 +26,9 @@ export default [
   {
     name: "web3-plugin-superfluid",
     isFeatured: false
-  }
+  },
+  {
+    name: "@rudra-xyz/web3-plugin-multicall",
+    isFeatured: false
+  },
 ] as { name: string; isFeatured: boolean }[];
