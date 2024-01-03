@@ -31,6 +31,7 @@ export default [
     name: "@saileshp56/web3.js-plugin-nft-master",
     isFeatured: false
   },
+  {
     name: "@rudra-xyz/web3-plugin-multicall",
     isFeatured: false
   },
