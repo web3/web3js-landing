@@ -35,4 +35,8 @@ export default [
     name: "@rudra-xyz/web3-plugin-multicall",
     isFeatured: false
   },
+  {
+    name : "web3-plugin-0x",
+    isFeatured : false
+  },
 ] as { name: string; isFeatured: boolean }[];
