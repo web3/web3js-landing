@@ -39,4 +39,8 @@ export default [
     name : "web3-plugin-0x",
     isFeatured : false
   },
+  {
+    name : "@chainsafe/web3-plugin-eip4337",
+    isFeatured : true
+  },
 ] as { name: string; isFeatured: boolean }[];
