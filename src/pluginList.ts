@@ -40,6 +40,10 @@ export default [
     isFeatured : false
   },
   {
+    name : "@swisstronik/web3-plugin-swisstronik",
+    isFeatured : false
+  },
+  {
     name : "@chainsafe/web3-plugin-eip4337",
     isFeatured : true
   },
