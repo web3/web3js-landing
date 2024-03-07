@@ -47,4 +47,8 @@ export default [
     name : "@chainsafe/web3-plugin-eip4337",
     isFeatured : true
   },
+  {
+    name : "web3-plugin-zksync",
+    isFeatured : true
+  }
 ] as { name: string; isFeatured: boolean }[];
