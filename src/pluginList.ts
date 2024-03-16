@@ -50,5 +50,9 @@ export default [
   {
     name : "web3-plugin-zksync",
     isFeatured : true
+  },
+    {
+    name : "@namespace-ens/web3-plugin-ens",
+    isFeatured : true
   }
 ] as { name: string; isFeatured: boolean }[];
