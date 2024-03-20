@@ -53,6 +53,6 @@ export default [
   },
     {
     name : "@namespace-ens/web3-plugin-ens",
-    isFeatured : true
+    isFeatured : false
   }
 ] as { name: string; isFeatured: boolean }[];
