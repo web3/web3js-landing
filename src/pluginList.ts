@@ -8,6 +8,10 @@ export default [
     isFeatured: true
   },
   {
+    name: "@chainsafe/web3-plugin-chainstack",
+    isFeatured: true
+  },
+  {
     name: "web3-plugin-craftsman",
     isFeatured: false
   },
