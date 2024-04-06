@@ -40,23 +40,27 @@ export default [
     isFeatured: false
   },
   {
-    name : "web3-plugin-0x",
-    isFeatured : false
+    name: "web3-plugin-0x",
+    isFeatured: false
   },
   {
-    name : "@swisstronik/web3-plugin-swisstronik",
-    isFeatured : false
+    name: "@swisstronik/web3-plugin-swisstronik",
+    isFeatured: false
   },
   {
-    name : "@chainsafe/web3-plugin-eip4337",
-    isFeatured : true
+    name: "@chainsafe/web3-plugin-eip4337",
+    isFeatured: true
   },
   {
-    name : "web3-plugin-zksync",
-    isFeatured : true
+    name: "web3-plugin-zksync",
+    isFeatured: true
   },
-    {
-    name : "@namespace-ens/web3-plugin-ens",
-    isFeatured : false
+  {
+    name: "@namespace-ens/web3-plugin-ens",
+    isFeatured: false
+  },
+  {
+    name: "web3-plugin-eas",
+    isFeatured: false
   }
 ] as { name: string; isFeatured: boolean }[];
