@@ -1,7 +1,7 @@
 import React from "react"
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme"
 import { Grid, Typography } from "@chainsafe/common-components"
-import {Trans} from "@lingui/macro";
+
 import { blogUrl, discordUrl, docsUrl } from "../../urls";
 
 const useStyles = makeStyles(({ palette, constants, breakpoints }: ITheme) => {
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
           <Grid item className={classes.linkWrapper}>
             <Grid item className={classes.header}>
               <Typography variant="h5" >
-                <strong><Trans>Resources</Trans></strong>
+                <strong>Resources</strong>
               </Typography>
             </Grid>
             <Grid item className={classes.item}>
@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
                 target="_blank"
               >
                 <Typography variant="h5" className={classes.bold}>
-                  <Trans>GitHub</Trans>
+                  GitHub
                 </Typography>
               </a>
             </Grid>
@@ -135,7 +135,7 @@ const Footer: React.FC = () => {
                 target="_blank"
               >
                 <Typography variant="h5" className={classes.bold}>
-                  <Trans>Discord</Trans>
+                  Discord
                 </Typography>
               </a>
           </Grid>

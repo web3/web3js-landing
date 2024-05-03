@@ -3,7 +3,6 @@ import {
   createStyles, ITheme, makeStyles, useMediaQuery
 } from "@chainsafe/common-theme";
 import { Grid, Link, Typography, useScrollToTop } from "@chainsafe/common-components";
-import { Trans } from "@lingui/macro"
 import { MobileNav } from "./MobileNav";
 import web3js from "../../assets/images/web3js.png"
 import { discordUrl, docsUrl } from "../../urls";
@@ -140,7 +139,7 @@ const NavBar: React.FC = () => {
                 rel='noopener noreferrer'
                 href={docsUrl}
                 className={classes.navlink}>
-                <Trans>Docs</Trans>
+                  Docs
               </a>
             </Typography>
             <Typography variant="h5">
@@ -148,7 +147,7 @@ const NavBar: React.FC = () => {
                 href="/plugins"
                 className={classes.navlink}
               >
-                <Trans>Plugins</Trans>
+                Plugins
               </a>
             </Typography>
             <Typography variant='h5'>
@@ -157,16 +156,16 @@ const NavBar: React.FC = () => {
                 rel='noopener noreferrer'
                 href={discordUrl}
                 className={classes.navlink}>
-                <Trans>Community</Trans>
+                  Discord
               </a>
             </Typography>
             <Typography variant='h5'>
               <a
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://medium.com/chainsafe-systems/tagged/ethereum'
+                href='https://blog.chainsafe.io/tagged/web3js'
                 className={classes.navlink}>
-                <Trans>Blog</Trans>
+                  Blog
               </a>
             </Typography>
             <Typography variant='h5'>
@@ -175,7 +174,7 @@ const NavBar: React.FC = () => {
                 rel='noopener noreferrer'
                 href='https://github.com/web3/web3.js'
                 className={classes.navlink}>
-                <Trans>GitHub</Trans>
+                  Github
               </a>
             </Typography>
           </Grid>

@@ -212,6 +212,16 @@ const Hero: React.FC = () => {
               </a>
             </div>
             <div className={classes.link}>
+              <div className={classes.stackedIndicator}></div>
+              <a
+                className={classes.stackedLink}
+                href='/plugins'
+                rel='noopener noreferrer'
+                target='_blank'>
+                Plugins
+              </a>
+            </div>
+            <div className={classes.link}>
               <div
                 className={clsx(
                   classes.primLight,

@@ -36,6 +36,7 @@ const useStyles = makeStyles(
       },
       highlightText: {
         color: palette.primary.main,
+        
       },
       titleText: {
         textAlign: 'left',
@@ -109,14 +110,14 @@ const Stats: React.FC = () => {
           <div className={classes.spec}>
             <p>A proud cornerstone of the ecosystem.</p>
             <div className={classes.statsWrapper}>
-              <div>
+              <p>
                 <span className={classes.highlightText}>500,000+ </span>
                 weekly downloads.
-              </div>
-              <div>
+              </p>
+              <p>
                 <span className={classes.highlightText}>3000+ </span>
                 dependent projects.
-              </div>
+              </p>
             </div>
           </div>
         </div>
