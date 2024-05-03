@@ -215,7 +215,7 @@ const Hero: React.FC = () => {
               <div className={classes.stackedIndicator}></div>
               <a
                 className={classes.stackedLink}
-                href='/plugins'
+                href='/pluginss'
                 rel='noopener noreferrer'
                 target='_blank'>
                 Plugins

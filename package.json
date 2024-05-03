@@ -7,7 +7,6 @@
     "@chainsafe/common-components": "^1.0.30",
     "@chainsafe/common-theme": "^1.0.10",
     "@lingui/babel-preset-react": "^2.9.2",
-    "@lingui/cli": "^3.10.2",
     "@lingui/core": "^3.10.4",
     "@lingui/macro": "^3.10.2",
     "@lingui/react": "^3.10.2",
