@@ -60,6 +60,10 @@ export default [
     isFeatured : false
   },
   {
+    name : "web3-plugin-blob-tx",
+    isFeatured : false
+  },
+  {
     name : "web3-uniswap-plugin",
     isFeatured : false
   }
