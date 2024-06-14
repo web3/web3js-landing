@@ -66,5 +66,9 @@ export default [
   {
     name : "web3-uniswap-plugin",
     isFeatured : false
+  },
+  {
+    name : "web3-plugin-contracts",
+    isFeatured : false
   }
 ] as { name: string; isFeatured: boolean }[];
