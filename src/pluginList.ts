@@ -74,6 +74,5 @@ export default [
   {
     name : "web3-plugin-faucettestnet2",
     isFeatured : false 
-  },
-] 
+  } 
 ] as { name: string; isFeatured: boolean }[];
