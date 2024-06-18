@@ -2,7 +2,6 @@ import React from "react";
 import { createStyles, ITheme, makeStyles } from "@chainsafe/common-theme";
 import { Typography } from "@chainsafe/common-components";
 import clsx from "clsx";
-import { Trans } from "@lingui/macro";
 import chainsafe from "../../assets/images/chainsafe.png"
 import ethereum from "../../assets/images/ethereumjs.png"
 import samuel from "../../assets/images/samuel.jpeg"
@@ -138,9 +137,7 @@ const Maintainers = (): JSX.Element => {
       <div className={classes.gridContainer}>
         <div className={classes.titleContainer}>
           <Typography variant="body1" className={clsx(classes.bodyText)}>
-            <Trans>
               Since 2014, Web3.js has existed as an open-source collection of libraries that allow you to interact with a local or remote Ethereum node. Throughout its rich history, Web3.js would not have been possible without the vision, expertise and contributions made by committed individuals and organizations throughout the years.
-            </Trans>
           </Typography>
         </div>
         <span className={classes.timelineItem}>
