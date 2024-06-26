@@ -70,5 +70,17 @@ export default [
   {
     name : "web3-plugin-contracts",
     isFeatured : false
-  }
+  },
+  {
+    name : "web3-plugin-sign",
+    isFeatured : false
+  },
+  {
+    name : "plugin-web3js-avalanche",
+    isFeatured : false
+  },
+  {
+    name : "web3-plugin-eas",
+    isFeatured : false
+  },
 ] as { name: string; isFeatured: boolean }[];
