@@ -70,5 +70,9 @@ export default [
   {
     name : "web3-plugin-contracts",
     isFeatured : false
+  },
+  {
+    name : "@chainsafe/web3-plugin-starknet",
+    isFeatured : true
   }
 ] as { name: string; isFeatured: boolean }[];
