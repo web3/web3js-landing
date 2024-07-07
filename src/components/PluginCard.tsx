@@ -29,9 +29,9 @@ export default function PluginCard({isFeatured, name, description, authors, down
                     {authors && <p className='text-lg text-gray-50 font-semibold mb-1'>{authors}</p>}
                 <p className='text-md text-zinc-400'>{downloadsCount} Downloads</p>
               </div>
-              <div className='cursor-pointer mt-1'>
+              {/* <div className='cursor-pointer mt-1'>
                 <Button type="pluginDownload" href={downloadUrl}>Download</Button>
-              </div>
+              </div> */}
             </div>
             )}
       </div>
