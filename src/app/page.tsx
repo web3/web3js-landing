@@ -18,12 +18,12 @@ export default function Home() {
     <Navbar />
     <Hero />
     <LogoCloud />
-    <YouCan />
-    <ThreeSteps />
-    <Features />
     <Stats />
+    <YouCan />
+    <Features />
     <Ambassadors />
     <WhyBeAmbassador />
+    <ThreeSteps />
     <Testimonials />
     <Footer />
     </>

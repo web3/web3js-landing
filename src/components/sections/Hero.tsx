@@ -12,7 +12,10 @@ export default function Hero() {
             Build dApps on any EVM Chain with TypeScript Libraries
           </SectionHeading>
           <div>
-            <Button className='text-white py-4 px-8' type="primary" href="https://www.npmjs.com/package/web3">Download on npm</Button>
+            <Button className='text-white py-4 px-8' type="primary" href="https://www.npmjs.com/package/web3">npm i web3</Button>
+            <div className='mt-6 px-2 flex flex-row align-center gap-x-2'><img className='h-5 w-5' src="/cs.png" alt="ChainSafe Logo, maintainer of web3js"/>
+            <p className='text-md text-gray-300'>{" "} Maintained by ChainSafe</p>
+            </div>
           </div>
           </div>
           <div className='flex flex-col w-full pt-8 lg:pt-0'>
