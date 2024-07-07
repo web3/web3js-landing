@@ -1,62 +1,33 @@
 {
-  "name": "web3js-landing",
+  "name": "web3js-website-next",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://web3js.org",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "@chainsafe/common-components": "^1.0.30",
-    "@chainsafe/common-theme": "^1.0.10",
-    "@lingui/babel-preset-react": "^2.9.2",
-    "@lingui/cli": "^3.10.2",
-    "@lingui/core": "^3.10.4",
-    "@lingui/macro": "^3.10.2",
-    "@lingui/react": "^3.10.2",
-    "@types/react": "^17.0.19",
-    "@types/react-dom": "^17.0.9",
-    "@types/react-embed-gist": "^1.0.0",
-    "clsx": "^1.1.1",
-    "formik": "^2.2.9",
-    "framer-motion": "4.1.17",
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.4",
+    "framer-motion": "^11.2.13",
+    "next": "14.2.4",
     "query-registry": "^2.6.0",
-    "react": "^17.0.2",
-    "react-code-blocks": "^0.0.9-0",
-    "react-dom": "^17.0.2",
-    "react-embed-gist": "^1.0.12",
-    "react-toast-notifications": "^2.5.1",
-    "sass": "^1.54.9",
-    "web-vitals": "^1.0.1"
+    "react": "^18",
+    "react-code-blocks": "^0.1.6",
+    "react-dom": "^18",
+    "react-intersection-observer": "^9.10.3"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react-app-rewired": "^2.2.1",
-    "react-scripts": "^5.0.1",
-    "typescript": "^4.3.5",
-    "util": "^0.12.5"
-  },
-  "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.3.3"
   }
 }

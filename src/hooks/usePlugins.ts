@@ -1,6 +1,7 @@
+"use client"
 import { getPackageManifest, getPackageDownloads, PackageDownloads } from 'query-registry';
 import { useEffect, useState } from 'react';
-import pluginList from '../pluginList';
+import pluginList from '@/pluginList';
 
 export interface PluginMetadata {
   name: string;
@@ -60,7 +61,7 @@ export const usePlugins = (): PluginsData => {
         console.log({e, pluginsJSON});
         setLoading(false);
         setError("Error loading plugin details");
-        setPluginList(pluginsJSON.map((plugin) => {
+        setPluginList(pluginsJSON.map((plugin: { name: any; isFeatured: any; }) => {
           return {
             name: plugin.name,
             isFeatured: plugin.isFeatured
