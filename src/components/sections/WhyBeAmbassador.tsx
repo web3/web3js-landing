@@ -39,6 +39,9 @@ const cards = [
         desc: 'and establish yourself as a leader in blockchain technology.',
     },
     {
+
+    },
+    {
         icon: <StarIcon />,
         title: 'Build your personal brand',
         desc: 'through content creation and speaking opportunities.',
