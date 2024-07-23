@@ -4,7 +4,7 @@ import SectionHeading from '../SectionHeading';
 
 export default function Hero() {
   return (
-    <div className="relative py-24 md:py-0 lg:h-screen w-full px-4 md:px-8 ">
+    <div className="relative py-24 md:py-0 lg:h-screen xl:h-full w-full px-4 md:px-8 ">
       <div className="relative flex flex-col max-w-7xl lg:py-48">
         <div className='mt-10 flex flex-col md:grid md:grid-cols-1 lg:grid-cols-2 justify-start items-start lg:mt-0'>
          <div className='flex flex-col gap-y-5'>         

@@ -20,18 +20,18 @@ export default function PluginCard({isFeatured, name, description, authors, down
                     <StarIcon className='text-brand-400 h-6 w-6' />
                 </div>
                 </div> : null }
-                <h2 className='mt-2 md:mt-7 text-gray-100 text-2xl font-semibold leading-7'>{name}</h2>
+                <a href={downloadUrl} target="_blank" rel="noopener noreferrer" className='mt-2 md:mt-7 text-gray-100 text-2xl font-semibold leading-7 hover:brightness-50'>{name}</a>
                 {description ? <h3 className='mt-2 text-gray-300 text-md leading-6'>{description}</h3> : null }
             </div>
             {!error && (
             <div className='flex justify-between mt-2 mx-2'>
                 <div className="flex flex-col">
-                    {authors && <p className='text-lg text-gray-50 font-semibold mb-1'>{authors}</p>}
-                <p className='text-md text-zinc-400'>{downloadsCount} Downloads</p>
+                    {authors ? <p className='text-lg text-gray-50 font-semibold mb-1'>{authors}</p> : <p>Unknown</p>}
+                {/* <p className='text-md text-zinc-400'>{downloadsCount} Downloads</p> */}
               </div>
-              {/* <div className='cursor-pointer mt-1'>
+              <div className='cursor-pointer mt-1'>
                 <Button type="pluginDownload" href={downloadUrl}>Download</Button>
-              </div> */}
+              </div>
             </div>
             )}
       </div>
