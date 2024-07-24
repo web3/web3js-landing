@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web3js',
     description: 'web3js - the longest-running EVM API',
-    images: [''],
+    images: ['https://imagedelivery.net/qdx9xDn6TxxInQGWsuRsVg/f3f16fdc-3d9c-44af-eda3-49865a286f00'],
   },
    openGraph: {
     title: 'web3js',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: 'web3js',
     images: [
       {
-        url: '',
+        url: 'https://imagedelivery.net/qdx9xDn6TxxInQGWsuRsVg/f3f16fdc-3d9c-44af-eda3-49865a286f00',
         width: 800,
         height: 600,
       },
