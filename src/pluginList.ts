@@ -74,6 +74,10 @@ export default [
     {
       name : "@chainsafe/web3-plugin-starknet",
       isFeatured : true
+    },
+    {
+      name: "web3-plugin-graphql",
+      isFeatured: false
     }
   ] as { name: string; isFeatured: boolean }[];
   
