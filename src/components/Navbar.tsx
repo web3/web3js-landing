@@ -2,13 +2,14 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
+import { docsUrl } from './urls'
 
 const navigation = [
   { name: 'About', href: '/', current: true },
   { name: 'Plugins', href: '/plugins', current: false },
-//   { name: 'History', href: '#', current: false },
+  { name: 'Docs', href: docsUrl, current: false }
 ]
 
 function classNames(...classes: string[]) {
@@ -16,12 +17,7 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
-    // useEffect? 
     const [isCurrentPage, setIsCurrentPage] = useState('');
-    // check history
-    // set navigation.name === [match] to currentPage 
-    // check currentPage === item.name ? bg : null 
-
   return (
     <Disclosure as="nav" className="">
       <div className="mx-auto max-w-9xl px-2 sm:px-6 lg:px-8">
