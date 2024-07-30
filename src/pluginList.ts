@@ -78,6 +78,10 @@ export default [
     {
       name: "web3-plugin-graphql",
       isFeatured: false
+    },
+    {
+      name: "@ora-io/web3-plugin-ora",
+      isFeatured: false
     }
   ] as { name: string; isFeatured: boolean }[];
   
