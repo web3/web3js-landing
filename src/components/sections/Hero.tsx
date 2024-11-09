@@ -19,7 +19,7 @@ export default function Hero() {
           </div>
           </div>
           <div className='flex flex-col w-full pt-8 lg:pt-0'>
-            <img className='w-auto lg:min-w-[800px]' src='/hero.png' alt='Abstract pattern of gemoetric shapes' />
+            <img className='w-auto lg:min-w-[800px]' src='/hero.png' alt='Abstract pattern of geometric shapes' />
           </div>
         </div>
       </div>
