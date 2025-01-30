@@ -54,7 +54,7 @@ export default function Footer() {
                 alt='Web3js Logo'
               />
               <p className='text-lg leading-6 text-neutral-400'>
-                Web3js - The longest-running web3 library.
+                Web3js
               </p>
 
             </div>
@@ -104,7 +104,7 @@ export default function Footer() {
           </div>
           <div className='mt-4 border-t border-green-400/10 py-2 sm:mt-8 lg:mt-12'>
             <p className='py-3 text-sm text-center leading-5 text-neutral-400'>
-              &copy; {currentYear} Maintained with ❤️ by ChainSafe
+              &copy; {currentYear}
             </p>
           </div>
       </footer>
