@@ -1,3 +1,7 @@
+> [!IMPORTANT]  
+> This repository is no longer maintained. If you have any questions about the Web3.js
+> website or would like to report a problem, please email web3js@chainsafe.io.
+
 # Web3.js Landing Page
 
 This is the source code for the landing page hosted on web3js.org.
