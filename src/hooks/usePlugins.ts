@@ -9,7 +9,7 @@ export interface PluginMetadata {
   version?: string;
   author?: string;
   homepage?: string;
-  donwloads?: number;
+  downloads?: number;
   license?: string;
   isFeatured?: boolean;
 }
@@ -47,7 +47,7 @@ export const usePlugins = (): PluginsData => {
               version: manifest.version,
               author: manifest.author?.name ?? manifest.contributors?.map(c => c.name).join(", ") ?? "Unknown",
               homepage: manifest.homepage,
-              donwloads: downloads?.downloads ?? 0,
+              downloads: downloads?.downloads ?? 0,
               license: manifest.license,
               description: manifest.description,
               isFeatured: pluginsJSON.isFeatured

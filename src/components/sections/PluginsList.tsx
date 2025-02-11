@@ -30,7 +30,7 @@ const PluginsList: React.FC<IPluginsList> = ({ pluginData }) => {
             name={plugin?.name}
             description={plugin?.description}
             authors={plugin?.author}
-            downloadsCount={plugin?.donwloads}
+            downloadsCount={plugin?.downloads}
             downloadUrl={"https://npmjs.com/package/" + plugin.name}
         /> )}
         </div>
